@@ -10,15 +10,9 @@ dependencies:
     - image.style.thumbnail
     - paragraphs.paragraphs_type.rich_text
   module:
-    - field_layout
     - image
-    - layout_discovery
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
+third_party_settings: {  }
 id: paragraph.rich_text.default
 targetEntityType: paragraph
 bundle: rich_text

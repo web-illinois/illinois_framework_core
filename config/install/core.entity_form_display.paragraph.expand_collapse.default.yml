@@ -6,7 +6,6 @@ dependencies:
     - field.field.paragraph.expand_collapse.field_expanded_text
     - paragraphs.paragraphs_type.expand_collapse
   module:
-    - layout_discovery
     - text
 third_party_settings: {  }
 id: paragraph.expand_collapse.default

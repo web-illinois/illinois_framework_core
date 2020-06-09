@@ -8,15 +8,9 @@ dependencies:
     - image.style.paragraphs_image
     - paragraphs.paragraphs_type.text_with_image_and_header
   module:
-    - field_layout
     - image
-    - layout_discovery
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
+third_party_settings: {  }
 id: paragraph.text_with_image_and_header.default
 targetEntityType: paragraph
 bundle: text_with_image_and_header

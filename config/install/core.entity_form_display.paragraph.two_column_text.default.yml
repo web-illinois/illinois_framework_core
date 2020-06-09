@@ -5,14 +5,8 @@ dependencies:
     - field.field.paragraph.two_column_text.field_rich_text
     - paragraphs.paragraphs_type.two_column_text
   module:
-    - field_layout
-    - layout_discovery
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
+third_party_settings: {  }
 id: paragraph.two_column_text.default
 targetEntityType: paragraph
 bundle: two_column_text

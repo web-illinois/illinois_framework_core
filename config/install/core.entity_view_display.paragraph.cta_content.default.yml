@@ -8,15 +8,9 @@ dependencies:
     - field.field.paragraph.cta_content.field_text
     - paragraphs.paragraphs_type.cta_content
   module:
-    - field_layout
     - image
-    - layout_discovery
     - link
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
+third_party_settings: {  }
 id: paragraph.cta_content.default
 targetEntityType: paragraph
 bundle: cta_content

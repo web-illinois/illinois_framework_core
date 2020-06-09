@@ -6,11 +6,7 @@ dependencies:
     - paragraphs.paragraphs_type.call_to_action
   module:
     - paragraphs
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
+third_party_settings: {  }
 id: paragraph.call_to_action.default
 targetEntityType: paragraph
 bundle: call_to_action

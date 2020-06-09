@@ -6,14 +6,8 @@ dependencies:
     - field.field.paragraph.expand_collapse.field_expanded_text
     - paragraphs.paragraphs_type.expand_collapse
   module:
-    - field_layout
-    - layout_discovery
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
+third_party_settings: {  }
 id: paragraph.expand_collapse.default
 targetEntityType: paragraph
 bundle: expand_collapse

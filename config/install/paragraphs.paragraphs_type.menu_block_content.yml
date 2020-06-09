@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: menu_block_content
+label: 'Menu block content'
+icon_uuid: null
+icon_default: null
+description: 'Content for menu blocks'
+behavior_plugins: {  }

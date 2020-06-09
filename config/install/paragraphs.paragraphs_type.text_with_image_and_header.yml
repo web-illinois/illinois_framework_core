@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: text_with_image_and_header
+label: 'Text with Image and Header'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

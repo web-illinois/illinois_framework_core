@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: rich_text
+label: 'Rich Text'
+icon_uuid: null
+icon_default: null
+description: 'V2. Replaces Two-column text and Text with Image and Header.'
+behavior_plugins: {  }

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: cta_content
+label: 'Call to Action Content'
+icon_uuid: null
+icon_default: null
+description: 'Content for call to action'
+behavior_plugins: {  }

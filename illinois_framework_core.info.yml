@@ -9,6 +9,15 @@ dependencies:
   - drupal:path
   - drupal:text
   - drupal:user
+  - file
+  - image
+  - link
+  - menu_ui
+  - node
+  - options
+  - paragraphs
+  - taxonomy
+  - text
 #components:
 #  - lightning_contact_form
 #  - lightning_page

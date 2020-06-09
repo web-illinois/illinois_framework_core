@@ -32,9 +32,10 @@
         "drush/drush": "^10.2"
     },
     "require-dev": {
+        "drupal/console": "^1.9",
         "drupal/core-composer-scaffold": "*",
         "drupal/core-dev": "*",
-        "drupal/console": "^1.9",
+        "drupal/features": "^3.11",
         "oomphinc/composer-installers-extender": "^1.1",
         "vijaycs85/drupal-quality-checker": "^1.2",
         "weitzman/drupal-test-traits": "dev-master",

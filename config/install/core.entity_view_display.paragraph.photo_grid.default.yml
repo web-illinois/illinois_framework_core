@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.photo_grid.field_photo_grid_images
+    - image.style.responsive_thumbnail_100_x_100_
+    - paragraphs.paragraphs_type.photo_grid
+  module:
+    - colorbox
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.photo_grid.default
+targetEntityType: paragraph
+bundle: photo_grid
+mode: default
+content:
+  field_photo_grid_images:
+    weight: 0
+    label: visually_hidden
+    settings:
+      colorbox_node_style: responsive_thumbnail_100_x_100_
+      colorbox_node_style_first: ''
+      colorbox_image_style: ''
+      colorbox_gallery: post
+      colorbox_gallery_custom: ''
+      colorbox_caption: auto
+      colorbox_caption_custom: ''
+    third_party_settings: {  }
+    type: colorbox
+    region: content
+hidden: {  }

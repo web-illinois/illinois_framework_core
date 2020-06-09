@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+name: 'Content Page'
+type: content_page
+description: 'Use <em>Content Page</em> to create new static pages, such as ''About Us''.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

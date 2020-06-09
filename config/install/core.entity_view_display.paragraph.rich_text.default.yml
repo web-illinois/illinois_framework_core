@@ -1,0 +1,66 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.rich_text.field_heading
+    - field.field.paragraph.rich_text.field_image_float
+    - field.field.paragraph.rich_text.field_paragraphs_image
+    - field.field.paragraph.rich_text.field_rich_text
+    - field.field.paragraph.rich_text.field_text_format
+    - image.style.paragraphs_image_large
+    - paragraphs.paragraphs_type.rich_text
+  module:
+    - field_layout
+    - image
+    - layout_discovery
+    - options
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.rich_text.default
+targetEntityType: paragraph
+bundle: rich_text
+mode: default
+content:
+  field_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_image_float:
+    type: list_key
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_paragraphs_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: paragraphs_image_large
+      image_link: file
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_rich_text:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_text_format:
+    type: list_key
+    weight: 4
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,63 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_menu_block
+    - paragraphs.paragraphs_type.menu_block_content
+    - paragraphs.paragraphs_type.menu_block_v2
+  module:
+    - entity_reference_revisions
+id: paragraph.menu_block_v2.field_menu_block
+field_name: field_menu_block
+entity_type: paragraph
+bundle: menu_block_v2
+label: 'Menu Block'
+description: 'Image with link. You may add up to three menu blocks per row. <br>If you need more than three, add a new Menu Block using the blue dropdown below.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      menu_block_content: menu_block_content
+    target_bundles_drag_drop:
+      menu_block_v2:
+        weight: 10
+        enabled: false
+      colored_text_block_with_image:
+        weight: 11
+        enabled: false
+      expand_collapse:
+        weight: 12
+        enabled: false
+      call_to_action:
+        weight: 13
+        enabled: false
+      menu_block:
+        weight: 13
+        enabled: false
+      menu_block_content:
+        enabled: true
+        weight: 14
+      cta_content:
+        weight: 15
+        enabled: false
+      photo_grid:
+        weight: 15
+        enabled: false
+      embeded_block:
+        weight: 16
+        enabled: false
+      rich_text:
+        weight: 16
+        enabled: false
+      text_with_image_and_header:
+        weight: 17
+        enabled: false
+      two_column_text:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

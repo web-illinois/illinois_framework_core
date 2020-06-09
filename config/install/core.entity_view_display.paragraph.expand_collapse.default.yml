@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.expand_collapse.field_collapsed_text
+    - field.field.paragraph.expand_collapse.field_expanded_text
+    - paragraphs.paragraphs_type.expand_collapse
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.expand_collapse.default
+targetEntityType: paragraph
+bundle: expand_collapse
+mode: default
+content:
+  field_collapsed_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_expanded_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

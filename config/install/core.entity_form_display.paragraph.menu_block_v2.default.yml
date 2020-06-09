@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.menu_block_v2.field_menu_block
+    - paragraphs.paragraphs_type.menu_block_v2
+  module:
+    - paragraphs
+third_party_settings: {  }
+id: paragraph.menu_block_v2.default
+targetEntityType: paragraph
+bundle: menu_block_v2
+mode: default
+content:
+  field_menu_block:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

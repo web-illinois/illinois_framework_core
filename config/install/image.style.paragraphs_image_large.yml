@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: paragraphs_image_large
+label: 'Paragraphs Image - Large'
+effects:
+  0820b95a-66bd-492f-af3a-66ef336c343b:
+    uuid: 0820b95a-66bd-492f-af3a-66ef336c343b
+    id: image_scale
+    weight: 1
+    data:
+      width: 325
+      height: null
+      upscale: false

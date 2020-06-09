@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: menu_block_v2
-label: 'Menu Block 2.0'
-icon_uuid: null
-icon_default: null
-description: 'Updated Menu Block paragraph type'
-behavior_plugins: {  }

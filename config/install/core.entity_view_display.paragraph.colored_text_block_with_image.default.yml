@@ -7,15 +7,9 @@ dependencies:
     - image.style.paragraphs_image_large
     - paragraphs.paragraphs_type.colored_text_block_with_image
   module:
-    - field_layout
     - image
-    - layout_discovery
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
+third_party_settings: {  }
 id: paragraph.colored_text_block_with_image.default
 targetEntityType: paragraph
 bundle: colored_text_block_with_image

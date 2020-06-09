@@ -6,8 +6,6 @@ dependencies:
     - node.type.content_page
     - paragraphs.paragraphs_type.colored_text_block_with_image
     - paragraphs.paragraphs_type.cta_content
-    - paragraphs.paragraphs_type.menu_block
-    - paragraphs.paragraphs_type.menu_block_content
     - paragraphs.paragraphs_type.text_with_image_and_header
     - paragraphs.paragraphs_type.two_column_text
   module:
@@ -28,23 +26,15 @@ settings:
     negate: 1
     target_bundles:
       colored_text_block_with_image: colored_text_block_with_image
-      menu_block: menu_block
       text_with_image_and_header: text_with_image_and_header
       cta_content: cta_content
       two_column_text: two_column_text
-      menu_block_content: menu_block_content
     target_bundles_drag_drop:
       colored_text_block_with_image:
         enabled: true
         weight: 8
       expand_collapse:
         weight: 9
-        enabled: false
-      menu_block:
-        enabled: true
-        weight: 10
-      photo_grid:
-        weight: 11
         enabled: false
       call_to_action:
         weight: 12
@@ -61,10 +51,4 @@ settings:
       two_column_text:
         enabled: true
         weight: 14
-      menu_block_content:
-        enabled: true
-        weight: 17
-      menu_block_v2:
-        weight: 18
-        enabled: false
 field_type: entity_reference_revisions

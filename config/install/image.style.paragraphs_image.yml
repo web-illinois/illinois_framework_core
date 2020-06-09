@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: paragraphs_image
+label: 'Paragraphs Image'
+effects:
+  830a1e62-ea5e-4421-a553-41f6d1521697:
+    uuid: 830a1e62-ea5e-4421-a553-41f6d1521697
+    id: image_scale
+    weight: 1
+    data:
+      width: 200
+      height: null
+      upscale: false

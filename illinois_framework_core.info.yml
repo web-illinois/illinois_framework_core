@@ -16,6 +16,7 @@ dependencies:
   - node
   - options
   - paragraphs
+  - pathauto
   - taxonomy
   - text
 #components:

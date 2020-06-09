@@ -39,18 +39,6 @@ settings:
       embeded_block:
         weight: 16
         enabled: false
-      menu_block:
-        weight: 16
-        enabled: false
-      menu_block_content:
-        weight: 17
-        enabled: false
-      menu_block_v2:
-        weight: 18
-        enabled: false
-      photo_grid:
-        weight: 19
-        enabled: false
       rich_text:
         weight: 20
         enabled: false

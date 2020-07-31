@@ -10,6 +10,7 @@
         "drupal/anchor_link": "^2.4",
         "drupal/bamboo_twig": "^4.1",
         "drupal/core-recommended": "^8.9.0",
+        "drupal/devel": "^4.0",
         "drupal/diff": "^1.0",
         "drupal/entity_usage": "^2.0@beta",
         "drupal/extlink": "^1.3",

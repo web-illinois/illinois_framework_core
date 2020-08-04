@@ -8,6 +8,7 @@
         "cweagans/composer-patches": "^1.6",
         "drupal/admin_toolbar": "^2.2",
         "drupal/anchor_link": "^2.4",
+        "drupal/backup_migrate": "^4.1",
         "drupal/bamboo_twig": "^4.1",
         "drupal/core-recommended": "^8.9.0",
         "drupal/devel": "^4.0",

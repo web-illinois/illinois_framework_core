@@ -1,0 +1,49 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.blog.body
+    - field.field.node.blog.field_if_author
+    - field.field.node.blog.field_if_date
+    - field.field.node.blog.field_if_meda_featured_image
+    - field.field.node.blog.field_if_related_people
+    - field.field.node.blog.field_paragraph
+    - field.field.node.blog.field_tags
+    - node.type.blog
+  module:
+    - text
+    - user
+id: node.blog.teaser
+targetEntityType: node
+bundle: blog
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 2
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_if_meda_featured_image:
+    type: entity_reference_entity_view
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_if_author: true
+  field_if_date: true
+  field_if_related_people: true
+  field_paragraph: true
+  field_tags: true

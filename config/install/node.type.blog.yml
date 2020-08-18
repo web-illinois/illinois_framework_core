@@ -5,9 +5,8 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
+    available_menus: {  }
+    parent: ''
 name: Blog
 type: blog
 description: 'The Blog CT is used for shorter news stories, sometimes with comments enabled, and may have different permissions to allow for students or other, non-standard site editor, users to post.'

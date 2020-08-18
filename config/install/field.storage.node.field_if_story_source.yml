@@ -2,17 +2,17 @@ langcode: en
 status: true
 dependencies:
   module:
+    - link
     - node
-    - text
-id: node.body
-field_name: body
+id: node.field_if_story_source
+field_name: field_if_story_source
 entity_type: node
-type: text_with_summary
+type: link
 settings: {  }
-module: text
+module: link
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
-persist_with_no_fields: true
+persist_with_no_fields: false
 custom_storage: false

@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_if_related_people
+    - node.type.news
+id: node.news.field_if_related_people
+field_name: field_if_related_people
+entity_type: node
+bundle: news
+label: 'Related people'
+description: 'Enter NetIDs for members of this unit who are associated with this content.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

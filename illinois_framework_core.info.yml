@@ -1,14 +1,14 @@
-name: 'Illinois Framework Lightning Core'
+name: 'Illinois Framework Core'
 core: 8.x
-core_version_requirement: '^8'
+core_version_requirement: ^8
 type: module
 package: 'Illinois Framework'
 description: 'Shared functionality for the Illinois Framework.'
 dependencies:
-  - drupal:node
-  - drupal:path
-  - drupal:text
-  - drupal:user
+  - 'drupal:node'
+  - 'drupal:path'
+  - 'drupal:text'
+  - 'drupal:user'
   - file
   - image
   - link
@@ -19,8 +19,3 @@ dependencies:
   - pathauto
   - taxonomy
   - text
-#components:
-#  - lightning_contact_form
-#  - lightning_page
-#  - lightning_roles
-#  - lightning_search

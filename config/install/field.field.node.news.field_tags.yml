@@ -3,12 +3,12 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_tags
-    - node.type.content_page
+    - node.type.news
     - taxonomy.vocabulary.tags
-id: node.content_page.field_tags
+id: node.news.field_tags
 field_name: field_tags
 entity_type: node
-bundle: content_page
+bundle: news
 label: Tags
 description: ''
 required: false
@@ -23,6 +23,6 @@ settings:
     sort:
       field: name
       direction: asc
-    auto_create: false
-    auto_create_bundle: tags
+    auto_create: true
+    auto_create_bundle: ''
 field_type: entity_reference

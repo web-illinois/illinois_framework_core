@@ -2,18 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_if_blog_paragraph
-    - node.type.blog
+    - field.storage.node.field_paragraph
+    - node.type.news
   module:
     - entity_reference_revisions
-id: node.blog.field_if_blog_paragraph
-field_name: field_if_blog_paragraph
+id: node.news.field_paragraph
+field_name: field_paragraph
 entity_type: node
-bundle: blog
+bundle: news
 label: Paragraph
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

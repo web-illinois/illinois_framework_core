@@ -3,19 +3,19 @@ status: true
 dependencies:
   module:
     - node
-id: content_page_url
-label: 'Content Page URL'
+id: content_page
+label: 'Content Page'
 type: 'canonical_entities:node'
-pattern: '[node:menu-link:menu:machine-name]/[node:menu-link:parents:join-path]/[node:title]'
+pattern: '[node:menu-link:parents:join-path]/[node:title]'
 selection_criteria:
-  b6096a1e-c65b-4738-b8b3-ed560517f7da:
+  e7c430f2-8c8a-472d-9dd3-6e41d531ba40:
     id: node_type
     bundles:
       content_page: content_page
     negate: false
     context_mapping:
       node: node
-    uuid: b6096a1e-c65b-4738-b8b3-ed560517f7da
+    uuid: e7c430f2-8c8a-472d-9dd3-6e41d531ba40
 selection_logic: and
 weight: -5
 relationships: {  }

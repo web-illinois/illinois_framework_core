@@ -2,25 +2,31 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
     - field.field.node.content_page.body
     - field.field.node.content_page.field_if_meda_featured_image
     - field.field.node.content_page.field_paragraph
     - field.field.node.content_page.field_tags
     - node.type.content_page
   module:
-    - entity_reference_revisions
+    - layout_builder
     - text
     - user
-id: node.content_page.default
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.content_page.teaser
 targetEntityType: node
 bundle: content_page
-mode: default
+mode: teaser
 content:
   body:
     label: hidden
-    type: text_default
+    type: text_summary_or_trimmed
     weight: 2
-    settings: {  }
+    settings:
+      trim_length: 200
     third_party_settings: {  }
     region: content
   field_if_meda_featured_image:
@@ -32,26 +38,11 @@ content:
       link: false
     third_party_settings: {  }
     region: content
-  field_paragraph:
-    weight: 3
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
-  field_tags:
-    type: entity_reference_label
-    weight: 4
-    region: content
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
   links:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_paragraph: true
+  field_tags: true

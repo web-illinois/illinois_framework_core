@@ -1,5 +1,5 @@
 {
-    "name": "web-illinois/illinois-framework-core",
+    "name": "web-illinois/illinois_framework_core",
     "description": "Contrib and custom modules that are required by the Illnois Framework",
     "type": "drupal-module",
     "license": "GPL-2.0-or-later",

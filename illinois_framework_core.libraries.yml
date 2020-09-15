@@ -1,0 +1,9 @@
+giving-page:
+  version: 1.0
+  css:
+    theme:
+      css/giving.css: {}
+  js:
+    js/giving.js: {}
+  dependencies:
+    - core/jquery

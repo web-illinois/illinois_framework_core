@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function illinois_framework_core_theme() {
+  return array(
+    // Make Drupal aware of our templates, base hook makes variables available within templates
+    'node__fund_listing_page__full' => array(
+      'base hook' => 'node',
+    ),
+    'field__node__field_funds__fund_listing_page' => array(
+      'base hook' => 'field',
+    ),
+    'field__node__field_department_name__fund_listing_page' => array(
+      'base hook' => 'field',
+    ),
+    'field__node__field_tracking_code__fund_listing_page' => array(
+      'base hook' => 'field',
+    ),
+  );
+}

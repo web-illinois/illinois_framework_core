@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.fund_listing_page.body
+    - field.field.node.fund_listing_page.field_department_name
+    - field.field.node.fund_listing_page.field_footer
+    - field.field.node.fund_listing_page.field_funds
+    - field.field.node.fund_listing_page.field_test_mode_
+    - field.field.node.fund_listing_page.field_tracking_code
+    - node.type.fund_listing_page
+  module:
+    - text
+    - user
+third_party_settings: {}
+id: node.fund_listing_page.teaser
+targetEntityType: node
+bundle: fund_listing_page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_department_name: true
+  field_footer: true
+  field_funds: true
+  field_test_mode_: true
+  field_tracking_code: true

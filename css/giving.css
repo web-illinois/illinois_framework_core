@@ -1,0 +1,116 @@
+#giving-total-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #eee;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+}
+
+#giving-total-wrapper {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#giving-total-fixed h3 {
+  float: left;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+#giving-total-fixed .button {
+  width: auto;
+  height: auto;
+  background-color: #0678be;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px 15px;
+}
+
+#giving-total-fixed .off-button {
+  border: 1px solid #999;
+  background-color: #ccc;
+  color: #777;
+  padding: 8px 12px;
+}
+
+#giving-total-fixed .off-button:hover {
+  color: #333 !important;
+}
+
+main {
+  padding-bottom: 100px;
+}
+
+@media (max-width: 600px) {
+  #giving-total-fixed {
+    position: inherit;
+  }
+
+  main {
+    padding-bottom: 0px;
+  }
+}
+
+.giving-test-mode-warning {
+  background-color: #ff5050;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.field-node--field-test-mode- {
+  display: none;
+}
+
+.field--name-field-test-mode- {
+  display: none;
+}
+
+#giving-total-fixed .button {
+  background-image: none;
+  margin-right: 0px;
+}
+
+form#gift_form .section {
+  padding: 0px;
+}
+
+form#gift_form a[name] {
+  color: initial;
+}
+
+form#gift_form a[name]:hover {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+form#gift_form fieldset {
+  padding-bottom: 15px;
+}
+
+form#gift_form label {
+  margin: 0 15px;
+  margin-left: 0px !important;
+  display: inline-block;
+}
+
+form#gift_form span.giftammt {
+  border-top: 1px solid #e84a27;
+  border-bottom: 3px solid #e84a27;
+  margin: 10px 0 50px 0;
+  padding: 0 10px;
+  display: list-item;
+  list-style: none;
+}
+
+form#gift_form input[type="checkbox"],
+form#gift_form input[type="text"],
+form#gift_form input[type="radio"] {
+  margin-bottom: 0;
+}

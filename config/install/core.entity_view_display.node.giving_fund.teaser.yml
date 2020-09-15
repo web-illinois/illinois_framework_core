@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.giving_fund.body
+    - field.field.node.giving_fund.field_fund_id
+    - field.field.node.giving_fund.field_gift_amounts
+    - node.type.giving_fund
+  module:
+    - text
+    - user
+third_party_settings: {}
+id: node.giving_fund.teaser
+targetEntityType: node
+bundle: giving_fund
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_fund_id: true
+  field_gift_amounts: true

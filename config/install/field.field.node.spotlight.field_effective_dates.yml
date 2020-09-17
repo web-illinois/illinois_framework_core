@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_effective_dates
+    - node.type.spotlight
+  module:
+    - datetime_range
+id: node.spotlight.field_effective_dates
+field_name: field_effective_dates
+entity_type: node
+bundle: spotlight
+label: 'Effective Dates'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+    default_end_date_type: now
+    default_end_date: now
+default_value_callback: ''
+settings: {  }
+field_type: daterange

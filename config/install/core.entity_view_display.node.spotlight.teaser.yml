@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.spotlight.body
+    - field.field.node.spotlight.field_effective_dates
+    - field.field.node.spotlight.field_if_meda_featured_image
+    - field.field.node.spotlight.field_if_related_people
+    - field.field.node.spotlight.field_more_details
+    - field.field.node.spotlight.field_paragraph
+    - field.field.node.spotlight.field_tags
+    - field.field.node.spotlight.field_type
+    - node.type.spotlight
+  module:
+    - text
+    - user
+id: node.spotlight.teaser
+targetEntityType: node
+bundle: spotlight
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_effective_dates: true
+  field_if_meda_featured_image: true
+  field_if_related_people: true
+  field_more_details: true
+  field_paragraph: true
+  field_tags: true
+  field_type: true

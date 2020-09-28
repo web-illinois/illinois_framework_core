@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.award_winner.body
+    - field.field.node.award_winner.field_if_award
+    - field.field.node.award_winner.field_if_date
+    - field.field.node.award_winner.field_if_meda_featured_image
+    - field.field.node.award_winner.field_tags
+    - node.type.award_winner
+  module:
+    - text
+    - user
+id: node.award_winner.teaser
+targetEntityType: node
+bundle: award_winner
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 2
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_if_meda_featured_image:
+    type: entity_reference_entity_view
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_if_award: true
+  field_if_date: true
+  field_tags: true

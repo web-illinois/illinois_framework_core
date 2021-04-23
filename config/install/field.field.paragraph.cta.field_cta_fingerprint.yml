@@ -1,0 +1,21 @@
+uuid: 29aa3467-50c1-4d65-a927-004b35e6ded5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_fingerprint
+    - paragraphs.paragraphs_type.cta
+  module:
+    - options
+id: paragraph.cta.field_cta_fingerprint
+field_name: field_cta_fingerprint
+entity_type: paragraph
+bundle: cta
+label: Fingerprint
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,30 @@
+uuid: 39f65fb6-93a5-4ff6-a998-ed9c55ecd751
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_cta_fingerprint
+field_name: field_cta_fingerprint
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: full
+      label: 'Fingerprint full-size'
+    -
+      value: left
+      label: 'Fingerprint fade-left'
+    -
+      value: right
+      label: 'Fingerprint fade-right'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

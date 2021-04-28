@@ -4,10 +4,6 @@ dependencies:
   config:
     - field.storage.node.field_paragraph
     - node.type.content_page
-    - paragraphs.paragraphs_type.colored_text_block_with_image
-    - paragraphs.paragraphs_type.cta_content
-    - paragraphs.paragraphs_type.text_with_image_and_header
-    - paragraphs.paragraphs_type.two_column_text
   module:
     - entity_reference_revisions
 id: node.content_page.field_paragraph
@@ -24,31 +20,11 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     negate: 1
-    target_bundles:
-      colored_text_block_with_image: colored_text_block_with_image
-      text_with_image_and_header: text_with_image_and_header
-      cta_content: cta_content
-      two_column_text: two_column_text
     target_bundles_drag_drop:
-      colored_text_block_with_image:
-        enabled: true
-        weight: 8
       expand_collapse:
         weight: 9
-        enabled: false
-      call_to_action:
-        weight: 12
         enabled: false
       rich_text:
         weight: 12
         enabled: false
-      text_with_image_and_header:
-        enabled: true
-        weight: 13
-      cta_content:
-        enabled: true
-        weight: 14
-      two_column_text:
-        enabled: true
-        weight: 14
 field_type: entity_reference_revisions

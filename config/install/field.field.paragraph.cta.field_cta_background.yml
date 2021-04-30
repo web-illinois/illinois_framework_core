@@ -1,0 +1,23 @@
+uuid: 1e861456-6f23-4ee0-9621-251cf908bfe7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_background
+    - paragraphs.paragraphs_type.cta
+  module:
+    - options
+id: paragraph.cta.field_cta_background
+field_name: field_cta_background
+entity_type: paragraph
+bundle: cta
+label: Background
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: bluegradient
+default_value_callback: ''
+settings: {  }
+field_type: list_string

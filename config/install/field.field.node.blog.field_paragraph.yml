@@ -22,19 +22,7 @@ settings:
     negate: 0
     target_bundles: null
     target_bundles_drag_drop:
-      colored_text_block_with_image:
-        weight: 6
-        enabled: false
-      cta_content:
-        weight: 7
-        enabled: false
       from_library:
         weight: 8
-        enabled: false
-      text_with_image_and_header:
-        weight: 9
-        enabled: false
-      two_column_text:
-        weight: 10
         enabled: false
 field_type: entity_reference_revisions

@@ -1,0 +1,39 @@
+uuid: b4852014-b5ee-4be2-b76c-83b9c43c383c
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_cta_background
+field_name: field_cta_background
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: bluegradient
+      label: 'Blue Gradient'
+    -
+      value: orangegradient
+      label: 'Orange Gradient'
+    -
+      value: illiniblue
+      label: 'Illini Blue'
+    -
+      value: illiniorange
+      label: 'Illini Orange'
+    -
+      value: gray
+      label: Gray
+    -
+      value: white
+      label: White
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

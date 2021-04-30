@@ -11,6 +11,7 @@ dependencies:
   - 'drupal:user'
   - file
   - image
+  - image_widget_crop
   - link
   - menu_ui
   - node

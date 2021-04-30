@@ -22,15 +22,6 @@ settings:
     negate: 1
     target_bundles: null
     target_bundles_drag_drop:
-      call_to_action:
-        weight: 9
-        enabled: false
-      colored_text_block_with_image:
-        weight: 10
-        enabled: false
-      cta_content:
-        weight: 11
-        enabled: false
       expand_collapse:
         weight: 12
         enabled: false
@@ -39,11 +30,5 @@ settings:
         enabled: false
       rich_text:
         weight: 14
-        enabled: false
-      text_with_image_and_header:
-        weight: 15
-        enabled: false
-      two_column_text:
-        weight: 16
         enabled: false
 field_type: entity_reference_revisions

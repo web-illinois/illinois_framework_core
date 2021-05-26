@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: spotlight_detail_3_
+label: 'Spotlight Detail 3:4'
+effects:
+  0dec2027-d15b-47fa-8eff-00afa77e5ef6:
+    uuid: 0dec2027-d15b-47fa-8eff-00afa77e5ef6
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 300
+      height: 400
+      anchor: center-center

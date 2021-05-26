@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.spotlight_list
+    - field.field.media.image.field_if_media_image_caption
+    - field.field.media.image.field_if_media_image_credit
+    - field.field.media.image.field_media_image
+    - image.style.spotlight_list
+    - media.type.image
+  module:
+    - image
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: media.image.spotlight_list
+targetEntityType: media
+bundle: image
+mode: spotlight_list
+content:
+  field_media_image:
+    label: visually_hidden
+    settings:
+      image_style: spotlight_list
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_if_media_image_caption: true
+  field_if_media_image_credit: true
+  name: true
+  thumbnail: true
+  uid: true

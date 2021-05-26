@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: spotlight_list
+label: 'Spotlight List'
+effects:
+  5210c395-c2d7-4b58-95bc-9ac57465fa4c:
+    uuid: 5210c395-c2d7-4b58-95bc-9ac57465fa4c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 150
+      height: 150
+      anchor: center-center

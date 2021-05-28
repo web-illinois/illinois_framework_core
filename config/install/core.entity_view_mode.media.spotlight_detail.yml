@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - media
-id: media.spotlight_detail
-label: 'Spotlight Detail'
-targetEntityType: media
-cache: true

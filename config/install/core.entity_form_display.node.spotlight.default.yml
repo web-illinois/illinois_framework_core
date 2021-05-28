@@ -12,61 +12,116 @@ dependencies:
     - field.field.node.spotlight.field_type
     - node.type.spotlight
   module:
-    - entity_reference_revisions
+    - datetime_range
+    - link
+    - media_library
+    - paragraphs
+    - path
     - text
-    - user
 id: node.spotlight.default
 targetEntityType: node
 bundle: spotlight
 mode: default
 content:
   body:
-    label: hidden
-    type: text_default
-    weight: 2
-    settings: {  }
+    type: text_textarea_with_summary
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
     third_party_settings: {  }
     region: content
-  field_if_meda_featured_image:
-    weight: 1
-    label: hidden
-    settings:
-      view_mode: spotlight_detail
-      link: false
+  field_effective_dates:
+    type: daterange_default
+    weight: 8
+    region: content
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_entity_view
+  field_if_meda_featured_image:
+    weight: 2
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
     region: content
   field_if_related_people:
-    weight: 5
-    label: above
+    weight: 7
     settings:
-      link: true
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_autocomplete
+    region: content
+  field_more_details:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   field_paragraph:
-    weight: 3
-    label: hidden
+    weight: 4
     settings:
-      view_mode: default
-      link: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
+    type: paragraphs
     region: content
   field_tags:
-    weight: 4
-    label: above
+    weight: 6
     settings:
-      link: true
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_autocomplete
     region: content
-  links:
-    weight: 0
+  field_type:
+    type: options_select
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
+  path:
+    type: path
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
-  field_effective_dates: true
-  field_more_details: true
-  field_type: true
+  created: true
+  promote: true
+  sticky: true
+  uid: true
+  url_redirects: true

@@ -15,7 +15,7 @@ dependencies:
     - entity_reference_revisions
     - text
     - user
-  id: node.spotlight.default
+id: node.spotlight.default
 targetEntityType: node
 bundle: spotlight
 mode: default
@@ -31,8 +31,8 @@ content:
     weight: 1
     label: hidden
     settings:
-      view_mode: spotlight_detail
-      link: false
+      link: true
+      view_mode: default
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content

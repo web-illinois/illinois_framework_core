@@ -18,7 +18,7 @@
             });
             $("#gift_total", context).text("$" + b)
         }
-        
+
         $("#gift-total", context).prepend("<h3>Gift Total: <span id='gift_total'>$0.00</span></h3>");
         $("label[class*='gift_other_text']", context).each(function() {
             $(this, context).css("display", "none")
@@ -30,20 +30,33 @@
         });
         $("input[id^='gift_value_']", context).each(function(a, b) {
             $(b, context).blur(function() {
+              if ($(b, context).val() === "") {
+                  $(b, context).val(0);
+              }
 
-                if ($(b, context).val() === "") {
-                    $(b, context).attr("value", "0");
-                }
+              $("#givingErrorNum" + a, context).remove();
 
-                $(b, context).val().match(RegExp(/^([0-9]?){10}\.?([0-9]?){2}$/)) ? ($("#givingErrorNum" + a, context).remove(), "" != $(b, context).attr("value") ? $($("input[id^='gift_other_']", context)[a]).attr({
+              // Check if the other value is a valid number
+              if ( $(b, context).val().match(RegExp(/^\d{1,10}\.?([0-9]?){2}$/)) ) {
+                // Check that the other value is greater than the minimum donation of five dollars
+                if ( $(b, context).val() >= 5 ) {
+                  // Set the attribute for the other value to what the user has entered
+                  $($("input[id^='gift_other_']", context)[a]).attr({
                     checked: "checked",
                     value: $(b, context).val()
-                }) : $($("input[id^='gift_other_']", context)[a], context).attr({
-                    value: 0
-                })) : $("#givingErrorNum" + a, context).hasClass("error") || ($($("input[id^='gift_other_']", context)[a], context).attr({
-                    value: 0
-                }), $(b, context).after(" <em class='error' id='givingErrorNum" + a + "'>Please enter a valid dollar amount</em>"));
-                c()
+                  });
+                }
+                else {
+                  $(b, context).after(" <em class='error' id='givingErrorNum" + a + "'>Please enter a dollar amount more than or equal to $5</em>");
+                  $($("input[id^='gift_other_']", context)[a], context).attr({ value: 0 });
+                }
+              }
+              else {
+                $(b, context).after(" <em class='error' id='givingErrorNum" + a + "'>Please enter a valid dollar amount</em>");
+                $($("input[id^='gift_other_']", context)[a], context).attr({ value: 0 });
+              }
+
+              c();
             })
         });
         $("input[name^='FUND']", context).each(function(a) {
@@ -92,24 +105,28 @@
             });
         });
 
-        document.getElementById("gift_form").onsubmit = function validateForm() {
-            var totalValue = document.getElementById("gift_total").innerText;
-            if (totalValue == "$0.00" || totalValue == "$NAN") {
-                alert("Please select or enter an amount for at least one fund.");
-                return false;
-            } else {
-                return true;
+        // Form validation on submit
+        $("#gift_form", context).on("submit", function() {
+          var totalValue = document.getElementById("gift_total").innerText;
+          if( $("input[class='other-fund-name']", context).val().length ) {
+            if( $("input:radio.other-fund-radio:checked", context).val() == 0 ) {
+              alert("Please select or enter an amount for the other fund.");
+              return false;
             }
-        }
+          }
+          if( $("input:radio.other-fund-radio:checked", context).val() != 0 ) {
+            if( $("input[class='other-fund-name']", context).val().length == 0 ) {
+              alert("Please specify the fund you wish to donate to in the 'Other' section.");
+              return false;
+            }
+          }
+          if (totalValue == "$0.00" || totalValue == "$NAN") {
+              alert("Please select or enter an amount for at least one fund.");
+              return false;
+          } else {
+              return true;
+          }
+        });
     }
   }
-
-
-
 })(jQuery, Drupal);
-
-
-
-
-
-

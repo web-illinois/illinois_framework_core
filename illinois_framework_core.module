@@ -20,3 +20,7 @@ function illinois_framework_core_theme() {
     ),
   );
 }
+
+function illinois_framework_core_preprocess_field(&$variables) {
+  $variables['node'] = $variables['element']['#object'];
+}

@@ -57,25 +57,23 @@
   ]
 -%}
 
-{%- for item in items -%}
-  <div style="display:none">{{ item.content }}</div>
-  {% set name = loop.index %}
-  <input name="{{ 'FUND' ~ name }}" type="hidden" value="{{- item.content['#node'].field_fund_id.value -}}/{{- item.content['#node'].title.value -}}" />
-{%- endfor -%}
-
 <p><strong>To make a gift, select the amount for the fund(s) you wish to support, then click the “Continue” button below. You will be directed to the University of Illinois Foundation’s secure online giving site for your personal and credit card information. To clear all inputs and selections click "Start over."</strong><br /><br /></p>
 
+{% set loop_number = 0 %}
 {%- for item in items -%}
-  {% set gift_num = 'GIFT_AMOUNT' ~ loop.index %}
+  {% set loop_number = loop.index %}
+  {% set gift_num = 'GIFT_AMOUNT' ~ loop_number %}
 
   <span class="section">
     <h2> <a name="{{- item.content['#node'].title.value -}}" id="{{- item.content['#node'].title.value -}}">{{- item.content['#node'].title.value -}} </a></h2>
-    {{ item.content['#node'].body.value |raw }} 
+    {{ item.content['#node'].body.value |raw }}
   </span>
 
   <span class="giftammt">
 
     <fieldset>
+
+      <input name="{{ 'FUND' ~ loop_number }}" id="{{ 'FUND' ~ loop_number }}" type="hidden" value="{{- item.content['#node'].field_fund_id.value -}}/{{- item.content['#node'].title.value -}}" />
 
       <legend class="desc" for="{{ gift_num }}">
         <strong>Gift amount <span class="hidden">for {{- item.content['#node'].title.value -}}</span></strong>
@@ -88,15 +86,15 @@
       {%- endfor -%}
 
       <label class="choice">
-        <input checked="checked" class="field radio" name="{{ gift_num }}" title="$0" type="radio" value="0.00" />$0
+        <input checked="checked" class="field radio" name="{{ gift_num }}" title="$0" type="radio" value="0" />$0
       </label>
 
       <label class="choice inline">
-        <input class="field radio" id="gift_other_{{ loop.index }}" name="{{ gift_num }}" title="$0" type="radio" value="0" />Other 
+        <input class="field radio" id="gift_other_{{ loop.index }}" name="{{ gift_num }}" title="$0" type="radio" value="0" />Other
       </label>
 
       <label class="gift_other_text inline" style="display: none;">
-        $ <input class="gift_value field" id="gift_value_{{ loop.index }}" size="6" title="Other amount" type="text" />
+        $ <input class="gift_value field" id="gift_value_{{ loop.index }}" size="6" title="Other amount" type="number" min="5" step="0.01" />
       </label>
 
     </fieldset>
@@ -104,6 +102,54 @@
   </span>
 {%- endfor -%}
 
+{%- if (node.field_write_in_fund.value == 1) -%}
+  {% set loop_number = loop_number + 1 %}
+  {% set gift_num = 'GIFT_AMOUNT' ~ loop_number %}
+  {% set fund_name = 'FUND' ~ loop_number %}
+
+  <span class="section">
+    <h2> <a name="other_fund">Other</a></h2>
+    <p>Please indicate where to direct the donation</p>
+    <input name="{{ fund_name }}" type="text" size="40" id="{{ fund_name }}" class="other-fund-name" placeholder="Other - please specify">
+  </span>
+
+  <span class="giftammt">
+
+    <fieldset>
+
+      <legend class="desc" for="{{ gift_num }}">
+        <strong>Gift amount <span class="hidden">for {{- item.content['#node'].title.value -}}</span></strong>
+      </legend>
+
+      <label class="choice">
+        <input class="field radio other-fund-radio" name="{{ gift_num }}" title="$500" type="radio" value="500.00" />$500
+      </label>
+      <label class="choice">
+        <input class="field radio other-fund-radio" name="{{ gift_num }}" title="$250" type="radio" value="250.00" />$250
+      </label>
+      <label class="choice">
+        <input class="field radio other-fund-radio" name="{{ gift_num }}" title="$100" type="radio" value="100.00" />$100
+      </label>
+      <label class="choice">
+        <input class="field radio other-fund-radio" name="{{ gift_num }}" title="$50" type="radio" value="50.00" />$50
+      </label>
+
+      <label class="choice">
+        <input checked="checked" class="field radio other-fund-radio" name="{{ gift_num }}" title="$0" type="radio" value="0" />$0
+      </label>
+
+      <label class="choice inline">
+        <input class="field radio other-fund-radio" id="gift_other_{{ loop_number }}" name="{{ gift_num }}" title="$0" type="radio" value="0" />Other
+      </label>
+
+      <label class="gift_other_text inline" style="display: none;">
+        $ <input class="gift_value field" id="gift_value_{{ loop_number }}" size="6" title="Other amount" type="number" min="5" step="0.01" />
+      </label>
+
+    </fieldset>
+
+  </span>
+{%- endif -%}
 
 <div id="giving-total-fixed">
 <div id="giving-total-wrapper">

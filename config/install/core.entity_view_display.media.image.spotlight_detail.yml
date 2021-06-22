@@ -1,0 +1,41 @@
+uuid: 88ccbc23-ce0a-46da-8a5e-c3b3aa2daca2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.spotlight_detail
+    - field.field.media.image.field_if_media_image_caption
+    - field.field.media.image.field_if_media_image_credit
+    - field.field.media.image.field_media_image
+    - image.style.spotlight_detail_3_
+    - media.type.image
+  module:
+    - image
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+_core:
+  default_config_hash: Mb__mgCETaXob9aK9fGiTOklAIem-yWk60jB258bFEM
+id: media.image.spotlight_detail
+targetEntityType: media
+bundle: image
+mode: spotlight_detail
+content:
+  field_media_image:
+    label: visually_hidden
+    settings:
+      image_style: spotlight_detail_3_
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_if_media_image_caption: true
+  field_if_media_image_credit: true
+  name: true
+  thumbnail: true
+  uid: true

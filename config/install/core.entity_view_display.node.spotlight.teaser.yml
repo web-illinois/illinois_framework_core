@@ -1,3 +1,4 @@
+uuid: 442b4186-d473-4708-9b26-c7b15f741b0a
 langcode: en
 status: true
 dependencies:
@@ -15,6 +16,8 @@ dependencies:
   module:
     - text
     - user
+_core:
+  default_config_hash: 1gnCnyikCzua2e9gCHDgPF9Jm-w05HLwli2JdQKskiM
 id: node.spotlight.teaser
 targetEntityType: node
 bundle: spotlight
@@ -23,19 +26,27 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 1
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  field_if_meda_featured_image:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: spotlight_list
+      link: false
+    third_party_settings: {  }
   links:
-    weight: 100
+    weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   field_effective_dates: true
-  field_if_meda_featured_image: true
   field_if_related_people: true
   field_more_details: true
   field_paragraph: true

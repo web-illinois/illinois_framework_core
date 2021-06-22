@@ -9,11 +9,11 @@ dependencies:
     - field.field.node.fund_listing_page.field_funds
     - field.field.node.fund_listing_page.field_test_mode_
     - field.field.node.fund_listing_page.field_tracking_code
+    - field.field.node.fund_listing_page.field_write_in_fund
     - node.type.fund_listing_page
   module:
     - text
     - user
-third_party_settings: {}
 id: node.fund_listing_page.teaser
 targetEntityType: node
 bundle: fund_listing_page
@@ -36,3 +36,4 @@ hidden:
   field_funds: true
   field_test_mode_: true
   field_tracking_code: true
+  field_write_in_fund: true

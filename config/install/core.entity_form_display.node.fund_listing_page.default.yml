@@ -8,11 +8,11 @@ dependencies:
     - field.field.node.fund_listing_page.field_funds
     - field.field.node.fund_listing_page.field_test_mode_
     - field.field.node.fund_listing_page.field_tracking_code
+    - field.field.node.fund_listing_page.field_write_in_fund
     - node.type.fund_listing_page
   module:
     - path
     - text
-third_party_settings: {}
 id: node.fund_listing_page.default
 targetEntityType: node
 bundle: fund_listing_page
@@ -25,6 +25,7 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
     region: content
   created:
@@ -42,7 +43,7 @@ content:
     type: string_textfield
     region: content
   field_footer:
-    weight: 9
+    weight: 10
     settings:
       rows: 5
       placeholder: ''
@@ -73,6 +74,13 @@ content:
     third_party_settings: {  }
     type: number
     region: content
+  field_write_in_fund:
+    weight: 9
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   path:
     type: path
     weight: 3
@@ -83,7 +91,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 121
+    weight: 12
     third_party_settings: {  }
     region: content
   title:
@@ -105,8 +113,10 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 11
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   promote: true
   sticky: true

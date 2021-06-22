@@ -1,0 +1,10 @@
+uuid: bc6d1695-224b-4038-bd03-0d83b8946fe4
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.spotlight_list
+label: 'Spotlight List'
+targetEntityType: media
+cache: true

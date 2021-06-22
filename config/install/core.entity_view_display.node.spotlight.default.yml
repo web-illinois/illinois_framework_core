@@ -1,3 +1,4 @@
+uuid: 42498b4d-f9e1-48fa-953c-fbfa050ee473
 langcode: en
 status: true
 dependencies:
@@ -15,6 +16,8 @@ dependencies:
     - entity_reference_revisions
     - text
     - user
+_core:
+  default_config_hash: fbvIlemQdoYHy6yOzwdl1RL-PkYKeSaXNIoo5Agd0N4
 id: node.spotlight.default
 targetEntityType: node
 bundle: spotlight
@@ -31,8 +34,8 @@ content:
     weight: 1
     label: hidden
     settings:
-      link: true
-      view_mode: default
+      view_mode: spotlight_detail
+      link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content

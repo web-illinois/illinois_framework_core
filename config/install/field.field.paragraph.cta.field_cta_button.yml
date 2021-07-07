@@ -7,13 +7,15 @@ dependencies:
     - paragraphs.paragraphs_type.cta
   module:
     - link
+_core:
+  default_config_hash: gPdeStxm_VWBosUHHxa-oKZFRbjMJzyk76KkoMkcPps
 id: paragraph.cta.field_cta_button
 field_name: field_cta_button
 entity_type: paragraph
 bundle: cta
 label: Button(s)
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

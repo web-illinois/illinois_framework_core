@@ -17,7 +17,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: 1gnCnyikCzua2e9gCHDgPF9Jm-w05HLwli2JdQKskiM
+  default_config_hash: z107Jy4Sg-5U_ZSH5iyPTLm18BRqvPOOF8DvhIe90OY
 id: node.spotlight.teaser
 targetEntityType: node
 bundle: spotlight
@@ -28,7 +28,7 @@ content:
     type: text_summary_or_trimmed
     weight: 1
     settings:
-      trim_length: 600
+      trim_length: 200
     third_party_settings: {  }
     region: content
   field_if_meda_featured_image:

@@ -31,7 +31,9 @@
         "drupal/twig_field_value": "^2.0",
         "drupal/twig_tweak": "^2.6",
         "drupal/video_embed_field": "^2.4",
-        "drush/drush": "^10.2"
+        "drush/drush": "^10.2",
+        "npm-asset/blazy": "~1.0",
+        "npm-asset/slick-carousel": "~1.0"
     },
     "require-dev": {
         "drupal/console": "^1.9",
@@ -74,6 +76,7 @@
             "docroot/core": [
                 "type:drupal-core"
             ],
+            "docroot/libraries/slick": ["npm-asset/slick-carousel"],
             "docroot/libraries/{$name}": [
                 "type:drupal-library",
                 "type:bower-asset",
@@ -89,6 +92,13 @@
                 "type:drupal-theme"
             ]
         },
+        "drupal-libraries": {
+            "library-directory": "docroot/libraries",
+            "libraries": [
+              {"name": "blazy", "package": "npm-asset/blazy"},
+              {"name": "slick", "package": "npm-asset/slick-carousel"}
+            ]
+          },
         "installer-types": [
             "bower-asset",
             "npm-asset"

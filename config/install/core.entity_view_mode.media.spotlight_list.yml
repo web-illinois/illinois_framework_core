@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - media
+_core:
+  default_config_hash: XrWMr-sUKk5xaVewMZy3ZBL6nr0sfR0DfJuv_sK1ygk
 id: media.spotlight_list
 label: 'Spotlight List'
 targetEntityType: media

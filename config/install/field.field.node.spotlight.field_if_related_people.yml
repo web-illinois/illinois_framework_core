@@ -1,9 +1,12 @@
+uuid: 0b89b8a6-b198-4b81-b080-afd1a2c0fd54
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_if_related_people
     - node.type.spotlight
+_core:
+  default_config_hash: qNr5O57Iw1FdMFc3w6zvp6SMwAtyBVvnSGTMgOKUrW0
 id: node.spotlight.field_if_related_people
 field_name: field_if_related_people
 entity_type: node

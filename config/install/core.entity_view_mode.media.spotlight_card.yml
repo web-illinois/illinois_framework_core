@@ -1,0 +1,10 @@
+uuid: 2bf13846-02bf-407f-b16b-b8b8faa3e0f5
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.spotlight_card
+label: 'Spotlight Card'
+targetEntityType: media
+cache: true

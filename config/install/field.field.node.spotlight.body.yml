@@ -1,3 +1,4 @@
+uuid: 281314a7-85ad-4750-b33c-ba1c5b0aefe8
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - node.type.spotlight
   module:
     - text
+_core:
+  default_config_hash: hJ9FxCBqT4VhbrCoNn7LidiEkqPCr8Y4LVLh6T7nJcY
 id: node.spotlight.body
 field_name: body
 entity_type: node

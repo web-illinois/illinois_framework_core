@@ -1,3 +1,4 @@
+uuid: 3d3c1242-55a4-4f11-9a9a-bc8ea2265976
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,8 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
+_core:
+  default_config_hash: N-AS5uxZ2AG3Eem2GjJtYt630zAY8eZcTHIbpECVG9g
 name: Spotlight
 type: spotlight
 description: ''

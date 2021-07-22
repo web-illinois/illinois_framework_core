@@ -8,6 +8,8 @@ dependencies:
   module:
     - node
     - user
+_core:
+  default_config_hash: JnV259FPgnyHMWb-0dzHRVtFptB4UFVDXQBogX2NK0g
 id: spotlight_list
 label: 'Spotlight List'
 module: views

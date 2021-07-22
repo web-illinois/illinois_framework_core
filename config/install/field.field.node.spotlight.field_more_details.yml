@@ -1,3 +1,4 @@
+uuid: 9a84458f-4b14-437c-8c8e-632c7e92fe53
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - node.type.spotlight
   module:
     - link
+_core:
+  default_config_hash: sJEWc_qvs6HNawcPlsxvUlWg5vOKzdo_9z8ALJbGjgc
 id: node.spotlight.field_more_details
 field_name: field_more_details
 entity_type: node

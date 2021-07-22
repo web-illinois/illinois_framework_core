@@ -1,0 +1,10 @@
+uuid: b9dd3d6c-aebf-4dcd-b3c1-3291a14f18ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.spotlight_card
+label: 'Spotlight Card'
+targetEntityType: node
+cache: true

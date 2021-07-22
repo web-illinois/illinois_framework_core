@@ -1,3 +1,4 @@
+uuid: 4f209c5c-93c6-4ad4-9b5f-d4bd9dab0da7
 langcode: en
 status: true
 dependencies:
@@ -5,12 +6,16 @@ dependencies:
     - field.field.node.content_page.body
     - field.field.node.content_page.field_if_meda_featured_image
     - field.field.node.content_page.field_paragraph
+    - field.field.node.content_page.field_sidebar
+    - field.field.node.content_page.field_sidebar_paragraphs
     - field.field.node.content_page.field_tags
     - node.type.content_page
   module:
     - entity_reference_revisions
     - text
     - user
+_core:
+  default_config_hash: LKJVZtpwQ1mhepFP3R71GmgiQUMOgHdqIteZLCDvPJo
 id: node.content_page.default
 targetEntityType: node
 bundle: content_page
@@ -54,4 +59,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_sidebar: true
+  field_sidebar_paragraphs: true

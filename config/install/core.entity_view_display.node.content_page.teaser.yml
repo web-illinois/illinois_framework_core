@@ -1,3 +1,4 @@
+uuid: 0fa91a70-34d8-470b-9a97-22c0d9fd93ee
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - field.field.node.content_page.body
     - field.field.node.content_page.field_if_meda_featured_image
     - field.field.node.content_page.field_paragraph
+    - field.field.node.content_page.field_sidebar
+    - field.field.node.content_page.field_sidebar_paragraphs
     - field.field.node.content_page.field_tags
     - node.type.content_page
   module:
@@ -16,6 +19,8 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
+_core:
+  default_config_hash: rByzxtZ6JUxbOhcVSr6S1vwLyKXJDF8r2J-RTgIGN5s
 id: node.content_page.teaser
 targetEntityType: node
 bundle: content_page
@@ -45,4 +50,6 @@ content:
     third_party_settings: {  }
 hidden:
   field_paragraph: true
+  field_sidebar: true
+  field_sidebar_paragraphs: true
   field_tags: true

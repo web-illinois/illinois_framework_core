@@ -1,0 +1,23 @@
+uuid: 0d1e6ce3-78bd-41b4-a5be-32e90b98764d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sidebar_paragraphs
+    - node.type.content_page
+  module:
+    - options
+id: node.content_page.field_sidebar_paragraphs
+field_name: field_sidebar_paragraphs
+entity_type: node
+bundle: content_page
+label: 'Sidebar Paragraphs'
+description: 'How many paragraphs should be placed next to the sidebar navigation.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

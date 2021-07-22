@@ -27,6 +27,7 @@
         "drupal/pathauto": "^1.8",
         "drupal/pathologic": "^1.0@alpha",
         "drupal/redirect": "^1.6",
+        "drupal/slick_views": "^2.4",
         "drupal/twig_field_value": "^2.0",
         "drupal/twig_tweak": "^2.6",
         "drupal/video_embed_field": "^2.4",

@@ -1,0 +1,27 @@
+uuid: 2fde28d2-d445-4190-b981-3857340c27fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_sidebar
+field_name: field_sidebar
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: sidebar
+      label: Sidebar
+    -
+      value: nosidebar
+      label: 'No Sidebar'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

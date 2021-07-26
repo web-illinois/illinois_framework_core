@@ -1,3 +1,4 @@
+uuid: d10f76a4-d7f3-426a-a79e-fb8840621fcd
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - node.type.spotlight
   module:
     - datetime_range
+_core:
+  default_config_hash: W_SYonVZRGZUuUM7lv22to_u4HFtTAF_KoxNkaB-uw0
 id: node.spotlight.field_effective_dates
 field_name: field_effective_dates
 entity_type: node

@@ -23,7 +23,7 @@ third_party_settings:
     allow_custom: false
     enabled: false
 _core:
-  default_config_hash: g4xIV5RlLFawC-CE1_A8_wthkhjn16e8RkvDmpzadQ4
+  default_config_hash: ABNDLEYtN3qiB5cy2tcr_EB-5VjnG-cMXQhswOfJ6TE
 id: node.spotlight.feature
 targetEntityType: node
 bundle: spotlight

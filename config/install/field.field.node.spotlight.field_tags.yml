@@ -1,3 +1,4 @@
+uuid: 766b2a62-f5c1-4004-8aa9-9b1626955a44
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - field.storage.node.field_tags
     - node.type.spotlight
     - taxonomy.vocabulary.tags
+_core:
+  default_config_hash: 3DZ-5786D_PaMMES0LrsE60c6_LSOatk132X9JPoKio
 id: node.spotlight.field_tags
 field_name: field_tags
 entity_type: node

@@ -1,3 +1,4 @@
+uuid: 90cdd9f4-b78c-414d-b50c-47c145df4272
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - node.type.spotlight
   module:
     - entity_reference_revisions
+_core:
+  default_config_hash: 0iqvhEGzIBgc5p24n4-cizB4QRxr-zx6zCmbZKwRgo0
 id: node.spotlight.field_paragraph
 field_name: field_paragraph
 entity_type: node

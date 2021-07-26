@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - media
+_core:
+  default_config_hash: r7Z0uYHvUkr1DoXtNcpsaqCw52iAL1LYo5ZK8e99Bs0
 id: media.spotlight_detail
 label: 'Spotlight Detail'
 targetEntityType: media

@@ -1,3 +1,4 @@
+uuid: 31f22ec2-64ae-4c49-9d4a-9114f1c0fbea
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - field.storage.node.field_type
     - node.type.spotlight
     - taxonomy.vocabulary.spotlight_type
+_core:
+  default_config_hash: '-5WopQIxvM5TybOG3WnjbDBHmnibbZvzHrKRFfXIx3c'
 id: node.spotlight.field_type
 field_name: field_type
 entity_type: node

@@ -1,3 +1,4 @@
+uuid: 69ffd6c7-a0be-4f54-8e66-62c082cec3d7
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - field.storage.node.field_if_meda_featured_image
     - media.type.image
     - node.type.spotlight
+_core:
+  default_config_hash: vU-wLTuWcHfy87Z_cI2s4nV8ac0lIw4hQMThBke9sDk
 id: node.spotlight.field_if_meda_featured_image
 field_name: field_if_meda_featured_image
 entity_type: node

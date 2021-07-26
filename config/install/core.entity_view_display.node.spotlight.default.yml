@@ -17,7 +17,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: fbvIlemQdoYHy6yOzwdl1RL-PkYKeSaXNIoo5Agd0N4
+  default_config_hash: g4xIV5RlLFawC-CE1_A8_wthkhjn16e8RkvDmpzadQ4
 id: node.spotlight.default
 targetEntityType: node
 bundle: spotlight

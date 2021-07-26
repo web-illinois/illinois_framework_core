@@ -1,0 +1,10 @@
+uuid: 338a39b5-5e85-4f5e-b8ab-bf9559a29f58
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.spotlight_content_slide
+label: 'Spotlight Content Slide'
+targetEntityType: node
+cache: true

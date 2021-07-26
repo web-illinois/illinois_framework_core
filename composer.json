@@ -76,12 +76,12 @@
             "docroot/core": [
                 "type:drupal-core"
             ],
-            "docroot/libraries/slick": ["npm-asset/slick-carousel"],
             "docroot/libraries/{$name}": [
                 "type:drupal-library",
-                "type:bower-asset",
-                "type:npm-asset"
+                "type:bower-asset"
             ],
+            "docroot/libraries/slick": ["npm-asset/slick-carousel"],
+            "docroot/libraries/blazy": ["npm-asset/blazy"],
             "docroot/modules/contrib/{$name}": [
                 "type:drupal-module"
             ],

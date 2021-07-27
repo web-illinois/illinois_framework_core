@@ -1,0 +1,15 @@
+uuid: 9589ccc2-0106-4715-9600-c744ae87b40d
+langcode: en
+status: true
+dependencies: {  }
+name: spotlight_card_5_6
+label: 'Spotlight Card 5:6'
+effects:
+  5198d9cf-4a33-4a70-a449-7b3245d9bf05:
+    uuid: 5198d9cf-4a33-4a70-a449-7b3245d9bf05
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 360
+      anchor: center-center

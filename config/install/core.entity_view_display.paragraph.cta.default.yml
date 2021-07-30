@@ -12,6 +12,7 @@ dependencies:
     - field.field.paragraph.cta.field_cta_margin
     - field.field.paragraph.cta.field_cta_subtitle
     - field.field.paragraph.cta.field_cta_title
+    - image.style.paragraphs_image_large
     - paragraphs.paragraphs_type.cta
   module:
     - image
@@ -62,10 +63,9 @@ content:
     weight: 7
     label: hidden
     settings:
-      image_style: ''
-      image_link: ''
+      image_style: paragraphs_image_large
     third_party_settings: {  }
-    type: image
+    type: image_url
     region: content
   field_cta_layout:
     weight: 2

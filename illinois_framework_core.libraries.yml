@@ -6,4 +6,5 @@ giving-page:
   js:
     js/giving.js: {}
   dependencies:
+    - core/drupal
     - core/jquery

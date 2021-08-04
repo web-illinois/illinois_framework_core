@@ -9,7 +9,7 @@
 
   // All the JavaScript for this file.
 
-  Drupal.behaviors.coursesAccordion = {
+  Drupal.behaviors.givingForm = {
     attach: function(context) {
         function c(a) {
             var b = 0;

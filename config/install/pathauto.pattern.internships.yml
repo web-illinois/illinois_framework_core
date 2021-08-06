@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: internships
+label: Internships
+type: 'canonical_entities:node'
+pattern: 'student-life/internships/[node:title]'
+selection_criteria:
+  ef55eeb1-b278-4940-9ff3-45899077373b:
+    id: node_type
+    bundles:
+      internships: internships
+    negate: false
+    context_mapping:
+      node: node
+    uuid: ef55eeb1-b278-4940-9ff3-45899077373b
+selection_logic: and
+weight: -5
+relationships: {  }

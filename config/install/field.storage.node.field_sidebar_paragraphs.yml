@@ -12,6 +12,9 @@ type: list_integer
 settings:
   allowed_values:
     -
+      value: 0
+      label: '0'
+    -
       value: 1
       label: '1'
     -

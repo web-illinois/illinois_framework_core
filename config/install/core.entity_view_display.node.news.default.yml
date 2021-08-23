@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.news.field_if_author
     - field.field.node.news.field_if_date
     - field.field.node.news.field_if_meda_featured_image
-    - field.field.node.news.field_if_related_people
     - field.field.node.news.field_if_story_source
     - field.field.node.news.field_if_subtitle
     - field.field.node.news.field_paragraph
@@ -32,7 +31,7 @@ content:
     region: content
   field_if_author:
     weight: 6
-    label: inline
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -40,12 +39,12 @@ content:
     region: content
   field_if_date:
     weight: 7
-    label: inline
+    label: hidden
     settings:
       timezone_override: ''
-      format_type: short
+      date_format: 'F j, Y'
     third_party_settings: {  }
-    type: datetime_default
+    type: datetime_custom
     region: content
   field_if_meda_featured_image:
     weight: 2
@@ -56,18 +55,9 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
-  field_if_related_people:
-    weight: 9
-    label: above
-    settings:
-      view_mode: compact
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: content
   field_if_story_source:
     weight: 8
-    label: above
+    label: inline
     settings:
       trim_length: null
       target: _blank
@@ -96,7 +86,7 @@ content:
     region: content
   field_tags:
     weight: 5
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }

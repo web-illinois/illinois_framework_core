@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.news.field_if_author
     - field.field.node.news.field_if_date
     - field.field.node.news.field_if_meda_featured_image
-    - field.field.node.news.field_if_related_people
     - field.field.node.news.field_if_story_source
     - field.field.node.news.field_if_subtitle
     - field.field.node.news.field_paragraph
@@ -46,7 +45,6 @@ content:
 hidden:
   field_if_author: true
   field_if_date: true
-  field_if_related_people: true
   field_if_story_source: true
   field_if_subtitle: true
   field_paragraph: true

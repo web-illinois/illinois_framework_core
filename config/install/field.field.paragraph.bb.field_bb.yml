@@ -58,9 +58,6 @@ settings:
       from_library:
         weight: 26
         enabled: false
-      page_introduction:
-        weight: 27
-        enabled: false
       rich_text:
         weight: 28
         enabled: false

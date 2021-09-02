@@ -15,13 +15,13 @@ settings:
   allowed_values:
     -
       value: left
-      label: 'Left aligned'
+      label: Left
     -
       value: center
-      label: 'Center aligned'
+      label: Center
     -
       value: right
-      label: 'Right aligned'
+      label: Right
   allowed_values_function: ''
 module: options
 locked: false

@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: M9D8lySCeAD3H8IqBeoyepD-UwTicngdM7HL9NPK_b0
+  default_config_hash: wvkHsDKsEtvcsIzFBnACE-gpShG9RJEMaji6TpkrBqQ
 id: cards_content
-label: 'Cards content'
+label: 'Cards Content'
 icon_uuid: null
 icon_default: null
 description: ''

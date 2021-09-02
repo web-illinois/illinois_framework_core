@@ -6,12 +6,12 @@ dependencies:
     - field.storage.paragraph.field_cards_content_body
     - paragraphs.paragraphs_type.cards_content
 _core:
-  default_config_hash: sauGOGJmIf4GELlXOpgr03vY5SnA6bIIIe5NaDw2nUI
+  default_config_hash: GdqyYGmks8JK5OH-9V4PXtLwzvhlvAPrbLy8-xUzDl0
 id: paragraph.cards_content.field_cards_content_body
 field_name: field_cards_content_body
 entity_type: paragraph
 bundle: cards_content
-label: Body
+label: 'Card Body'
 description: ''
 required: false
 translatable: false

@@ -13,7 +13,7 @@ dependencies:
     - image
     - link
 _core:
-  default_config_hash: 0mZWQqUVzY09kCYR4qzMz_JfiVWR7FUOcq_Xpziy6cA
+  default_config_hash: Jhdgx3Kyg-mpfwUYxa8WH4uMg4SX6G4Z-EYaf7tHCdc
 id: paragraph.cards_content.default
 targetEntityType: paragraph
 bundle: cards_content

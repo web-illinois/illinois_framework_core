@@ -6,12 +6,12 @@ dependencies:
     - field.storage.paragraph.field_cards_subtitle
     - paragraphs.paragraphs_type.cards
 _core:
-  default_config_hash: FvhSvqqqKl0dFbSyODVkK3zHanFiT16bhJn7L0fj5HY
+  default_config_hash: zmhJtLVNgJFZfysvkrLWTpEvv6RpR9EMpZXn2eZ4wNw
 id: paragraph.cards.field_cards_subtitle
 field_name: field_cards_subtitle
 entity_type: paragraph
 bundle: cards
-label: Subtitle
+label: 'Section Subtitle'
 description: ''
 required: false
 translatable: false

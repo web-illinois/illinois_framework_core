@@ -8,12 +8,12 @@ dependencies:
   module:
     - link
 _core:
-  default_config_hash: Gn0mgBhbVtgvsE5YM7xl9spTrQD1i0IfE59IOvsb90E
+  default_config_hash: iD9QN7KYLyoli3DYesIl3eIKfTdnJ9ca_2VHvJsjl3Q
 id: paragraph.cards_content.field_cards_content_button
 field_name: field_cards_content_button
 entity_type: paragraph
 bundle: cards_content
-label: Button
+label: 'Card Buttons'
 description: ''
 required: false
 translatable: false

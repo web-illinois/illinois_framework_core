@@ -2,6 +2,8 @@ uuid: 87e908ae-7c6f-4ec3-85a5-33ef66e1ff40
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: z0M1ffmIeL2tOMv8rA4CWw90xmxFKBdaM-sd_028Wtg
 name: cards_image
 label: 'Cards Image'
 effects:

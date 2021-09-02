@@ -5,6 +5,8 @@ dependencies:
   module:
     - options
     - paragraphs
+_core:
+  default_config_hash: U3dniLwUN3Dbs-gDEVrgAESLItCp5swnHYfAUto4194
 id: paragraph.field_cards_background
 field_name: field_cards_background
 entity_type: paragraph

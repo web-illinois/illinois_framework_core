@@ -7,15 +7,19 @@ dependencies:
     - paragraphs.paragraphs_type.cards
   module:
     - options
+_core:
+  default_config_hash: 64Uc7tKbEUyTJnY_kuYyRbuiQYLiKzHyKdVSMy2HCWM
 id: paragraph.cards.field_cards_background
 field_name: field_cards_background
 entity_type: paragraph
 bundle: cards
-label: Background
+label: 'Section Background'
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: white
 default_value_callback: ''
 settings: {  }
 field_type: list_string

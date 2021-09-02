@@ -1,3 +1,4 @@
+uuid: 1abfd0b8-229c-4ca8-aa40-257682ba12bb
 langcode: en
 status: true
 dependencies:
@@ -6,11 +7,13 @@ dependencies:
     - paragraphs.paragraphs_type.feature_video
   module:
     - options
+_core:
+  default_config_hash: evde-BT_HMxFuI5UhP-dxLNYIIoiEP8s6-eaceptBv0
 id: paragraph.feature_video.field_feature_video_vid_width
 field_name: field_feature_video_vid_width
 entity_type: paragraph
 bundle: feature_video
-label: 'Video Width'
+label: Layout
 description: ''
 required: true
 translatable: false

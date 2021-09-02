@@ -1,8 +1,11 @@
+uuid: 1d1bada7-efd4-4091-83d5-b99ef95564b5
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: exu5rX_FktCOLZy09SdM5HZYrJhSkfwLHf6RfLpRqGw
 id: paragraph.field_feature_video_subtitle
 field_name: field_feature_video_subtitle
 entity_type: paragraph

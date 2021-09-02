@@ -1,3 +1,4 @@
+uuid: 4834d75a-0124-4866-86c0-83b1b2907d47
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.feature_video
   module:
     - options
+_core:
+  default_config_hash: DNyuYyjy4-XQHeqQARrsQpgvjRIrzNvIWuICB4VJGpo
 id: paragraph.feature_video.field_feature_video_background
 field_name: field_feature_video_background
 entity_type: paragraph

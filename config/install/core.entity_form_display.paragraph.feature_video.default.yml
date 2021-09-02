@@ -1,3 +1,4 @@
+uuid: c9c0e4f6-138c-4655-af92-b6718963c042
 langcode: en
 status: true
 dependencies:
@@ -5,9 +6,7 @@ dependencies:
     - field.field.paragraph.feature_video.field_feature_video_background
     - field.field.paragraph.feature_video.field_feature_video_body
     - field.field.paragraph.feature_video.field_feature_video_button
-    - field.field.paragraph.feature_video.field_feature_video_callout
     - field.field.paragraph.feature_video.field_feature_video_subtitle
-    - field.field.paragraph.feature_video.field_feature_video_tagline
     - field.field.paragraph.feature_video.field_feature_video_title
     - field.field.paragraph.feature_video.field_feature_video_vid_align
     - field.field.paragraph.feature_video.field_feature_video_vid_width
@@ -17,19 +16,21 @@ dependencies:
     - link
     - media_library
     - text
+_core:
+  default_config_hash: eJz6Ml1EB5sYa4XrDtYST924PMcyZJs3yi3XRbgwOJI
 id: paragraph.feature_video.default
 targetEntityType: paragraph
 bundle: feature_video
 mode: default
 content:
   field_feature_video_background:
-    weight: 2
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_feature_video_body:
-    weight: 6
+    weight: 5
     settings:
       rows: 9
       summary_rows: 3
@@ -39,31 +40,15 @@ content:
     type: text_textarea_with_summary
     region: content
   field_feature_video_button:
-    weight: 7
+    weight: 6
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
     region: content
-  field_feature_video_callout:
-    weight: 8
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_feature_video_subtitle:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_feature_video_tagline:
-    weight: 9
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -71,7 +56,7 @@ content:
     type: string_textfield
     region: content
   field_feature_video_title:
-    weight: 0
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -79,20 +64,20 @@ content:
     type: string_textfield
     region: content
   field_feature_video_vid_align:
-    weight: 4
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_feature_video_vid_width:
-    weight: 5
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_feature_video_video:
     type: media_library_widget
-    weight: 3
+    weight: 7
     settings:
       media_types: {  }
     third_party_settings: {  }

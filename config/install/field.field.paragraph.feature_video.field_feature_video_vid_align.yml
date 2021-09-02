@@ -1,3 +1,4 @@
+uuid: f68f9475-0dbc-4baf-b00c-391c6f6b3adf
 langcode: en
 status: true
 dependencies:
@@ -6,17 +7,19 @@ dependencies:
     - paragraphs.paragraphs_type.feature_video
   module:
     - options
+_core:
+  default_config_hash: Z2kw-BHa6Bg5Jeu4TP4zYEDUvVEIS7zS1sx89-8TwDI
 id: paragraph.feature_video.field_feature_video_vid_align
 field_name: field_feature_video_vid_align
 entity_type: paragraph
 bundle: feature_video
-label: 'Video Alignment'
+label: Alignment
 description: ''
 required: true
 translatable: false
 default_value:
   -
-    value: fixed
+    value: left
 default_value_callback: ''
 settings: {  }
 field_type: list_string

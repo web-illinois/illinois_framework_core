@@ -1,9 +1,12 @@
+uuid: 03319726-66c6-40e8-ba61-bb3af477d274
 langcode: en
 status: true
 dependencies:
   module:
     - link
     - paragraphs
+_core:
+  default_config_hash: ZjLvLeTDreRRREdhrFFyObPjK0TaCV7i7ESZR-66ak8
 id: paragraph.field_feature_video_button
 field_name: field_feature_video_button
 entity_type: paragraph

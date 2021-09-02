@@ -1,9 +1,12 @@
+uuid: e48f63a0-6882-453d-941a-0de3f5005afd
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_feature_video_video
     - paragraphs.paragraphs_type.feature_video
+_core:
+  default_config_hash: 0chpVwt0fNnyJLw5OjxzQa-5bYFhrq5SMbDgPQhacl8
 id: paragraph.feature_video.field_feature_video_video
 field_name: field_feature_video_video
 entity_type: paragraph

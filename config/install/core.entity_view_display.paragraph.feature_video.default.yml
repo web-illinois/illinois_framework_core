@@ -1,3 +1,4 @@
+uuid: 75c899ce-1877-4f6d-b3e1-5285cb4da0ae
 langcode: en
 status: true
 dependencies:
@@ -5,9 +6,7 @@ dependencies:
     - field.field.paragraph.feature_video.field_feature_video_background
     - field.field.paragraph.feature_video.field_feature_video_body
     - field.field.paragraph.feature_video.field_feature_video_button
-    - field.field.paragraph.feature_video.field_feature_video_callout
     - field.field.paragraph.feature_video.field_feature_video_subtitle
-    - field.field.paragraph.feature_video.field_feature_video_tagline
     - field.field.paragraph.feature_video.field_feature_video_title
     - field.field.paragraph.feature_video.field_feature_video_vid_align
     - field.field.paragraph.feature_video.field_feature_video_vid_width
@@ -17,6 +16,8 @@ dependencies:
     - link
     - options
     - text
+_core:
+  default_config_hash: d5mfWw5S2dUZiAuzMU0C2hfjDddcfq0F_OPR5RKuMWw
 id: paragraph.feature_video.default
 targetEntityType: paragraph
 bundle: feature_video
@@ -48,24 +49,8 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_feature_video_callout:
-    weight: 7
-    label: visually_hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_feature_video_subtitle:
     weight: 1
-    label: visually_hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_feature_video_tagline:
-    weight: 8
     label: visually_hidden
     settings:
       link_to_entity: false

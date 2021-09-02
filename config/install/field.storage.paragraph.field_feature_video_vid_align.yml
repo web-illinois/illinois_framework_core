@@ -1,9 +1,12 @@
+uuid: cfc2bfdd-fb3a-4f33-9b88-31953dde4ad3
 langcode: en
 status: true
 dependencies:
   module:
     - options
     - paragraphs
+_core:
+  default_config_hash: LGGy-MHRfGMPfZ241fVRqLVl5lcHTRMnaozK3uIukgg
 id: paragraph.field_feature_video_vid_align
 field_name: field_feature_video_vid_align
 entity_type: paragraph

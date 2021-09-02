@@ -1,8 +1,11 @@
+uuid: e3624fe3-a7a5-4ce3-94b0-40bf6acc0c8f
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: od3VQMN2s5eFmgCNEesN959aeGHUYFdcY1Wq2AtrndI
 id: feature_video
-label: 'Feature - Video'
+label: 'Feature Video'
 icon_uuid: null
 icon_default: null
 description: ''

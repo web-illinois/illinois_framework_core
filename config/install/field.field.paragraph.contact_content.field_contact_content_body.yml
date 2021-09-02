@@ -8,12 +8,12 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: iqWvfaJ96Y5_CgPFulHwwqWZukoN8hjVvQr5f-0LZug
+  default_config_hash: of4zUfZauaEkCvltdJoDddo6le2wBofvV_M74SpodbQ
 id: paragraph.contact_content.field_contact_content_body
 field_name: field_contact_content_body
 entity_type: paragraph
 bundle: contact_content
-label: Body
+label: 'Body (instead of image)'
 description: 'If the Layouts “Body Right - Info Left” or “Body Left - Info Right” are used then the body field will appear in place of an image.'
 required: false
 translatable: false

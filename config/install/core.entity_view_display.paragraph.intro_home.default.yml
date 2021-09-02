@@ -13,6 +13,8 @@ dependencies:
   module:
     - link
     - options
+_core:
+  default_config_hash: ujj5UL9tdVGgqPksrJlDKjTlgVo9cXsI4vW_Q1fzKK0
 id: paragraph.intro_home.default
 targetEntityType: paragraph
 bundle: intro_home

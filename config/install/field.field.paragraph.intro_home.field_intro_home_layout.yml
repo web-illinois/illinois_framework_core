@@ -7,11 +7,13 @@ dependencies:
     - paragraphs.paragraphs_type.intro_home
   module:
     - options
+_core:
+  default_config_hash: VVVMj9VCMslmvYuR84bGQO9fWJBEbg2sS4oyk3yrYz4
 id: paragraph.intro_home.field_intro_home_layout
 field_name: field_intro_home_layout
 entity_type: paragraph
 bundle: intro_home
-label: Layout
+label: Alignment
 description: ''
 required: true
 translatable: false

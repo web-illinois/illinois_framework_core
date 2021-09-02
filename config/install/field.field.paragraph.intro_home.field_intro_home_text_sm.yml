@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_intro_home_text_sm
     - paragraphs.paragraphs_type.intro_home
+_core:
+  default_config_hash: uxXMPePKJ2xooq3oQGyMRm7PkX7paAhyHGm0PYg-0Ic
 id: paragraph.intro_home.field_intro_home_text_sm
 field_name: field_intro_home_text_sm
 entity_type: paragraph

@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_intro_home_text_lg
     - paragraphs.paragraphs_type.intro_home
+_core:
+  default_config_hash: 4W2vfjE5mmXe1fBjpCNa5yFNpiO_psG4hOlcCVqdTBE
 id: paragraph.intro_home.field_intro_home_text_lg
 field_name: field_intro_home_text_lg
 entity_type: paragraph

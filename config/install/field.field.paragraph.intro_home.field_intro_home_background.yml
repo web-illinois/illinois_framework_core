@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.intro_home
   module:
     - options
+_core:
+  default_config_hash: zGtm77_zuvKPcRcr7PyeHtLJsivqsGwMbXtJsX0NOdc
 id: paragraph.intro_home.field_intro_home_background
 field_name: field_intro_home_background
 entity_type: paragraph

@@ -5,6 +5,8 @@ dependencies:
   module:
     - link
     - paragraphs
+_core:
+  default_config_hash: O54hel1OJKLnY9FLpIf0OEYG2m2r6dNFOdTm-X-PVb8
 id: paragraph.field_intro_home_button
 field_name: field_intro_home_button
 entity_type: paragraph

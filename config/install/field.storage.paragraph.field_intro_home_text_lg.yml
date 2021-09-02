@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: nUwdFqNd6rQiKZV4UINS_Mt8gx7Q8teWHfi5ybGyCl8
 id: paragraph.field_intro_home_text_lg
 field_name: field_intro_home_text_lg
 entity_type: paragraph

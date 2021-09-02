@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.intro_home
   module:
     - options
+_core:
+  default_config_hash: qHitH3lw21P_r6jWF7Qspo1N6Wt6YR0jrXwYSA4HbM8
 id: paragraph.intro_home.field_intro_home_fingerprint
 field_name: field_intro_home_fingerprint
 entity_type: paragraph

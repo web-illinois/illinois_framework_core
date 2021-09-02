@@ -5,6 +5,8 @@ dependencies:
   module:
     - options
     - paragraphs
+_core:
+  default_config_hash: 3MXvXqKW4cus2cKxRpAqrXjFdlnmJJWURzuj9lFjjSc
 id: paragraph.field_intro_home_layout
 field_name: field_intro_home_layout
 entity_type: paragraph

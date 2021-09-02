@@ -5,6 +5,8 @@ dependencies:
   module:
     - paragraphs
     - text
+_core:
+  default_config_hash: zwqZkNDCSnBbidzXwC_MVODr7ZjXt5TS4RNpjA-yN40
 id: paragraph.field_hero_section_intro
 field_name: field_hero_section_intro
 entity_type: paragraph

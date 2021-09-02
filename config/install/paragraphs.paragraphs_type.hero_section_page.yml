@@ -2,8 +2,10 @@ uuid: 7a10e87a-37cd-45aa-bcc0-097391b2b931
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: 6sY4zb3OU9hrUsd9MW7c4jPt6us6w2_w7bIRy0U1-CA
 id: hero_section_page
-label: 'Hero - Section Page'
+label: 'Hero Section'
 icon_uuid: null
 icon_default: null
 description: ''

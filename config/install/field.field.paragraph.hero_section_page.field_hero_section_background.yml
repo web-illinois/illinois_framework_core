@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.hero_section_page
   module:
     - options
+_core:
+  default_config_hash: Y5EQvTMnkQE1M_-Lle0JiMrmubxtVRGJ8G1p6OQp6Pw
 id: paragraph.hero_section_page.field_hero_section_background
 field_name: field_hero_section_background
 entity_type: paragraph

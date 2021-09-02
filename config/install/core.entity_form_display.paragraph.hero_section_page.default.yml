@@ -11,19 +11,21 @@ dependencies:
   module:
     - image_widget_crop
     - text
+_core:
+  default_config_hash: PHJpkkTTBlMyIYyWVeFZfje45qD993WjeNwgYuGHc5w
 id: paragraph.hero_section_page.default
 targetEntityType: paragraph
 bundle: hero_section_page
 mode: default
 content:
   field_hero_section_background:
-    weight: 2
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_hero_section_image:
-    weight: 1
+    weight: 2
     settings:
       show_crop_area: true
       show_default_crop: true
@@ -39,7 +41,7 @@ content:
     type: image_widget_crop
     region: content
   field_hero_section_intro:
-    weight: 0
+    weight: 1
     settings:
       rows: 9
       summary_rows: 3

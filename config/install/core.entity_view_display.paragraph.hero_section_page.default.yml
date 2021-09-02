@@ -11,6 +11,8 @@ dependencies:
     - image
     - options
     - text
+_core:
+  default_config_hash: DYSgPcU21AicGk1S1lrc9vC5lHybdMMBaPbpJUG8eMo
 id: paragraph.hero_section_page.default
 targetEntityType: paragraph
 bundle: hero_section_page

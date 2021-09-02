@@ -6,6 +6,8 @@ dependencies:
     - crop.type.4_1_ratio
   module:
     - crop
+_core:
+  default_config_hash: 3zxPpycYFV5FQ-JY73veoFiGLjjoMrF0lIWJyoNkCCY
 name: hero_section_image
 label: 'Hero Section Image'
 effects:

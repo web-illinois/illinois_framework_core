@@ -7,11 +7,13 @@ dependencies:
     - paragraphs.paragraphs_type.hero_section_page
   module:
     - image
+_core:
+  default_config_hash: TjcEzvc5KoMz-2ZtbgahUxK5EaXvTKiPa19WZ3DLY34
 id: paragraph.hero_section_page.field_hero_section_image
 field_name: field_hero_section_image
 entity_type: paragraph
 bundle: hero_section_page
-label: 'Hero Section Image'
+label: Image
 description: ''
 required: false
 translatable: false

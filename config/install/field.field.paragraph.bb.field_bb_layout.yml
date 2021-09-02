@@ -7,11 +7,13 @@ dependencies:
     - paragraphs.paragraphs_type.bb
   module:
     - options
+_core:
+  default_config_hash: jwsEDsjlsb9K6YlAdnEToZtUt0Q0xYKAQKfuDQDtF_M
 id: paragraph.bb.field_bb_layout
 field_name: field_bb_layout
 entity_type: paragraph
 bundle: bb
-label: Layout
+label: Alignment
 description: ''
 required: true
 translatable: false

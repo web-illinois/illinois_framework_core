@@ -5,6 +5,8 @@ dependencies:
   module:
     - options
     - paragraphs
+_core:
+  default_config_hash: qq2f5A7Ix1bNZ11MdfoXgNbBdll9zLIsKxtyVhcG62k
 id: paragraph.field_bb_background
 field_name: field_bb_background
 entity_type: paragraph

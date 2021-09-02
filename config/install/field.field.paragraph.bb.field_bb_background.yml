@@ -7,11 +7,13 @@ dependencies:
     - paragraphs.paragraphs_type.bb
   module:
     - options
+_core:
+  default_config_hash: FlgoajwVAF0B-1OoyAsZEP8IJMr0jmLsBqaaSYHlAlk
 id: paragraph.bb.field_bb_background
 field_name: field_bb_background
 entity_type: paragraph
 bundle: bb
-label: Background
+label: 'Card Background'
 description: ''
 required: true
 translatable: false

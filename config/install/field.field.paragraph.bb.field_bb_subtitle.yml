@@ -5,11 +5,13 @@ dependencies:
   config:
     - field.storage.paragraph.field_bb_subtitle
     - paragraphs.paragraphs_type.bb
+_core:
+  default_config_hash: bu2tJ7vrnscLwq1RqZA6stQfU80xoPElvtGfHi37gpY
 id: paragraph.bb.field_bb_subtitle
 field_name: field_bb_subtitle
 entity_type: paragraph
 bundle: bb
-label: Subtitle
+label: 'Section Subtitle'
 description: ''
 required: false
 translatable: false

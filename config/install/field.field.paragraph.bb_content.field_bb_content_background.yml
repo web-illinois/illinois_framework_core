@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.bb_content
   module:
     - options
+_core:
+  default_config_hash: g-H_eRTnNZVOJisqSzLMJu0d-RI-LcE4ZVzq9LVX93k
 id: paragraph.bb_content.field_bb_content_background
 field_name: field_bb_content_background
 entity_type: paragraph

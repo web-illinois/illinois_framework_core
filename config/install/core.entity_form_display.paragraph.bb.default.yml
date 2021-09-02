@@ -7,14 +7,13 @@ dependencies:
     - field.field.paragraph.bb.field_bb_background
     - field.field.paragraph.bb.field_bb_content_layer_width
     - field.field.paragraph.bb.field_bb_layout
-    - field.field.paragraph.bb.field_bb_margin
     - field.field.paragraph.bb.field_bb_subtitle
     - field.field.paragraph.bb.field_bb_title
     - paragraphs.paragraphs_type.bb
   module:
     - paragraphs
 _core:
-  default_config_hash: c1NnOvI_lM3K4BHOhTqX8zE_Y1ru0T9-RE16vKgCeVc
+  default_config_hash: YUi_fJbPBK_E67obRPUkZwPq29Jp5rbxfPi114cqAc4
 id: paragraph.bb.default
 targetEntityType: paragraph
 bundle: bb
@@ -46,12 +45,6 @@ content:
     region: content
   field_bb_layout:
     weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_bb_margin:
-    weight: 0
     settings: {  }
     third_party_settings: {  }
     type: options_select

@@ -5,6 +5,8 @@ dependencies:
   module:
     - options
     - paragraphs
+_core:
+  default_config_hash: iUhZZv6ThpYCCpOrQIYFvfO4B3YXTJ1Jln2KYSYzang
 id: paragraph.field_bb_content_layer_width
 field_name: field_bb_content_layer_width
 entity_type: paragraph

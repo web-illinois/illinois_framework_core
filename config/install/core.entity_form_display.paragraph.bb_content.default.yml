@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.bb_content.field_bb_content_background
     - field.field.paragraph.bb_content.field_bb_content_body
     - field.field.paragraph.bb_content.field_bb_content_image
     - field.field.paragraph.bb_content.field_bb_content_link
@@ -14,14 +15,14 @@ dependencies:
     - link
     - text
 _core:
-  default_config_hash: G0FTUf6uXMVtHCRduxjRYTpHcSk1LCKfthvRIahcEhg
+  default_config_hash: 4X-UObxPGLoWWzX4kK7quYae3UKPlpsnR3CKMTSvm_U
 id: paragraph.bb_content.default
 targetEntityType: paragraph
 bundle: bb_content
 mode: default
 content:
   field_bb_content_body:
-    weight: 4
+    weight: 2
     settings:
       rows: 9
       summary_rows: 3
@@ -31,7 +32,7 @@ content:
     type: text_textarea_with_summary
     region: content
   field_bb_content_image:
-    weight: 3
+    weight: 0
     settings:
       show_crop_area: true
       show_default_crop: true
@@ -47,7 +48,7 @@ content:
     type: image_widget_crop
     region: content
   field_bb_content_link:
-    weight: 2
+    weight: 3
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -64,4 +65,5 @@ content:
     region: content
 hidden:
   created: true
+  field_bb_content_background: true
   status: true

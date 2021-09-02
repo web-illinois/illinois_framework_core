@@ -5,11 +5,13 @@ dependencies:
   config:
     - field.storage.paragraph.field_bb_title
     - paragraphs.paragraphs_type.bb
+_core:
+  default_config_hash: BeZA66IkYvVhJwur1WIHW-qZbhKckdM7hB5FTVX5hqI
 id: paragraph.bb.field_bb_title
 field_name: field_bb_title
 entity_type: paragraph
 bundle: bb
-label: Title
+label: 'Section Title'
 description: ''
 required: false
 translatable: false

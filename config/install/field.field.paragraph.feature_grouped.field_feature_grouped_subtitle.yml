@@ -11,7 +11,7 @@ id: paragraph.feature_grouped.field_feature_grouped_subtitle
 field_name: field_feature_grouped_subtitle
 entity_type: paragraph
 bundle: feature_grouped
-label: Subtitle
+label: Callout
 description: ''
 required: false
 translatable: false

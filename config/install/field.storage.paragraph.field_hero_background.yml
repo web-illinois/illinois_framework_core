@@ -13,13 +13,16 @@ settings:
   allowed_values:
     -
       value: blue
-      label: 'Illini Blue'
+      label: 'Blue Background with Orange Buttons'
     -
       value: orange
-      label: 'Illini Orange'
+      label: 'Orange Background with Blue Buttons'
     -
       value: image
-      label: Image
+      label: 'Image with Orange Buttons'
+    -
+      value: imageblue
+      label: 'Image with Blue Buttons'
   allowed_values_function: ''
 module: options
 locked: false

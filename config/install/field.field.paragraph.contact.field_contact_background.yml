@@ -15,7 +15,7 @@ entity_type: paragraph
 bundle: contact
 label: 'Section Background'
 description: ''
-required: false
+required: true
 translatable: false
 default_value:
   -

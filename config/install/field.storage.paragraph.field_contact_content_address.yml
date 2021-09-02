@@ -6,7 +6,7 @@ dependencies:
     - paragraphs
     - text
 _core:
-  default_config_hash: led2qZhz-ojTvhogGK0NKjO_F2vTHrUl8HaCUuuOSLo
+  default_config_hash: MX_sgQn_X4uydk9ihVoHrfLGml0G0b6KeicNlWZd1hA
 id: paragraph.field_contact_content_address
 field_name: field_contact_content_address
 entity_type: paragraph

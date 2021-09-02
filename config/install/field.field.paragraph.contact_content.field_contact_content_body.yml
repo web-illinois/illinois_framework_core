@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.contact_content
   module:
     - text
+_core:
+  default_config_hash: iqWvfaJ96Y5_CgPFulHwwqWZukoN8hjVvQr5f-0LZug
 id: paragraph.contact_content.field_contact_content_body
 field_name: field_contact_content_body
 entity_type: paragraph

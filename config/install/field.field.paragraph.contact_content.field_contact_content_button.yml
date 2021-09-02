@@ -8,7 +8,7 @@ dependencies:
   module:
     - link
 _core:
-  default_config_hash: SlyetnKqDB98NANqIjx-iDPIkbZLMqAGaC81V46GUHw
+  default_config_hash: G89PLH3GlCBtDlCbhy15BgMOrlQ8RIwR_7BM0pk6ixQ
 id: paragraph.contact_content.field_contact_content_button
 field_name: field_contact_content_button
 entity_type: paragraph

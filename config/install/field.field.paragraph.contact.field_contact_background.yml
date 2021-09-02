@@ -8,12 +8,12 @@ dependencies:
   module:
     - options
 _core:
-  default_config_hash: y2yYUWklMdpRpWUotECmG4O9fxlhgtTd65vMFtK-vWM
+  default_config_hash: oxbbz_BqC5O0c_jRq0YrXvYdUoFuR9uitV38xsxrv0c
 id: paragraph.contact.field_contact_background
 field_name: field_contact_background
 entity_type: paragraph
 bundle: contact
-label: Background
+label: 'Section Background'
 description: ''
 required: false
 translatable: false

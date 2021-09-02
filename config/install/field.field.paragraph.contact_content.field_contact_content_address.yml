@@ -8,7 +8,7 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: MW9nn1lSPhJZaZ8TFotNeGUf6KfqNaIpmFKdw99AtPk
+  default_config_hash: 6HG5CpCUlYNR9kKT7ZNI2mFwBEWz4Ahr1t2p7dQKXK8
 id: paragraph.contact_content.field_contact_content_address
 field_name: field_contact_content_address
 entity_type: paragraph

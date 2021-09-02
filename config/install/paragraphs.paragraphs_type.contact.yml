@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: 09aiBedvPgQA_KjuIh4e4RgKsw7hgi89EoMIEy59xm8
+  default_config_hash: n8SPZoGcN-G9z6SbRAFD0g_tGfUXcrxrZ36tlqrX1_0
 id: contact
 label: Contact
 icon_uuid: null

@@ -6,7 +6,7 @@ dependencies:
     - paragraphs
     - telephone
 _core:
-  default_config_hash: Ph4qwnsdjDE4im6bRN9QvmCvO6UCoi9_1yAVmUcnV7o
+  default_config_hash: 3Zal_PPvju6oFDdTfZVtQDi22iNdw-1J6lPnkiG1UBA
 id: paragraph.field_contact_content_phone
 field_name: field_contact_content_phone
 entity_type: paragraph

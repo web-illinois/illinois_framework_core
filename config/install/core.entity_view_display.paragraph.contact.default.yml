@@ -12,7 +12,7 @@ dependencies:
     - entity_reference_revisions
     - options
 _core:
-  default_config_hash: 6Nkvqz7q1o498qcjzcZq8v8D6SgAVurn56pzlKmIvxA
+  default_config_hash: gJHYFOK9W-AIBm5SyoYErxGCEbFxA8g2f29vooyd9qQ
 id: paragraph.contact.default
 targetEntityType: paragraph
 bundle: contact

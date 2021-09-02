@@ -8,7 +8,7 @@ dependencies:
   module:
     - image
 _core:
-  default_config_hash: uFdRoXJWmWhMQgmBOUQrStHlYyDXbTckLSzuMM_gnEU
+  default_config_hash: h2qt-us1-da0W5PIIS6jA9fBxcozFCaxZ7CgJGOin0c
 id: paragraph.contact_content.field_contact_content_image
 field_name: field_contact_content_image
 entity_type: paragraph
@@ -24,7 +24,7 @@ settings:
   file_extensions: 'png gif jpg jpeg'
   max_filesize: 5mb
   max_resolution: 5000x5000
-  min_resolution: 500x500
+  min_resolution: 200x200
   alt_field: true
   alt_field_required: true
   title_field: true

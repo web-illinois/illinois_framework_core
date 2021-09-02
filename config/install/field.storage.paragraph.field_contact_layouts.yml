@@ -6,7 +6,7 @@ dependencies:
     - options
     - paragraphs
 _core:
-  default_config_hash: mbP4AF5vM8mTMu4zFseb9i4L-F4WC_iusQZThlluW8Q
+  default_config_hash: qX2brs8ytBx7e6QoAG4LwAw1bKuYhHZGlFtb_eWlteg
 id: paragraph.field_contact_layouts
 field_name: field_contact_layouts
 entity_type: paragraph
@@ -15,16 +15,16 @@ settings:
   allowed_values:
     -
       value: right
-      label: 'Right Image - Info Left'
+      label: 'Image Right - Info Left'
     -
       value: left
-      label: 'Left Image - Info Right'
+      label: 'Image Left - Info Right'
     -
       value: righttxt
-      label: 'Right Text - Info Left'
+      label: 'Body Right - Info Left'
     -
       value: lefttxt
-      label: 'Left Text - Info Right'
+      label: 'Body Left - Info Right'
   allowed_values_function: ''
 module: options
 locked: false

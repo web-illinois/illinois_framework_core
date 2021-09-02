@@ -18,7 +18,7 @@ dependencies:
     - telephone
     - text
 _core:
-  default_config_hash: TNj7aSkGy7h8MEkCF0tDjxfYXNMbpHZKaZxvQfIdICk
+  default_config_hash: si5pMhEmUUXyG5xZ9HPHHTUgd4N92DwD0SVy8biNDyw
 id: paragraph.contact_content.default
 targetEntityType: paragraph
 bundle: contact_content

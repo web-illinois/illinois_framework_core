@@ -8,12 +8,12 @@ dependencies:
   module:
     - options
 _core:
-  default_config_hash: N9dQpAm7Fju0mM97CXMYPW2N9M9xuS92sQiZqLzqBwE
+  default_config_hash: XKYxgi5QulXNJlp2z3oV5A2OWFUukBFBHl7Zk3TF4wk
 id: paragraph.contact.field_contact_layouts
 field_name: field_contact_layouts
 entity_type: paragraph
 bundle: contact
-label: Layout
+label: Alignment
 description: ''
 required: true
 translatable: false

@@ -9,7 +9,7 @@ dependencies:
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: _fae2I-nS9RjVXwdmYsLFbfQjPrKTAxOTS-ZNlva4zM
+  default_config_hash: BGGfrYx6EMg7Z16t2DtFB18kp28Y4_BJzcOg2sVU4BU
 id: paragraph.contact.field_contact_content
 field_name: field_contact_content
 entity_type: paragraph
@@ -71,6 +71,9 @@ settings:
         enabled: false
       list_collection_content:
         weight: 34
+        enabled: false
+      page_introduction:
+        weight: 35
         enabled: false
       rich_text:
         weight: 36

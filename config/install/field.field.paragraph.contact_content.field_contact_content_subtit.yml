@@ -6,7 +6,7 @@ dependencies:
     - field.storage.paragraph.field_contact_content_subtit
     - paragraphs.paragraphs_type.contact_content
 _core:
-  default_config_hash: haWX2iAIU71sBSSxCw55pSlg-0YNtCfK8qVCqK5x0eI
+  default_config_hash: b3JUY8Qz_IegwrNzubCKAJAi4RY9M30DX7d7QbSA43g
 id: paragraph.contact_content.field_contact_content_subtit
 field_name: field_contact_content_subtit
 entity_type: paragraph

@@ -6,7 +6,7 @@ dependencies:
     - field.storage.paragraph.field_contact_content_email
     - paragraphs.paragraphs_type.contact_content
 _core:
-  default_config_hash: WHBh4ai7gkA2uOwrGf5uUve5aTLRqxJUVgzrKbFoXBI
+  default_config_hash: QvYCjDJuiMaDmxEFVU3GoqvVjZG5P57uB9vLydC65eQ
 id: paragraph.contact_content.field_contact_content_email
 field_name: field_contact_content_email
 entity_type: paragraph

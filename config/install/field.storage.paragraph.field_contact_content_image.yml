@@ -7,7 +7,7 @@ dependencies:
     - image
     - paragraphs
 _core:
-  default_config_hash: CkwvX6jU4G5urjBj52SrTnrQfYRzkS0pBhkEvnkTclI
+  default_config_hash: k_c2M_eVXvQtBoZ2Dyk5loqJn-jXYM76-ZDrAJGv_ZE
 id: paragraph.field_contact_content_image
 field_name: field_contact_content_image
 entity_type: paragraph

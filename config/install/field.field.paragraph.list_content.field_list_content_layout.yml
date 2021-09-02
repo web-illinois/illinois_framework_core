@@ -8,12 +8,12 @@ dependencies:
   module:
     - options
 _core:
-  default_config_hash: 0hohF7YR5jW14INlRTC_KDj1vfD1sdRATt7HqLti_kQ
+  default_config_hash: a5DXrorX9wcx-ULbXx2nHe78VyD7C__1SpO1AsuRYcA
 id: paragraph.list_content.field_list_content_layout
 field_name: field_list_content_layout
 entity_type: paragraph
 bundle: list_content
-label: 'Image layout'
+label: Alignment
 description: ''
 required: true
 translatable: false

@@ -13,7 +13,7 @@ dependencies:
     - options
     - text
 _core:
-  default_config_hash: 1kpuYP3-UadIMFOY2e1WJ29aaYegz43jSVNb2JQHsYQ
+  default_config_hash: nqIq4LHTE26PVItK8FwG7CccEYuP2MOwulTLv2Q06-U
 id: paragraph.list_content.default
 targetEntityType: paragraph
 bundle: list_content

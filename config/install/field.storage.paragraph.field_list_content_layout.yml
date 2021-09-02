@@ -5,6 +5,8 @@ dependencies:
   module:
     - options
     - paragraphs
+_core:
+  default_config_hash: q2z5nb9mAkb2Myz4BD_ksIyUaDje6O_mdjDXsFLBVJA
 id: paragraph.field_list_content_layout
 field_name: field_list_content_layout
 entity_type: paragraph
@@ -13,10 +15,10 @@ settings:
   allowed_values:
     -
       value: left
-      label: 'Float left'
+      label: 'Image Left'
     -
       value: right
-      label: 'Float right'
+      label: 'Image Right'
   allowed_values_function: ''
 module: options
 locked: false

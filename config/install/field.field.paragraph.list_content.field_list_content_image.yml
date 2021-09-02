@@ -8,7 +8,7 @@ dependencies:
   module:
     - image
 _core:
-  default_config_hash: LcTb_rBOhw1X00uMnwh3Ehr5Ehat-Mz6ROuwnrN9Jao
+  default_config_hash: B2KtOeMGR_62v4r40uayDy40--TYkV0YQk12DVeAKE0
 id: paragraph.list_content.field_list_content_image
 field_name: field_list_content_image
 entity_type: paragraph

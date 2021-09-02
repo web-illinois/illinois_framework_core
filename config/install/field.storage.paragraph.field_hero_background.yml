@@ -13,10 +13,10 @@ settings:
   allowed_values:
     -
       value: blue
-      label: Default
+      label: 'Illini Blue'
     -
       value: orange
-      label: Orange
+      label: 'Illini Orange'
     -
       value: image
       label: Image

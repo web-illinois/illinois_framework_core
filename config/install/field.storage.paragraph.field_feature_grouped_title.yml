@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: 3iMxTFtCgc5T31sPV4A6xU46PuL-DpDjL26OoW0ax1M
 id: paragraph.field_feature_grouped_title
 field_name: field_feature_grouped_title
 entity_type: paragraph

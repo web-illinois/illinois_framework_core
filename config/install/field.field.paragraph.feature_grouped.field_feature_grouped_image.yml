@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.feature_grouped
   module:
     - image
+_core:
+  default_config_hash: UHjbxDpzww0fD6O295Rz4-Xk5qXvRt2-MshEPJ0l8-s
 id: paragraph.feature_grouped.field_feature_grouped_image
 field_name: field_feature_grouped_image
 entity_type: paragraph

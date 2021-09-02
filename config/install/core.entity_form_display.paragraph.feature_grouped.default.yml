@@ -16,13 +16,15 @@ dependencies:
     - image
     - link
     - text
+_core:
+  default_config_hash: SQiq77NN_h1E_aRlGJCUIxeSZXT_EUe15kzclbLLGLU
 id: paragraph.feature_grouped.default
 targetEntityType: paragraph
 bundle: feature_grouped
 mode: default
 content:
   field_feature_grouped_background:
-    weight: 3
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -54,13 +56,13 @@ content:
     type: image_image
     region: content
   field_feature_grouped_layout:
-    weight: 2
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_feature_grouped_subtitle:
-    weight: 1
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -68,7 +70,7 @@ content:
     type: string_textfield
     region: content
   field_feature_grouped_title:
-    weight: 0
+    weight: 2
     settings:
       size: 60
       placeholder: ''

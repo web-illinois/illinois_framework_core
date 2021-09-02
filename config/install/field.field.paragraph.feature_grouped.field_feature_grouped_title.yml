@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_feature_grouped_title
     - paragraphs.paragraphs_type.feature_grouped
+_core:
+  default_config_hash: aTUQ7qVFLdbpO1UgaOOzfRKLNmd7uJN6MX6-4M3gVy4
 id: paragraph.feature_grouped.field_feature_grouped_title
 field_name: field_feature_grouped_title
 entity_type: paragraph

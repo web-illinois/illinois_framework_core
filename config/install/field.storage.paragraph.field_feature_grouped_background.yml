@@ -5,6 +5,8 @@ dependencies:
   module:
     - options
     - paragraphs
+_core:
+  default_config_hash: W4yOgfmeNmlWkKnIbOPSund-XxuKDLdjSZ_G3E1KRNU
 id: paragraph.field_feature_grouped_background
 field_name: field_feature_grouped_background
 entity_type: paragraph

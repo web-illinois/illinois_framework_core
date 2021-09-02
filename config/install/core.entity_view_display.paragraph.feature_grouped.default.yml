@@ -16,6 +16,8 @@ dependencies:
     - link
     - options
     - text
+_core:
+  default_config_hash: cGlSvX7BBYl-DXqaq9Y4BR6WxL5sasSpHs_SKB07reY
 id: paragraph.feature_grouped.default
 targetEntityType: paragraph
 bundle: feature_grouped

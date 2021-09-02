@@ -5,6 +5,8 @@ dependencies:
   module:
     - link
     - paragraphs
+_core:
+  default_config_hash: W--NuxmLmW4Euu_7ZZuD0KLz_R87Wb-IsJPvCo9ZSv8
 id: paragraph.field_feature_grouped_buttons
 field_name: field_feature_grouped_buttons
 entity_type: paragraph

@@ -7,11 +7,13 @@ dependencies:
     - paragraphs.paragraphs_type.feature_grouped
   module:
     - options
+_core:
+  default_config_hash: qH1vse4RQGoIY7-juVlklm1Xft9X06Ef0J1BwyhaBxI
 id: paragraph.feature_grouped.field_feature_grouped_layout
 field_name: field_feature_grouped_layout
 entity_type: paragraph
 bundle: feature_grouped
-label: Layout
+label: Alignment
 description: ''
 required: true
 translatable: false

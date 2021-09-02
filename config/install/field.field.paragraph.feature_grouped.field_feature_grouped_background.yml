@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.feature_grouped
   module:
     - options
+_core:
+  default_config_hash: FHm4gCMDpC2_xVpm-Owjy6b64ZdhcwzDmDQH6hvE8X4
 id: paragraph.feature_grouped.field_feature_grouped_background
 field_name: field_feature_grouped_background
 entity_type: paragraph

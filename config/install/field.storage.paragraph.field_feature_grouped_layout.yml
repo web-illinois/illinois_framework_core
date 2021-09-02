@@ -5,6 +5,8 @@ dependencies:
   module:
     - options
     - paragraphs
+_core:
+  default_config_hash: D295mcsCiE6wW_BLmrRxP0DHPqFq2XU91JpJzviqMYA
 id: paragraph.field_feature_grouped_layout
 field_name: field_feature_grouped_layout
 entity_type: paragraph
@@ -13,10 +15,10 @@ settings:
   allowed_values:
     -
       value: left
-      label: 'Photo Left & Content Right'
+      label: 'Image Left'
     -
       value: right
-      label: 'Photo Right & Content Left'
+      label: 'Image Right'
   allowed_values_function: ''
 module: options
 locked: false

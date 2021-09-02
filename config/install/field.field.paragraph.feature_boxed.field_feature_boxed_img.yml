@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.feature_boxed
   module:
     - image
+_core:
+  default_config_hash: RrphWFWPctOBmHrbUHVkoxCN2ooCz8ScL65nOsWm440
 id: paragraph.feature_boxed.field_feature_boxed_img
 field_name: field_feature_boxed_img
 entity_type: paragraph

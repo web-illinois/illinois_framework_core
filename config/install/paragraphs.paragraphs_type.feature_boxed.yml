@@ -2,8 +2,10 @@ uuid: 123aa4b6-0a90-4b9d-b24b-9ade06581f00
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: Uw5h0LLzn7lu6hlJkUl1EDlikBKXHeUd5d6WE3ojWiM
 id: feature_boxed
-label: 'Feature - Boxed'
+label: 'Feature Box'
 icon_uuid: null
 icon_default: null
 description: ''

@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.feature_boxed
   module:
     - link
+_core:
+  default_config_hash: FXbsjqbrfItIeU4Fb2O3ftMDcP_BeyWdQz1Hu2cjqlM
 id: paragraph.feature_boxed.field_feature_boxed_button
 field_name: field_feature_boxed_button
 entity_type: paragraph

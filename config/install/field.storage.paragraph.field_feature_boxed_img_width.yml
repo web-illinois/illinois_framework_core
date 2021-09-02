@@ -5,6 +5,8 @@ dependencies:
   module:
     - options
     - paragraphs
+_core:
+  default_config_hash: '-21AtLhuNCFgmENakoWCdo1F8Xcshe-uKg9utnGRDwU'
 id: paragraph.field_feature_boxed_img_width
 field_name: field_feature_boxed_img_width
 entity_type: paragraph

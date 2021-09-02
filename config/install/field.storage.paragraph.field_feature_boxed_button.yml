@@ -5,6 +5,8 @@ dependencies:
   module:
     - link
     - paragraphs
+_core:
+  default_config_hash: WXrska7Q0TUCSDNPN6nF9DnmEiTlKzWSGrRZd7ebF-4
 id: paragraph.field_feature_boxed_button
 field_name: field_feature_boxed_button
 entity_type: paragraph

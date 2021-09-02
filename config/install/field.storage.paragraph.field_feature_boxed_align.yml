@@ -5,6 +5,8 @@ dependencies:
   module:
     - options
     - paragraphs
+_core:
+  default_config_hash: p-LNk71fSNSAcXmu3fbYGNDA8MzBX6AUteKneqQRsso
 id: paragraph.field_feature_boxed_align
 field_name: field_feature_boxed_align
 entity_type: paragraph
@@ -13,10 +15,10 @@ settings:
   allowed_values:
     -
       value: left
-      label: Left
+      label: 'Text/Box Left'
     -
       value: right
-      label: Right
+      label: 'Text/Box Right'
   allowed_values_function: ''
 module: options
 locked: false

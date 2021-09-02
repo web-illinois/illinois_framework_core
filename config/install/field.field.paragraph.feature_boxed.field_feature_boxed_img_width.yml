@@ -7,11 +7,13 @@ dependencies:
     - paragraphs.paragraphs_type.feature_boxed
   module:
     - options
+_core:
+  default_config_hash: GZQWxG6FOCZkWtmkipToeS8PvP3qLv7PeB0aDkuF7qE
 id: paragraph.feature_boxed.field_feature_boxed_img_width
 field_name: field_feature_boxed_img_width
 entity_type: paragraph
 bundle: feature_boxed
-label: 'Image Width'
+label: Layout
 description: ''
 required: true
 translatable: false

@@ -7,11 +7,9 @@ dependencies:
     - field.field.paragraph.feature_boxed.field_feature_boxed_background
     - field.field.paragraph.feature_boxed.field_feature_boxed_body
     - field.field.paragraph.feature_boxed.field_feature_boxed_button
-    - field.field.paragraph.feature_boxed.field_feature_boxed_callout
     - field.field.paragraph.feature_boxed.field_feature_boxed_img
     - field.field.paragraph.feature_boxed.field_feature_boxed_img_width
     - field.field.paragraph.feature_boxed.field_feature_boxed_subtitle
-    - field.field.paragraph.feature_boxed.field_feature_boxed_tagline
     - field.field.paragraph.feature_boxed.field_feature_boxed_title
     - image.style.thumbnail
     - paragraphs.paragraphs_type.feature_boxed
@@ -19,19 +17,21 @@ dependencies:
     - image
     - link
     - text
+_core:
+  default_config_hash: Mk8-LJu82MjTYqpceQUPxlORVWTxAua-fOp3-FwGzMs
 id: paragraph.feature_boxed.default
 targetEntityType: paragraph
 bundle: feature_boxed
 mode: default
 content:
   field_feature_boxed_align:
-    weight: 5
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_feature_boxed_background:
-    weight: 2
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -54,16 +54,8 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_feature_boxed_callout:
-    weight: 8
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_feature_boxed_img:
-    weight: 3
+    weight: 5
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -71,21 +63,13 @@ content:
     type: image_image
     region: content
   field_feature_boxed_img_width:
-    weight: 4
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_feature_boxed_subtitle:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_feature_boxed_tagline:
-    weight: 9
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -93,7 +77,7 @@ content:
     type: string_textfield
     region: content
   field_feature_boxed_title:
-    weight: 0
+    weight: 3
     settings:
       size: 60
       placeholder: ''

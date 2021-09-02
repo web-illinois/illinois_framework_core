@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_feature_boxed_title
     - paragraphs.paragraphs_type.feature_boxed
+_core:
+  default_config_hash: fyVw0mCHMZfmP6Jc2dn0hKW9L5ZxKhkU7RRQ2X5Z4yk
 id: paragraph.feature_boxed.field_feature_boxed_title
 field_name: field_feature_boxed_title
 entity_type: paragraph

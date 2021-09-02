@@ -7,11 +7,13 @@ dependencies:
     - paragraphs.paragraphs_type.feature_boxed
   module:
     - options
+_core:
+  default_config_hash: 0bIUcmIKwnQc1YE3KrUfRwt1rShYmfkgVR9FNF4UL_I
 id: paragraph.feature_boxed.field_feature_boxed_align
 field_name: field_feature_boxed_align
 entity_type: paragraph
 bundle: feature_boxed
-label: 'Box Alignment'
+label: Alignment
 description: ''
 required: true
 translatable: false

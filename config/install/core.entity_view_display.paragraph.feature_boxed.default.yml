@@ -7,11 +7,9 @@ dependencies:
     - field.field.paragraph.feature_boxed.field_feature_boxed_background
     - field.field.paragraph.feature_boxed.field_feature_boxed_body
     - field.field.paragraph.feature_boxed.field_feature_boxed_button
-    - field.field.paragraph.feature_boxed.field_feature_boxed_callout
     - field.field.paragraph.feature_boxed.field_feature_boxed_img
     - field.field.paragraph.feature_boxed.field_feature_boxed_img_width
     - field.field.paragraph.feature_boxed.field_feature_boxed_subtitle
-    - field.field.paragraph.feature_boxed.field_feature_boxed_tagline
     - field.field.paragraph.feature_boxed.field_feature_boxed_title
     - paragraphs.paragraphs_type.feature_boxed
   module:
@@ -19,6 +17,8 @@ dependencies:
     - link
     - options
     - text
+_core:
+  default_config_hash: Q1Lj1JnJD-wYQflEVEiipDn4R9offi1MrX9ALQX6epU
 id: paragraph.feature_boxed.default
 targetEntityType: paragraph
 bundle: feature_boxed
@@ -57,14 +57,6 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_feature_boxed_callout:
-    weight: 3
-    label: visually_hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_feature_boxed_img:
     weight: 4
     label: visually_hidden
@@ -83,14 +75,6 @@ content:
     region: content
   field_feature_boxed_subtitle:
     weight: 8
-    label: visually_hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_feature_boxed_tagline:
-    weight: 9
     label: visually_hidden
     settings:
       link_to_entity: false

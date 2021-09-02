@@ -5,6 +5,8 @@ dependencies:
   module:
     - paragraphs
     - text
+_core:
+  default_config_hash: Y2YQhPXbQU95X1YOERyYOQnRqNRh35S0AdFS8y3Y-ks
 id: paragraph.field_feature_boxed_body
 field_name: field_feature_boxed_body
 entity_type: paragraph

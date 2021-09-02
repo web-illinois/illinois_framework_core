@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.feature_boxed
   module:
     - options
+_core:
+  default_config_hash: iyqP0WFyS_OA02SIyxX0eg0EMjD8qgH03HHdwi41VKw
 id: paragraph.feature_boxed.field_feature_boxed_background
 field_name: field_feature_boxed_background
 entity_type: paragraph

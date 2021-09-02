@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: tz0VhYGllD4r0RPxrLK0Gd54d2uNrfHw7sam8WQAbhg
 id: paragraph.field_feature_boxed_title
 field_name: field_feature_boxed_title
 entity_type: paragraph

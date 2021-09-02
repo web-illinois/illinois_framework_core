@@ -6,6 +6,8 @@ dependencies:
     - file
     - image
     - paragraphs
+_core:
+  default_config_hash: O0MJimqu0Iuk7rWnJwrt2QSCe1y2SDZPgeA4Y8hk3NA
 id: paragraph.field_feature_boxed_img
 field_name: field_feature_boxed_img
 entity_type: paragraph

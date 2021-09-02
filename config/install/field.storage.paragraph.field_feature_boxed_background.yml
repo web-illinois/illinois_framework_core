@@ -5,6 +5,8 @@ dependencies:
   module:
     - options
     - paragraphs
+_core:
+  default_config_hash: 2dJxOo91s_zp3x3xKW2E_wT725HV7mYfawzyQroLHe4
 id: paragraph.field_feature_boxed_background
 field_name: field_feature_boxed_background
 entity_type: paragraph

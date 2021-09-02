@@ -8,6 +8,8 @@ dependencies:
     - paragraphs.paragraphs_type.rt_content
   module:
     - entity_reference_revisions
+_core:
+  default_config_hash: Gstc0ZpR1O8AIDF4BOub2swJ5zzzEQpWpn_A5RByaxM
 id: paragraph.rt.field_rt_column
 field_name: field_rt_column
 entity_type: paragraph
@@ -54,6 +56,9 @@ settings:
         enabled: false
       from_library:
         weight: 26
+        enabled: false
+      page_introduction:
+        weight: 27
         enabled: false
       rich_text:
         weight: 28

@@ -8,6 +8,8 @@ dependencies:
     - paragraphs.paragraphs_type.rt_content
   module:
     - text
+_core:
+  default_config_hash: pI1fuIZZRcWo2gPOoPHnwgmlXgo4xtK2aif3o8r_5T8
 id: paragraph.rt_content.default
 targetEntityType: paragraph
 bundle: rt_content

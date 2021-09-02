@@ -7,11 +7,13 @@ dependencies:
     - paragraphs.paragraphs_type.rt_content
   module:
     - text
+_core:
+  default_config_hash: DhVOokqbMyb9gIR_ytVJqbv46AQMVK9YRhiS3CCTo6M
 id: paragraph.rt_content.field_rt_content_body
 field_name: field_rt_content_body
 entity_type: paragraph
 bundle: rt_content
-label: 'Rich Text'
+label: Body
 description: ''
 required: true
 translatable: false

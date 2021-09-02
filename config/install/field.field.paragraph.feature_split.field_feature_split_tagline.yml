@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_feature_split_tagline
     - paragraphs.paragraphs_type.feature_split
+_core:
+  default_config_hash: NYrqJRd3CPdOPEE9eHAR-Xw8TmqjRMwP9VBMjmXSulQ
 id: paragraph.feature_split.field_feature_split_tagline
 field_name: field_feature_split_tagline
 entity_type: paragraph

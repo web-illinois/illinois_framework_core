@@ -1,3 +1,4 @@
+uuid: f1719148-8ae4-409d-99d3-93dbc4b48048
 langcode: en
 status: true
 dependencies:
@@ -18,19 +19,21 @@ dependencies:
     - image
     - link
     - text
+_core:
+  default_config_hash: C2-5TcLagEZC2UTXo_bJfdGbCe_L1q83s92x2K2G0Cc
 id: paragraph.feature_split.default
 targetEntityType: paragraph
 bundle: feature_split
 mode: default
 content:
   field_feature_split_background:
-    weight: 2
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_feature_split_body:
-    weight: 6
+    weight: 5
     settings:
       rows: 9
       summary_rows: 3
@@ -40,7 +43,7 @@ content:
     type: text_textarea_with_summary
     region: content
   field_feature_split_button:
-    weight: 7
+    weight: 9
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -48,7 +51,7 @@ content:
     type: link_default
     region: content
   field_feature_split_callout:
-    weight: 8
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -56,7 +59,7 @@ content:
     type: string_textfield
     region: content
   field_feature_split_img:
-    weight: 3
+    weight: 8
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -64,19 +67,19 @@ content:
     type: image_image
     region: content
   field_feature_split_img_align:
-    weight: 4
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_feature_split_img_width:
-    weight: 5
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_feature_split_subtitle:
-    weight: 1
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -84,7 +87,7 @@ content:
     type: string_textfield
     region: content
   field_feature_split_tagline:
-    weight: 9
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -92,7 +95,7 @@ content:
     type: string_textfield
     region: content
   field_feature_split_title:
-    weight: 0
+    weight: 3
     settings:
       size: 60
       placeholder: ''

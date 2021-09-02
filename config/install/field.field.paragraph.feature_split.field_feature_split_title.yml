@@ -1,9 +1,12 @@
+uuid: ce698a1f-c90b-400d-8b14-624cc64d7888
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_feature_split_title
     - paragraphs.paragraphs_type.feature_split
+_core:
+  default_config_hash: 4uc_c0hy9kRTH-1QcKfbXvKUXGkxUpbpBmNO7o8vDV8
 id: paragraph.feature_split.field_feature_split_title
 field_name: field_feature_split_title
 entity_type: paragraph

@@ -1,3 +1,4 @@
+uuid: 5a53cb74-331a-4036-8fb6-7f2bac8f5629
 langcode: en
 status: true
 dependencies:
@@ -6,11 +7,13 @@ dependencies:
     - paragraphs.paragraphs_type.feature_split
   module:
     - options
+_core:
+  default_config_hash: 5xZevzfDFwJ8G5OuV8OoIoftlIzjoY24iqb5X4K7Zb8
 id: paragraph.feature_split.field_feature_split_img_align
 field_name: field_feature_split_img_align
 entity_type: paragraph
 bundle: feature_split
-label: 'Image Alignment'
+label: Alignment
 description: ''
 required: true
 translatable: false

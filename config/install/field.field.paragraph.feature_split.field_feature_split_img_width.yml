@@ -7,11 +7,13 @@ dependencies:
     - paragraphs.paragraphs_type.feature_split
   module:
     - options
+_core:
+  default_config_hash: xSnebV7ICRahddsH2nnj6d9JdLnFAQ8YQxDCJED4Ue0
 id: paragraph.feature_split.field_feature_split_img_width
 field_name: field_feature_split_img_width
 entity_type: paragraph
 bundle: feature_split
-label: 'Image Width'
+label: Layout
 description: ''
 required: true
 translatable: false

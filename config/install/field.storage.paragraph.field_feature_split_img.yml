@@ -1,3 +1,4 @@
+uuid: 87f33282-8242-4981-88d8-d5ec80c40677
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - file
     - image
     - paragraphs
+_core:
+  default_config_hash: EXf9DyeoO380h38Y1SptQKjeVyPvM3K2e4MDRtcr2Co
 id: paragraph.field_feature_split_img
 field_name: field_feature_split_img
 entity_type: paragraph

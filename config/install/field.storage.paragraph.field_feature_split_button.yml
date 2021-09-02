@@ -1,9 +1,12 @@
+uuid: 04fb9254-596a-4594-b14d-6d2e2dff3d80
 langcode: en
 status: true
 dependencies:
   module:
     - link
     - paragraphs
+_core:
+  default_config_hash: VJ68iEuWF28ZkZocEeGRylFEzr-D5p4juzz-mgot5lE
 id: paragraph.field_feature_split_button
 field_name: field_feature_split_button
 entity_type: paragraph

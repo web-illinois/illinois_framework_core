@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: fupE2jdwFei648OEkQ0E0B0-ouByGiK_054i2WGwdAY
 id: paragraph.field_feature_split_tagline
 field_name: field_feature_split_tagline
 entity_type: paragraph

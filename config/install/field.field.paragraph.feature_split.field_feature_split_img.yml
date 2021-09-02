@@ -1,3 +1,4 @@
+uuid: 06255865-deb9-450b-aff5-4e6f66d53e78
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.feature_split
   module:
     - image
+_core:
+  default_config_hash: vH3S_frueqhDd3AHYq6tPGcvY9RfSGy1KYOwDsmlVrg
 id: paragraph.feature_split.field_feature_split_img
 field_name: field_feature_split_img
 entity_type: paragraph

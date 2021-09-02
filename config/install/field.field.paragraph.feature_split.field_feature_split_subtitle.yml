@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_feature_split_subtitle
     - paragraphs.paragraphs_type.feature_split
+_core:
+  default_config_hash: E7zaTLCfm8QxR2NlRxaDcaCDLAZKVn8JxQ7Nbq8EtVg
 id: paragraph.feature_split.field_feature_split_subtitle
 field_name: field_feature_split_subtitle
 entity_type: paragraph

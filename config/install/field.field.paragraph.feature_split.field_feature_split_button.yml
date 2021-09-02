@@ -1,3 +1,4 @@
+uuid: 2ec56610-9021-4f88-9477-1e89ca0e4b9f
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.feature_split
   module:
     - link
+_core:
+  default_config_hash: VFJkN1JhroKL-9KMuAO1GRNL6cuY5fCA0Hgf1Ikc4qU
 id: paragraph.feature_split.field_feature_split_button
 field_name: field_feature_split_button
 entity_type: paragraph

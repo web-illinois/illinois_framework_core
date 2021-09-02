@@ -1,8 +1,11 @@
+uuid: 2e4fd39a-a9a2-4868-92d6-d5226aea2fb9
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: LXIjejx5s_jnn8RWu1NMcndJUJrg2aRE4bFuDVoYsOc
 id: feature_split
-label: 'Feature - Split'
+label: 'Feature Split'
 icon_uuid: null
 icon_default: null
 description: ''

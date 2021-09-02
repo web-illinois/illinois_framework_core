@@ -5,11 +5,13 @@ dependencies:
   config:
     - field.storage.paragraph.field_list_title
     - paragraphs.paragraphs_type.list
+_core:
+  default_config_hash: DF6QghphKb1pXWzwMe30pF5RbkRyV5uuh3ot0FGEV-0
 id: paragraph.list.field_list_title
 field_name: field_list_title
 entity_type: paragraph
 bundle: list
-label: Title
+label: 'Section Title'
 description: ''
 required: false
 translatable: false

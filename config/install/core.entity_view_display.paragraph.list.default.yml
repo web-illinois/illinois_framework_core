@@ -4,15 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.list.field_list_content
-    - field.field.paragraph.list.field_list_margin
     - field.field.paragraph.list.field_list_subtitle
     - field.field.paragraph.list.field_list_title
     - paragraphs.paragraphs_type.list
   module:
     - entity_reference_revisions
-    - options
 _core:
-  default_config_hash: oB1EMbxHTGmjGfnUq_F39LD1fw3XgaFS8drzBwotSEE
+  default_config_hash: egE1JlDYtlDaAltRDT-5PGt3Fa4lS_PX1C_R8MH7Fc4
 id: paragraph.list.default
 targetEntityType: paragraph
 bundle: list
@@ -26,13 +24,6 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    region: content
-  field_list_margin:
-    weight: 0
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
   field_list_subtitle:
     weight: 2

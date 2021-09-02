@@ -5,11 +5,13 @@ dependencies:
   config:
     - field.storage.paragraph.field_cta_narrow_title
     - paragraphs.paragraphs_type.cta_narrow
+_core:
+  default_config_hash: ZPI6X5H1H3hZ_lW91esq33zR6o6Lep8Ev0fgagVMwcE
 id: paragraph.cta_narrow.field_cta_narrow_title
 field_name: field_cta_narrow_title
 entity_type: paragraph
 bundle: cta_narrow
-label: Heading
+label: Title
 description: ''
 required: false
 translatable: false

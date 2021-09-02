@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: 1QuWJm7tXDfQjZzwFHDL8H3gWjgpznTcnKve3q66WRg
+  default_config_hash: YwnhYCHPPL848TYbECbiBHcihwwAEBev5Kr-E4bjGDw
 id: cta_narrow
 label: 'Call to Action Narrow'
 icon_uuid: null

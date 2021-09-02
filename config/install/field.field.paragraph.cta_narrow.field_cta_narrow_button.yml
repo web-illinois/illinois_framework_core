@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.cta_narrow
   module:
     - link
+_core:
+  default_config_hash: UomJZ7nO5DSejE11fJqovPmkJdnXz8mBxfKW0tOitZY
 id: paragraph.cta_narrow.field_cta_narrow_button
 field_name: field_cta_narrow_button
 entity_type: paragraph

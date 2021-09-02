@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_cta_narrow_body
     - paragraphs.paragraphs_type.cta_narrow
+_core:
+  default_config_hash: d5khvRSr4u7h1W6f9YPRHxy8fl_s25jO0Epn046pNzc
 id: paragraph.cta_narrow.field_cta_narrow_body
 field_name: field_cta_narrow_body
 entity_type: paragraph

@@ -8,7 +8,7 @@ dependencies:
   module:
     - link
 _core:
-  default_config_hash: ksOkXV7i-m58zEJVfZc3X_MlwRkNdapV7dWGOZzeTTo
+  default_config_hash: 2wmhr6HTqZRakZgIH5IpfwpHaIrRy_8tN9YD781oqdg
 id: paragraph.icon_row_content.field_icon_row_content_link
 field_name: field_icon_row_content_link
 entity_type: paragraph

@@ -12,7 +12,7 @@ dependencies:
     - link
     - options
 _core:
-  default_config_hash: dnpE7xZUa9rKQJO1PEt5lLFG7mzbrzuUqp3NJrVvmcc
+  default_config_hash: UToW_Xb90REZzUUVyS6sNEyXkSubLRRcNJZK-RcV2ic
 id: paragraph.icon_row_content.default
 targetEntityType: paragraph
 bundle: icon_row_content

@@ -6,7 +6,7 @@ dependencies:
     - field.storage.paragraph.field_icon_row_content_text
     - paragraphs.paragraphs_type.icon_row_content
 _core:
-  default_config_hash: JbUYVWDw-G09r1z7iSBUMpbOZUa6P4LDZdepTJ39YPI
+  default_config_hash: fcwQH5dK6eJ5pQ6FphQlFLuibQzkavTCdQsvejxH9j4
 id: paragraph.icon_row_content.field_icon_row_content_text
 field_name: field_icon_row_content_text
 entity_type: paragraph

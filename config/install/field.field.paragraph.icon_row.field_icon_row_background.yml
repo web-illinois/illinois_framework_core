@@ -8,12 +8,12 @@ dependencies:
   module:
     - options
 _core:
-  default_config_hash: KF9vyIlWVo4rN6SgXbreEBW6gOZyQqNRYMejCwpTnw0
+  default_config_hash: W08mg16cUu22ry5RtEKo9cbNS-gyvW5TM8bl_GLvWFw
 id: paragraph.icon_row.field_icon_row_background
 field_name: field_icon_row_background
 entity_type: paragraph
 bundle: icon_row
-label: Background
+label: 'Section Background'
 description: ''
 required: true
 translatable: false

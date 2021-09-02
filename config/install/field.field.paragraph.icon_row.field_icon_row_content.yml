@@ -9,7 +9,7 @@ dependencies:
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: J-ZY1r4SbxvpkkawDThYVG0BTlDlZa04HIqnXUQX5dw
+  default_config_hash: g6C2ycJ6XDKdxrgIR7FXj-Lc5zYbXrwwF3xzMsxsE2I
 id: paragraph.icon_row.field_icon_row_content
 field_name: field_icon_row_content
 entity_type: paragraph
@@ -95,6 +95,9 @@ settings:
         enabled: false
       list_content:
         weight: 50
+        enabled: false
+      page_introduction:
+        weight: 51
         enabled: false
       rich_text:
         weight: 52

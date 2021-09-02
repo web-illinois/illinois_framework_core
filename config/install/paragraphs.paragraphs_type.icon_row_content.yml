@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: 7fnvHZ72ZjSTEPrhEwuNYijc58Lg-ByXdsI8NrP1-wc
+  default_config_hash: janDCwsE5rMky7HfAe88LYdemhZWl1PdMsGyLHN6EEo
 id: icon_row_content
-label: 'Icon row content'
+label: 'Icon Row Content'
 icon_uuid: null
 icon_default: null
 description: ''

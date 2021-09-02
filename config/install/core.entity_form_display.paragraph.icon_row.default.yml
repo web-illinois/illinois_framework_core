@@ -3,28 +3,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.icon_row.field_icon_row_alignment
     - field.field.paragraph.icon_row.field_icon_row_background
     - field.field.paragraph.icon_row.field_icon_row_content
     - field.field.paragraph.icon_row.field_icon_row_icon_size
-    - field.field.paragraph.icon_row.field_icon_row_margin
     - field.field.paragraph.icon_row.field_icon_row_title
     - paragraphs.paragraphs_type.icon_row
   module:
     - paragraphs
 _core:
-  default_config_hash: z4OZ7D3c6BxtBtexZQwq1tt3LIWl27CXUomuVKQbLaY
+  default_config_hash: mxzSiZpXecCr5tJSaY8SnOh4JFJ89lxfwp2_Lgrpyu4
 id: paragraph.icon_row.default
 targetEntityType: paragraph
 bundle: icon_row
 mode: default
 content:
-  field_icon_row_alignment:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_icon_row_background:
     weight: 1
     settings: {  }
@@ -45,12 +37,6 @@ content:
     region: content
   field_icon_row_icon_size:
     weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_icon_row_margin:
-    weight: 0
     settings: {  }
     third_party_settings: {  }
     type: options_select

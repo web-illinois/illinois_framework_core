@@ -11,7 +11,7 @@ dependencies:
   module:
     - link
 _core:
-  default_config_hash: hH4plUhXUKOiKJGVtglxBtHn8MOywTJNtRymmQ1gdzQ
+  default_config_hash: Ci2ur5jE6EJ9eUdeyMhxheDJ4-UCYLKJbXVmRfETnqs
 id: paragraph.icon_row_content.default
 targetEntityType: paragraph
 bundle: icon_row_content

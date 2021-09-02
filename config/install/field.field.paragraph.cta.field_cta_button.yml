@@ -8,7 +8,7 @@ dependencies:
   module:
     - link
 _core:
-  default_config_hash: gPdeStxm_VWBosUHHxa-oKZFRbjMJzyk76KkoMkcPps
+  default_config_hash: bhDFCHHQriCAGPRVHVD4jSFedWKPp8Djw04CjLuFIbg
 id: paragraph.cta.field_cta_button
 field_name: field_cta_button
 entity_type: paragraph

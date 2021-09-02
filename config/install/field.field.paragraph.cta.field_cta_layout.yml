@@ -7,11 +7,13 @@ dependencies:
     - paragraphs.paragraphs_type.cta
   module:
     - options
+_core:
+  default_config_hash: AeBHU82YU54qGzyQkGHsuhzfOunrApPkPZJYeyGgO-w
 id: paragraph.cta.field_cta_layout
 field_name: field_cta_layout
 entity_type: paragraph
 bundle: cta
-label: Layout
+label: Alignment
 description: ''
 required: false
 translatable: false

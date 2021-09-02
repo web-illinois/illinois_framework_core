@@ -5,6 +5,8 @@ dependencies:
   module:
     - options
     - paragraphs
+_core:
+  default_config_hash: OCpPOsCP6Uf6aAMqrXwW77MLktc26i3jYoyN5pTJIpQ
 id: paragraph.field_cta_background
 field_name: field_cta_background
 entity_type: paragraph

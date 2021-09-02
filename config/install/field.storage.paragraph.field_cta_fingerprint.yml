@@ -5,6 +5,8 @@ dependencies:
   module:
     - options
     - paragraphs
+_core:
+  default_config_hash: WMA_oO7UMTB2Imn-Cgx77uVAbGVS8eIowyPG88ARJYU
 id: paragraph.field_cta_fingerprint
 field_name: field_cta_fingerprint
 entity_type: paragraph

@@ -5,6 +5,8 @@ dependencies:
   module:
     - paragraphs
     - text
+_core:
+  default_config_hash: POhwk4hA-_-HOBmbOqJJvZ4nqK0x-w2o5UuJ3ZsLOmo
 id: paragraph.field_cta_body
 field_name: field_cta_body
 entity_type: paragraph

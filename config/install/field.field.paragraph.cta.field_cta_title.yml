@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_cta_title
     - paragraphs.paragraphs_type.cta
+_core:
+  default_config_hash: HMqGYVKud_KJfp6hwECVvMxuEHw_FJAbfjAYkuPxvvA
 id: paragraph.cta.field_cta_title
 field_name: field_cta_title
 entity_type: paragraph

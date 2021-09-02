@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.cta
   module:
     - options
+_core:
+  default_config_hash: _crZ3coUgwKlRvMCF-scmn60VkxU1cmEIhDwR4eqgJQ
 id: paragraph.cta.field_cta_fingerprint
 field_name: field_cta_fingerprint
 entity_type: paragraph

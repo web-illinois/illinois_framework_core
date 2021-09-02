@@ -5,6 +5,8 @@ dependencies:
   module:
     - options
     - paragraphs
+_core:
+  default_config_hash: D_t9LD71byVmoPpO69J85Zk_URzMEOJRSvWGAPq8u8E
 id: paragraph.field_cta_layout
 field_name: field_cta_layout
 entity_type: paragraph

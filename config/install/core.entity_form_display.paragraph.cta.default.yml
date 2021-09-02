@@ -9,7 +9,6 @@ dependencies:
     - field.field.paragraph.cta.field_cta_fingerprint
     - field.field.paragraph.cta.field_cta_icon
     - field.field.paragraph.cta.field_cta_layout
-    - field.field.paragraph.cta.field_cta_margin
     - field.field.paragraph.cta.field_cta_subtitle
     - field.field.paragraph.cta.field_cta_title
     - image.style.thumbnail
@@ -19,20 +18,20 @@ dependencies:
     - link
     - text
 _core:
-  default_config_hash: HphGs_msYe-idZC17qx20dvFFP0j-z_bgzQnKemlRWA
+  default_config_hash: imbdqTUHiELF4SBGnRXXlG3cT4OXrHaVVkbrpi2zitU
 id: paragraph.cta.default
 targetEntityType: paragraph
 bundle: cta
 mode: default
 content:
   field_cta_background:
-    weight: 1
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_cta_body:
-    weight: 7
+    weight: 6
     settings:
       rows: 5
       placeholder: ''
@@ -40,7 +39,7 @@ content:
     type: text_textarea
     region: content
   field_cta_button:
-    weight: 8
+    weight: 7
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -48,7 +47,7 @@ content:
     type: link_default
     region: content
   field_cta_fingerprint:
-    weight: 2
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -62,19 +61,13 @@ content:
     type: image_image
     region: content
   field_cta_layout:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_cta_margin:
-    weight: 0
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_cta_subtitle:
-    weight: 5
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -82,7 +75,7 @@ content:
     type: string_textfield
     region: content
   field_cta_title:
-    weight: 6
+    weight: 5
     settings:
       size: 60
       placeholder: ''

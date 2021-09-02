@@ -2,6 +2,8 @@ uuid: 74534403-4612-4783-9988-6c81c42e6ce9
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: mEdl19J2i8utZc4nXVd9-p8Bo6cEjxfphmMpB6SCpuc
 id: cta
 label: 'Call to Action'
 icon_uuid: null

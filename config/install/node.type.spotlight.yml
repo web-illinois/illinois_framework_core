@@ -12,7 +12,7 @@ _core:
   default_config_hash: N-AS5uxZ2AG3Eem2GjJtYt630zAY8eZcTHIbpECVG9g
 name: Spotlight
 type: spotlight
-description: ''
+description: 'Use <em>Spotlight</em> to highlight important topics/awards/people of your unit. Has the <em>Spotlight Type</em> taxonomy for creating types.'
 help: ''
 new_revision: true
 preview_mode: 1

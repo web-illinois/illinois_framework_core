@@ -6,16 +6,16 @@ dependencies:
 id: spotlight
 label: Spotlight
 type: 'canonical_entities:node'
-pattern: '/spotlight/[node:title]'
+pattern: '/spotlight/[node:field_type:entity:name]/[node:title]'
 selection_criteria:
-  3241fb5a-72ca-48ee-9031-f3f4f7c7138c:
+  18bfdda1-981c-43e9-870b-c3b91418d56a:
     id: node_type
     bundles:
       spotlight: spotlight
     negate: false
     context_mapping:
       node: node
-    uuid: 3241fb5a-72ca-48ee-9031-f3f4f7c7138c
+    uuid: 18bfdda1-981c-43e9-870b-c3b91418d56a
 selection_logic: and
 weight: -5
 relationships: {  }

@@ -1,0 +1,27 @@
+<?php
+
+use Drupal\Core\Config\FileStorage;
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\field\Entity\FieldConfig;
+
+/*
+Updates spotlight feature to hide more detail button and address changes in feature view.
+WILL overwrite existing config with the base config. Need to reapply changes made on site afterwards.
+*/
+function illinois_framework_core_update_8000(){
+    //load our config
+    $config_path = drupal_get_path('module', 'illinois_framework_core') . '/config/install/';
+    $source = new FileStorage($config_path);
+
+    //set the view to the new config
+    \Drupal::configFactory()
+    ->getEditable('views.view.spotlight_feature')
+    ->setData($source->read('views.view.spotlight_feature.yml'))
+    ->save(TRUE);
+
+    //set the feature display to new config
+    \Drupal::configFactory()
+    ->getEditable('core.entity_view_display.node.spotlight_feature')
+    ->setData($source->read('core.entity_view_display.node.spotlight_feature.yml'))
+    ->save(TRUE);
+}

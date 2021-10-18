@@ -9,7 +9,7 @@ dependencies:
     - node
     - user
 _core:
-  default_config_hash: n8Vpta52SZDDdJMPhSvti0fHOcVGl8cxW8evc8ZmrYc
+  default_config_hash: 7Rr9zq72TVszGktHHWvG1dcGi-J_7I6zYe_WQRWsaX4
 id: spotlight_feature
 label: 'Spotlight Feature'
 module: views
@@ -56,6 +56,10 @@ display:
           offset: 0
       style:
         type: default
+        options:
+          row_class: node-feature
+          default_row_class: true
+          uses_fields: false
       row:
         type: 'entity:node'
         options:

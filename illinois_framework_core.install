@@ -1,22 +1,21 @@
 <?php
 
 use Drupal\Core\Config\FileStorage;
-use Drupal\field\Entity\FieldStorageConfig;
-use Drupal\field\Entity\FieldConfig;
+use Drupal\Core\Utility\UpdateException;
 
-/*
-Updates spotlight feature to hide more detail button and address changes in feature view.
-WILL overwrite existing config with the base config. Need to reapply changes made on site afterwards.
+/**
+* Updates spotlight feature to hide more detail button and address changes in feature view.
+* WILL overwrite existing config with the base config. Need to reapply changes made on site afterwards.
 */
-function illinois_framework_core_update_8901(){
+function illinois_framework_core_update_8900(){
     //load our config
     $config_path = drupal_get_path('module', 'illinois_framework_core') . '/config/install/';
     $source = new FileStorage($config_path);
 
     //load up the config we want to import.
 
-    $source_config = $source->read('views.view.spotlight_feature.yml');
-    if($source_config !=== FALSE){
+    $source_config = $source->read("views.view.spotlight_feature.yml");
+    if($source_config !== FALSE){
     //set the view to the new config
     \Drupal::configFactory()
     ->getEditable('views.view.spotlight_feature')
@@ -24,7 +23,7 @@ function illinois_framework_core_update_8901(){
     ->save(TRUE);
     }else{
         //say we did not find the config to load
-        \Drupal::messenger()->addMessage("Failed to load config file");
+        throw new UpdateException("Failed to load config file");
     }
 
     //set the feature display to new config

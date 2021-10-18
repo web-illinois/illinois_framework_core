@@ -8,8 +8,6 @@ dependencies:
   module:
     - node
     - user
-_core:
-  default_config_hash: 7Rr9zq72TVszGktHHWvG1dcGi-J_7I6zYe_WQRWsaX4
 id: spotlight_feature
 label: 'Spotlight Feature'
 module: views

@@ -21,8 +21,6 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-_core:
-  default_config_hash: xc3yx4hIzL3bJC9tm-58ieeeeMdCXxizmuRzsCtjPNY
 id: node.spotlight.feature
 targetEntityType: node
 bundle: spotlight

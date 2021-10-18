@@ -4,8 +4,7 @@ use Drupal\Core\Config\FileStorage;
 use Drupal\Core\Utility\UpdateException;
 
 /**
-* Updates spotlight feature to hide more detail button and address changes in feature view.
-* WILL overwrite existing config with the base config. Need to reapply changes made on site afterwards.
+* Updates spotlight feature to hide more detail button and address changes in feature view. WILL overwrite existing config with the base config. Need to reapply changes made on site afterwards.
 */
 function illinois_framework_core_update_8900(){
     //load our config
@@ -14,7 +13,7 @@ function illinois_framework_core_update_8900(){
 
     //load up the config we want to import.
 
-    $source_config = $source->read("views.view.spotlight_feature.yml");
+    $source_config = $source->read('views.view.spotlight_feature.yml');
     if($source_config !== FALSE){
     //set the view to the new config
     \Drupal::configFactory()

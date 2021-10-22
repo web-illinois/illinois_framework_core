@@ -11,7 +11,7 @@ dependencies:
     - taxonomy
     - user
 _core:
-  default_config_hash: JnV259FPgnyHMWb-0dzHRVtFptB4UFVDXQBogX2NK0g
+  default_config_hash: y7YtO8ldLaC4D7q82usxySTvQNYEz5B69_h-laFSuzQ
 id: spotlight_list
 label: 'Spotlight List'
 module: views
@@ -171,20 +171,7 @@ display:
           granularity: second
       title: 'Spotlight List'
       header: {  }
-      footer:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: '<style>.views-row{padding:1em;} .views-row:nth-child(even){background-color:var(--il-cloud-1);}</style>'
-            format: full_html
-          plugin_id: text
+      footer: {  }
       empty: {  }
       relationships:
         field_type:
@@ -246,6 +233,7 @@ display:
           entity_field: name
           plugin_id: string
       display_extenders: {  }
+      css_class: spotlight-list
     cache_metadata:
       max-age: -1
       contexts:

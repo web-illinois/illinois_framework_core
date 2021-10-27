@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Enable config sync module
+ */
+function illinois_framework_core_update_9200() {
+  \Drupal::service('module_installer')->install(['config_sync']);
+}

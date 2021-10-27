@@ -1,6 +1,5 @@
 name: 'Illinois Framework Core'
-core: 8.x
-core_version_requirement: ^8
+core_version_requirement: ^8 || ^9
 type: module
 package: 'Illinois Framework'
 description: 'Shared functionality for the Illinois Framework.'

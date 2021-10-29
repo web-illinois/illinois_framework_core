@@ -1,0 +1,23 @@
+uuid: 6e00591b-d586-4815-aaad-570a10da2ca2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_rt_background_color
+    - paragraphs.paragraphs_type.rt
+  module:
+    - options
+id: paragraph.rt.field_rt_background_color
+field_name: field_rt_background_color
+entity_type: paragraph
+bundle: rt
+label: 'Background Color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: White
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -3,21 +3,28 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.rt.field_rt_background_color
     - field.field.paragraph.rt.field_rt_column
     - field.field.paragraph.rt.field_rt_title
     - paragraphs.paragraphs_type.rt
   module:
     - paragraphs
 _core:
-  default_config_hash: zPy1pOrfkueYb1NmvecH-FtTivn8JV318nAeTNri1Wo
+  default_config_hash: 1CeBxjt4eKgullDILYD7QQo1O_lQmt--rrBLvzJRfUk
 id: paragraph.rt.default
 targetEntityType: paragraph
 bundle: rt
 mode: default
 content:
+  field_rt_background_color:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_rt_column:
     type: entity_reference_paragraphs
-    weight: 1
+    weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -28,7 +35,7 @@ content:
     third_party_settings: {  }
     region: content
   field_rt_title:
-    weight: 0
+    weight: 1
     settings:
       size: 60
       placeholder: ''

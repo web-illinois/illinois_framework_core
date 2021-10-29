@@ -3,18 +3,27 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.rt.field_rt_background_color
     - field.field.paragraph.rt.field_rt_column
     - field.field.paragraph.rt.field_rt_title
     - paragraphs.paragraphs_type.rt
   module:
     - entity_reference_revisions
+    - options
 _core:
-  default_config_hash: 70hU5RwwSbDoaFuhRTwmv_k9bx-oZRAuMyYwZXUxUUE
+  default_config_hash: aukpu3NB0C44uKJxEIUWtBpvdBrXf6gWPo4dXobeFls
 id: paragraph.rt.default
 targetEntityType: paragraph
 bundle: rt
 mode: default
 content:
+  field_rt_background_color:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_rt_column:
     type: entity_reference_revisions_entity_view
     weight: 1

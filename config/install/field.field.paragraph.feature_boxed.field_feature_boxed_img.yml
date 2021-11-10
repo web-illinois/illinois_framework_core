@@ -8,7 +8,7 @@ dependencies:
   module:
     - image
 _core:
-  default_config_hash: RrphWFWPctOBmHrbUHVkoxCN2ooCz8ScL65nOsWm440
+  default_config_hash: PZWjv9SiFKCIBe4-GOIN_TidEJt0AAAfCSr0UAoKnqk
 id: paragraph.feature_boxed.field_feature_boxed_img
 field_name: field_feature_boxed_img
 entity_type: paragraph
@@ -22,9 +22,9 @@ default_value_callback: ''
 settings:
   file_directory: paragraphs/feature-boxed
   file_extensions: 'png gif jpg jpeg'
-  max_filesize: 5MB
+  max_filesize: 10MB
   max_resolution: ''
-  min_resolution: 1280x600
+  min_resolution: 1000x500
   alt_field: true
   alt_field_required: true
   title_field: true

@@ -10,13 +10,13 @@ dependencies:
     - image.style.news_archive_thumbnail
     - node.type.news
   module:
+    - advanced_text_formatter
     - datetime
     - media
     - node
-    - text
     - user
 _core:
-  default_config_hash: hbScTvSYPLmObCfD_4so8bjsMiu6gqFKTyFOq6Rs0UE
+  default_config_hash: vGADyWgqAJSNVasBJtX59zUDlqqJTJHkR5R5_2p6uV4
 id: news
 label: News
 module: views
@@ -331,9 +331,31 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_summary_or_trimmed
+          type: advanced_text
           settings:
-            trim_length: 300
+            trim_length: '300'
+            ellipsis: 1
+            word_boundary: 1
+            use_summary: 1
+            token_replace: 0
+            filter: drupal
+            format: trim_text
+            allowed_html:
+              - a
+              - b
+              - br
+              - dd
+              - dl
+              - dt
+              - em
+              - i
+              - li
+              - ol
+              - p
+              - strong
+              - u
+              - ul
+            autop: 0
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -621,9 +643,31 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_summary_or_trimmed
+          type: advanced_text
           settings:
-            trim_length: 300
+            trim_length: '300'
+            ellipsis: 1
+            word_boundary: 1
+            use_summary: 1
+            token_replace: 0
+            filter: drupal
+            format: trim_text
+            allowed_html:
+              - a
+              - b
+              - br
+              - dd
+              - dl
+              - dt
+              - em
+              - i
+              - li
+              - ol
+              - p
+              - strong
+              - u
+              - ul
+            autop: 0
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -983,7 +1027,7 @@ display:
             more_link: false
             more_link_text: ''
             more_link_path: ''
-            strip_tags: true
+            strip_tags: false
             trim: false
             preserve_tags: '<a> <strong> <em> <div>'
             html: false
@@ -1000,9 +1044,31 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_summary_or_trimmed
+          type: advanced_text
           settings:
-            trim_length: 600
+            trim_length: '600'
+            ellipsis: 1
+            word_boundary: 1
+            use_summary: 1
+            token_replace: 0
+            filter: drupal
+            format: trim_text
+            allowed_html:
+              - a
+              - b
+              - br
+              - dd
+              - dl
+              - dt
+              - em
+              - i
+              - li
+              - ol
+              - p
+              - strong
+              - u
+              - ul
+            autop: 0
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1317,7 +1383,7 @@ display:
             more_link: false
             more_link_text: ''
             more_link_path: ''
-            strip_tags: true
+            strip_tags: false
             trim: false
             preserve_tags: '<a> <strong> <em> <div>'
             html: false
@@ -1334,9 +1400,31 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_summary_or_trimmed
+          type: advanced_text
           settings:
-            trim_length: 600
+            trim_length: '600'
+            ellipsis: 1
+            word_boundary: 1
+            use_summary: 1
+            token_replace: 0
+            filter: drupal
+            format: trim_text
+            allowed_html:
+              - a
+              - b
+              - br
+              - dd
+              - dl
+              - dt
+              - em
+              - i
+              - li
+              - ol
+              - p
+              - strong
+              - u
+              - ul
+            autop: 0
           group_column: value
           group_columns: {  }
           group_rows: true

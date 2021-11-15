@@ -5,6 +5,7 @@
     "license": "GPL-2.0-or-later",
     "require": {
         "drupal/admin_toolbar": "^3.0",
+        "drupal/advanced_text_formatter": "^2.1",
         "drupal/anchor_link": "^2.4",
         "drupal/backup_migrate": "^5.0",
         "drupal/bamboo_twig": "^5.0",

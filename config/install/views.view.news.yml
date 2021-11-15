@@ -10,13 +10,13 @@ dependencies:
     - image.style.news_archive_thumbnail
     - node.type.news
   module:
+    - advanced_text_formatter
     - datetime
     - media
     - node
-    - text
     - user
 _core:
-  default_config_hash: hbScTvSYPLmObCfD_4so8bjsMiu6gqFKTyFOq6Rs0UE
+  default_config_hash: vGADyWgqAJSNVasBJtX59zUDlqqJTJHkR5R5_2p6uV4
 id: news
 label: News
 module: views
@@ -331,9 +331,31 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_summary_or_trimmed
+          type: advanced_text
           settings:
-            trim_length: 300
+            trim_length: '300'
+            ellipsis: 1
+            word_boundary: 1
+            use_summary: 1
+            token_replace: 0
+            filter: drupal
+            format: trim_text
+            allowed_html:
+              - a
+              - b
+              - br
+              - dd
+              - dl
+              - dt
+              - em
+              - i
+              - li
+              - ol
+              - p
+              - strong
+              - u
+              - ul
+            autop: 0
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -558,6 +580,71 @@ display:
           click_sort_column: value
           type: string
           settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+        title_1:
+          id: title_1
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
             link_to_entity: false
           group_column: value
           group_columns: {  }
@@ -621,9 +708,31 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_summary_or_trimmed
+          type: advanced_text
           settings:
-            trim_length: 300
+            trim_length: '300'
+            ellipsis: 1
+            word_boundary: 1
+            use_summary: 1
+            token_replace: 0
+            filter: drupal
+            format: trim_text
+            allowed_html:
+              - a
+              - b
+              - br
+              - dd
+              - dl
+              - dt
+              - em
+              - i
+              - li
+              - ol
+              - p
+              - strong
+              - u
+              - ul
+            autop: 0
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -699,7 +808,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"highlighted-news-content\">\r\n<div class=\"title\"><h2>{{ title }}</h2></div>\r\n<div class=\"body\">{{ body }}</div>\r\n<div class=\"button\"><a class=\"il-button\" href=\"{{ view_node }}\">Read full story <span class=\"hidden\">{{ title }}</span></a></div>\r\n</div>"
+            text: "<div class=\"highlighted-news-content\">\r\n<div class=\"title\"><h2>{{ title }}</h2></div>\r\n<div class=\"body\">{{ body }}</div>\r\n<div class=\"button\"><a class=\"il-button\" href=\"{{ view_node }}\">Read full story <span class=\"hidden\">{{ title_1 }}</span></a></div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -1000,9 +1109,31 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_summary_or_trimmed
+          type: advanced_text
           settings:
-            trim_length: 600
+            trim_length: '600'
+            ellipsis: 1
+            word_boundary: 1
+            use_summary: 1
+            token_replace: 0
+            filter: drupal
+            format: trim_text
+            allowed_html:
+              - a
+              - b
+              - br
+              - dd
+              - dl
+              - dt
+              - em
+              - i
+              - li
+              - ol
+              - p
+              - strong
+              - u
+              - ul
+            autop: 0
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1334,9 +1465,31 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_summary_or_trimmed
+          type: advanced_text
           settings:
-            trim_length: 600
+            trim_length: '600'
+            ellipsis: 1
+            word_boundary: 1
+            use_summary: 1
+            token_replace: 0
+            filter: drupal
+            format: trim_text
+            allowed_html:
+              - a
+              - b
+              - br
+              - dd
+              - dl
+              - dt
+              - em
+              - i
+              - li
+              - ol
+              - p
+              - strong
+              - u
+              - ul
+            autop: 0
           group_column: value
           group_columns: {  }
           group_rows: true

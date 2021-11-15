@@ -1,0 +1,80 @@
+uuid: f33d0c68-16c5-4788-b95f-5afcc03e6e19
+langcode: en
+status: true
+dependencies:
+  module:
+    - blazy
+    - media
+    - slick
+name: 'Trim text'
+format: trim_text
+weight: 0
+filters:
+  blazy_filter:
+    id: blazy_filter
+    provider: blazy
+    status: false
+    weight: 3
+    settings:
+      filter_tags:
+        img: img
+        iframe: iframe
+      media_switch: ''
+      hybrid_style: ''
+      box_style: ''
+      box_caption: ''
+      use_data_uri: '0'
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<a href hreflang> <em> <strong> <cite> '
+      filter_html_help: true
+      filter_html_nofollow: false
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types: {  }
+      allowed_view_modes: {  }
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      skin: ''
+      background: false
+      layout: ''
+      optionset_thumbnail: ''
+      skin_thumbnail: ''
+      thumbnail_position: ''
+      thumbnail_caption: ''
+      image_style: ''
+      thumbnail_style: ''
+      responsive_image_style: ''
+      thumbnail_effect: ''
+      media_switch: ''
+      ratio: ''
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'

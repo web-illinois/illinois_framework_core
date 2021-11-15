@@ -6,3 +6,10 @@
 function illinois_framework_core_update_9200() {
   \Drupal::service('module_installer')->install(['config_sync']);
 }
+
+/**
+ * Enable advanced_text_formatter module
+ */
+function illinois_framework_core_update_9201() {
+  \Drupal::service('module_installer')->install(['advanced_text_formatter']);
+}

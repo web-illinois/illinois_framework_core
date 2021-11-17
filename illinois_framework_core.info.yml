@@ -8,6 +8,7 @@ dependencies:
   - 'drupal:path'
   - 'drupal:text'
   - 'drupal:user'
+  - advanced_text_formatter
   - config_sync
   - file
   - image
@@ -18,5 +19,6 @@ dependencies:
   - options
   - paragraphs
   - pathauto
+  - slick
   - taxonomy
   - text

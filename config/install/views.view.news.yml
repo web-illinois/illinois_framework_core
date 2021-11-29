@@ -1,8 +1,8 @@
-uuid: 84c10df4-178b-409c-813f-1e56439f47d9
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
     - field.storage.node.body
     - field.storage.node.field_if_date
     - field.storage.node.field_if_meda_featured_image
@@ -16,7 +16,7 @@ dependencies:
     - node
     - user
 _core:
-  default_config_hash: vGADyWgqAJSNVasBJtX59zUDlqqJTJHkR5R5_2p6uV4
+  default_config_hash: Sn94gvIqEbzvhj7U0XVhEuW1-fTxXdfOcumHpqGi-Z0
 id: news
 label: News
 module: views
@@ -1151,6 +1151,8 @@ display:
         filters: false
         filter_groups: false
         pager: false
+        style: false
+        row: false
       css_class: news-page
       filters:
         status:
@@ -1202,6 +1204,14 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+      style:
+        type: html_list
+        options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
     cache_metadata:
       max-age: -1
       contexts:

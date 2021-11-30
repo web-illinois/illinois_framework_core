@@ -1,0 +1,10 @@
+uuid: 3cdebcd5-3040-4b03-a302-2257d322e578
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.news_teaser
+label: 'News Teaser'
+targetEntityType: media
+cache: true

@@ -1,3 +1,4 @@
+uuid: 02412d9e-7692-49e1-86a1-717478abae4e
 langcode: en
 status: true
 dependencies:
@@ -7,14 +8,18 @@ dependencies:
     - field.field.node.news.field_if_author
     - field.field.node.news.field_if_date
     - field.field.node.news.field_if_meda_featured_image
+    - field.field.node.news.field_if_related_people
     - field.field.node.news.field_if_story_source
     - field.field.node.news.field_if_subtitle
     - field.field.node.news.field_paragraph
     - field.field.node.news.field_tags
     - node.type.news
   module:
+    - datetime
     - text
     - user
+_core:
+  default_config_hash: fSkE3aTHuP1IvfSnqyUz0sLyEvInVlv8qt4be0zRsG0
 id: node.news.teaser
 targetEntityType: node
 bundle: news
@@ -28,24 +33,29 @@ content:
       trim_length: 600
     third_party_settings: {  }
     region: content
-  field_if_meda_featured_image:
-    type: entity_reference_entity_view
+  field_if_date:
+    type: datetime_default
     weight: 1
     region: content
     label: hidden
     settings:
-      view_mode: default
-      link: false
+      timezone_override: ''
+      format_type: html_date
     third_party_settings: {  }
-  links:
+  field_if_meda_featured_image:
+    type: entity_reference_entity_view
     weight: 0
     region: content
-    settings: {  }
+    label: hidden
+    settings:
+      view_mode: news_teaser
+      link: false
     third_party_settings: {  }
 hidden:
   field_if_author: true
-  field_if_date: true
+  field_if_related_people: true
   field_if_story_source: true
   field_if_subtitle: true
   field_paragraph: true
   field_tags: true
+  links: true

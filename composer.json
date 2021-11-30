@@ -29,6 +29,8 @@
         "drupal/twig_field_value": "^2.0",
         "drupal/twig_tweak": "^2.6",
         "drupal/video_embed_field": "^2.4",
+        "drupal-ckeditor-libraries-group/fakeobjects": "^4.17",
+        "drupal-ckeditor-libraries-group/link": "^4.17",
         "drush/drush": "^10.2",
         "npm-asset/blazy": "~1.0",
         "npm-asset/slick-carousel": "~1.0"

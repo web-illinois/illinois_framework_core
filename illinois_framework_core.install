@@ -1,6 +1,23 @@
 <?php
 
 /**
+ * Implement hook_install().
+ */
+function illinois_framework_core_install() {
+  illinois_framework_core_set_image_processor();
+}
+
+/**
+ * Set the default image handler to imagick
+ */
+function illinois_framework_core_set_image_processor() {
+  $config_factory = \Drupal::configFactory();
+  $system_image_config = $config_factory->getEditable('system.image');
+  $system_image_config->set('toolkit', 'imagick');
+  $system_image_config->save(TRUE);
+}
+
+/**
  * Enable config sync module
  */
 function illinois_framework_core_update_9200() {
@@ -12,4 +29,18 @@ function illinois_framework_core_update_9200() {
  */
 function illinois_framework_core_update_9201() {
   \Drupal::service('module_installer')->install(['advanced_text_formatter']);
+}
+
+/**
+ * Set the default image handler to imagick
+ */
+function illinois_framework_core_update_9203() {
+  illinois_framework_core_set_image_processor();
+}
+
+/**
+ * Set the default image handler to imagick
+ */
+function illinois_framework_core_update_9204() {
+  \Drupal::service('module_installer')->install(['anchor_link']);
 }

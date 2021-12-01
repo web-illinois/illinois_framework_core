@@ -55,7 +55,7 @@ content:
     region: content
   field_intro_home_text_lg:
     weight: 6
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -63,7 +63,7 @@ content:
     region: content
   field_intro_home_text_sm:
     weight: 7
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string

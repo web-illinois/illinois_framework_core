@@ -16,7 +16,7 @@ dependencies:
     - node
     - user
 _core:
-  default_config_hash: Sn94gvIqEbzvhj7U0XVhEuW1-fTxXdfOcumHpqGi-Z0
+  default_config_hash: 3ndQAWvo7_BGEHO9P-E0jpqpNJ2XXlMD8bDdus5OGfA
 id: news
 label: News
 module: views
@@ -78,6 +78,11 @@ display:
         type: html_list
       row:
         type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       fields:
         title:
           id: title
@@ -253,7 +258,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: h3
           element_class: ''
           element_label_type: ''
           element_label_class: ''
@@ -404,7 +409,7 @@ display:
             preserve_tags: '<span>'
             html: false
           element_type: ''
-          element_class: readmore
+          element_class: 'readmore il-altgeld'
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false

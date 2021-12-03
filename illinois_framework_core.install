@@ -39,8 +39,15 @@ function illinois_framework_core_update_9203() {
 }
 
 /**
- * Set the default image handler to imagick
+ * Install the anchor link module
  */
 function illinois_framework_core_update_9204() {
   \Drupal::service('module_installer')->install(['anchor_link']);
+}
+
+/**
+ * Install the block exclude pages module
+ */
+function illinois_framework_core_update_9205() {
+  \Drupal::service('module_installer')->install(['block_exclude_pages']);
 }

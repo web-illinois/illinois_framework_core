@@ -2,42 +2,30 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_paragraph
-    - node.type.content_page
+    - field.storage.paragraph.field_accordion_content
+    - paragraphs.paragraphs_type.accordion
     - paragraphs.paragraphs_type.accordion_content
-    - paragraphs.paragraphs_type.bb_content
-    - paragraphs.paragraphs_type.cards_content
-    - paragraphs.paragraphs_type.contact_content
-    - paragraphs.paragraphs_type.icon_row_content
-    - paragraphs.paragraphs_type.list_content
-    - paragraphs.paragraphs_type.rt_content
   module:
     - entity_reference_revisions
-id: node.content_page.field_paragraph
-field_name: field_paragraph
-entity_type: node
-bundle: content_page
-label: Paragraph
+id: paragraph.accordion.field_accordion_content
+field_name: field_accordion_content
+entity_type: paragraph
+bundle: accordion
+label: 'Accordion Rows'
 description: ''
-required: false
-translatable: true
+required: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 1
+    negate: 0
     target_bundles:
       accordion_content: accordion_content
-      bb_content: bb_content
-      cards_content: cards_content
-      contact_content: contact_content
-      icon_row_content: icon_row_content
-      list_content: list_content
-      rt_content: rt_content
     target_bundles_drag_drop:
       accordion:
-        weight: 27
+        weight: 26
         enabled: false
       accordion_content:
         enabled: true
@@ -46,28 +34,28 @@ settings:
         weight: 28
         enabled: false
       bb_content:
-        enabled: true
         weight: 29
+        enabled: false
       block_reference:
         weight: 30
         enabled: false
       cards:
-        weight: 30
+        weight: 31
         enabled: false
       cards_content:
-        enabled: true
-        weight: 31
-      contact:
         weight: 32
         enabled: false
-      contact_content:
-        enabled: true
+      contact:
         weight: 33
-      cta:
+        enabled: false
+      contact_content:
         weight: 34
         enabled: false
-      cta_narrow:
+      cta:
         weight: 35
+        enabled: false
+      cta_narrow:
+        weight: 36
         enabled: false
       feature_boxed:
         weight: 37
@@ -91,24 +79,24 @@ settings:
         weight: 43
         enabled: false
       icon_row:
-        weight: 42
-        enabled: false
-      icon_row_content:
-        enabled: true
-        weight: 43
-      intro_home:
         weight: 44
         enabled: false
-      list:
+      icon_row_content:
         weight: 45
         enabled: false
-      list_content:
-        enabled: true
+      intro_home:
         weight: 46
+        enabled: false
+      list:
+        weight: 47
+        enabled: false
+      list_content:
+        weight: 48
+        enabled: false
       rt:
         weight: 49
         enabled: false
       rt_content:
-        enabled: true
         weight: 50
+        enabled: false
 field_type: entity_reference_revisions

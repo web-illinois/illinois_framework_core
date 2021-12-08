@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.accordion_content.field_accordion_details
+    - field.field.paragraph.accordion_content.field_accordion_summary
+    - paragraphs.paragraphs_type.accordion_content
+  module:
+    - text
+id: paragraph.accordion_content.default
+targetEntityType: paragraph
+bundle: accordion_content
+mode: default
+content:
+  field_accordion_details:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_accordion_summary:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden: {  }

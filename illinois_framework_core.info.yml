@@ -14,6 +14,7 @@ dependencies:
   - image
   - image_widget_crop
   - link
+  - linkit
   - menu_ui
   - node
   - options

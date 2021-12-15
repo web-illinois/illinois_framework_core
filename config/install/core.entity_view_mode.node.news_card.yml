@@ -1,0 +1,10 @@
+uuid: 02654219-e7f2-41e8-a088-0ff7ed5678de
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.news_card
+label: 'News card'
+targetEntityType: node
+cache: true

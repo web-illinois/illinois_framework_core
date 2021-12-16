@@ -51,3 +51,10 @@ function illinois_framework_core_update_9204() {
 function illinois_framework_core_update_9205() {
   \Drupal::service('module_installer')->install(['block_exclude_pages']);
 }
+
+/**
+ * Enable linkit_media_library module
+ */
+function illinois_framework_core_update_9206() {
+  \Drupal::service('module_installer')->install(['linkit_media_library']);
+}

@@ -53,8 +53,8 @@ function illinois_framework_core_update_9205() {
 }
 
 /**
- * Enable media_library_linkit module
+ * Enable linkit_media_library module
  */
 function illinois_framework_core_update_9206() {
-  \Drupal::service('module_installer')->install(['media_library_linkit']);
+  \Drupal::service('module_installer')->install(['linkit_media_library']);
 }

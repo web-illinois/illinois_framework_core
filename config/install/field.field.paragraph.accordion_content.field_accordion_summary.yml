@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accordion_summary
+    - paragraphs.paragraphs_type.accordion_content
+id: paragraph.accordion_content.field_accordion_summary
+field_name: field_accordion_summary
+entity_type: paragraph
+bundle: accordion_content
+label: Summary
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

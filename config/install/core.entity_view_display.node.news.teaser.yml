@@ -15,42 +15,64 @@ dependencies:
     - field.field.node.news.field_tags
     - node.type.news
   module:
+    - advanced_text_formatter
     - datetime
-    - text
     - user
 _core:
-  default_config_hash: fSkE3aTHuP1IvfSnqyUz0sLyEvInVlv8qt4be0zRsG0
+  default_config_hash: eOEeG2LfyBr7TB9q6umoAdHn6QWysWF3HGpX9Ry6214
 id: node.news.teaser
 targetEntityType: node
 bundle: news
 mode: teaser
 content:
   body:
+    type: advanced_text
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 2
     settings:
-      trim_length: 600
+      trim_length: '300'
+      ellipsis: '1'
+      word_boundary: '1'
+      use_summary: '1'
+      filter: drupal
+      format: trim_text
+      allowed_html:
+        - a
+        - b
+        - br
+        - dd
+        - dl
+        - dt
+        - em
+        - i
+        - li
+        - ol
+        - p
+        - strong
+        - u
+        - ul
+      token_replace: 0
+      autop: 0
     third_party_settings: {  }
+    weight: 2
     region: content
   field_if_date:
     type: datetime_default
-    weight: 1
-    region: content
     label: hidden
     settings:
       timezone_override: ''
       format_type: html_date
     third_party_settings: {  }
+    weight: 1
+    region: content
   field_if_meda_featured_image:
     type: entity_reference_entity_view
-    weight: 0
-    region: content
     label: hidden
     settings:
       view_mode: news_teaser
       link: false
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_if_author: true
   field_if_related_people: true

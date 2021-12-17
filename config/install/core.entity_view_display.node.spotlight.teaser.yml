@@ -14,37 +14,59 @@ dependencies:
     - field.field.node.spotlight.field_type
     - node.type.spotlight
   module:
-    - text
+    - advanced_text_formatter
     - user
 _core:
-  default_config_hash: EkxePYKvmYZ4NbfD-6-tC7z85nVOc3IyxJCwkKNYNkg
+  default_config_hash: Mc-Dcsl_P2vizRGIlodG88_RoWlLo41T7vmbZq5La1g
 id: node.spotlight.teaser
 targetEntityType: node
 bundle: spotlight
 mode: teaser
 content:
   body:
+    type: advanced_text
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 1
     settings:
-      trim_length: 200
+      trim_length: '200'
+      ellipsis: '1'
+      word_boundary: '1'
+      use_summary: '1'
+      filter: drupal
+      format: trim_text
+      allowed_html:
+        - a
+        - b
+        - br
+        - dd
+        - dl
+        - dt
+        - em
+        - i
+        - li
+        - ol
+        - p
+        - strong
+        - u
+        - ul
+      token_replace: 0
+      autop: 0
     third_party_settings: {  }
+    weight: 1
     region: content
   field_if_meda_featured_image:
     type: entity_reference_entity_view
-    weight: 0
-    region: content
     label: hidden
     settings:
       view_mode: spotlight_list
       link: false
     third_party_settings: {  }
-  links:
-    weight: 2
+    weight: 0
     region: content
+  links:
     settings: {  }
     third_party_settings: {  }
+    weight: 2
+    region: content
 hidden:
   field_effective_dates: true
   field_if_related_people: true

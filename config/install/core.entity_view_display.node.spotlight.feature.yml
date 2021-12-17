@@ -14,34 +14,58 @@ dependencies:
     - field.field.node.spotlight.field_type
     - node.type.spotlight
   module:
+    - advanced_text_formatter
     - layout_builder
-    - text
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: rHfhNRVX3AzUfTft-ai9XSJyM1k5_-FSGsd7DOtreNc
 id: node.spotlight.feature
 targetEntityType: node
 bundle: spotlight
 mode: feature
 content:
   body:
+    type: advanced_text
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 1
     settings:
-      trim_length: 600
+      trim_length: '300'
+      ellipsis: '1'
+      word_boundary: '1'
+      use_summary: '1'
+      filter: drupal
+      format: trim_text
+      allowed_html:
+        - a
+        - b
+        - br
+        - dd
+        - dl
+        - dt
+        - em
+        - i
+        - li
+        - ol
+        - p
+        - strong
+        - u
+        - ul
+      token_replace: 0
+      autop: 0
     third_party_settings: {  }
+    weight: 1
     region: content
   field_if_meda_featured_image:
-    weight: 0
+    type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: spotlight_feature
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    weight: 0
     region: content
 hidden:
   field_effective_dates: true

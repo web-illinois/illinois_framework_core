@@ -49,8 +49,11 @@ class BlockSelection extends DefaultSelection {
       }
     }
 
-    // Sort the options alphabetically.
-    asort($options['block']);
+    if(!empty($options['block'])){
+      // Sort the options alphabetically.
+      asort($options['block']);
+    }
+
     return $options;
   }
 

@@ -24,3 +24,5 @@ dependencies:
   - slick
   - taxonomy
   - text
+  - video_embed_field
+  - video_embed_wysiwyg

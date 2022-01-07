@@ -58,3 +58,11 @@ function illinois_framework_core_update_9205() {
 function illinois_framework_core_update_9206() {
   \Drupal::service('module_installer')->install(['linkit_media_library']);
 }
+
+/**
+ * Enable video_embed_field and video_embed_wysiwyg module
+ */
+function illinois_framework_core_update_9207() {
+  \Drupal::service('module_installer')->install(['video_embed_field']);
+  \Drupal::service('module_installer')->install(['video_embed_wysiwyg']);
+}

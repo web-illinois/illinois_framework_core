@@ -24,29 +24,31 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 9
+    weight: 10
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
-    weight: 2
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   field_if_meda_featured_image:
     type: media_library_widget
-    weight: 28
+    weight: 13
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
   field_paragraph:
-    weight: 10
+    type: paragraphs
+    weight: 11
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -62,56 +64,54 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-    type: paragraphs
-    region: content
   field_sidebar:
-    weight: 29
+    type: options_select
+    weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_sidebar_paragraphs:
-    weight: 30
+    type: options_select
+    weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_tags:
-    weight: 11
+    type: entity_reference_autocomplete_tags
+    weight: 12
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
-    region: content
   path:
     type: path
-    weight: 5
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
+    weight: 5
+    region: content
     settings:
       display_label: true
-    weight: 3
-    region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
+    weight: 9
+    region: content
     settings:
       display_label: true
-    weight: 7
-    region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
+    weight: 6
+    region: content
     settings:
       display_label: true
-    weight: 4
-    region: content
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -123,16 +123,16 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 1
+    weight: 3
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 6
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -1,0 +1,15 @@
+uuid: 667fb140-b7f8-4691-bc80-b92b100d1207
+langcode: en
+status: true
+dependencies: {  }
+name: hvrbox_image
+label: 'Hvrbox image'
+effects:
+  cc8dedde-36eb-470d-a098-79d2950b0476:
+    uuid: cc8dedde-36eb-470d-a098-79d2950b0476
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1000
+      height: 665
+      anchor: center-center

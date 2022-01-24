@@ -1,10 +1,10 @@
-uuid: 02654219-e7f2-41e8-a088-0ff7ed5678de
+uuid: 4834af4b-b83b-488c-8668-222c5db377ef
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.news_card
-label: 'News card'
+id: node.hvrbox_card
+label: 'Hvrbox card'
 targetEntityType: node
 cache: true

@@ -1,9 +1,9 @@
-uuid: 7f03efdd-06f4-4ab0-b176-bede4c1feb82
+uuid: 883e21c9-a686-451e-9a5c-df21c49ae1d2
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.news_card
+    - core.entity_view_mode.node.hvrbox_card
     - field.field.node.news.body
     - field.field.node.news.field_if_author
     - field.field.node.news.field_if_date
@@ -13,10 +13,12 @@ dependencies:
     - field.field.node.news.field_if_subtitle
     - field.field.node.news.field_paragraph
     - field.field.node.news.field_tags
+    - image.style.hvrbox_image
     - node.type.news
   module:
     - advanced_text_formatter
     - layout_builder
+    - media
     - user
 third_party_settings:
   layout_builder:
@@ -24,10 +26,10 @@ third_party_settings:
     allow_custom: false
 _core:
   default_config_hash: c3XTXCyTjieO1Yqoe-b10sFGdxQ64-IcS00D2tiR3rY
-id: node.news.news_card
+id: node.news.hvrbox_card
 targetEntityType: node
 bundle: news
-mode: news_card
+mode: hvrbox_card
 content:
   body:
     type: advanced_text
@@ -36,7 +38,6 @@ content:
       trim_length: '300'
       ellipsis: '1'
       word_boundary: '1'
-      use_summary: '1'
       filter: drupal
       format: trim_text
       allowed_html:
@@ -54,19 +55,20 @@ content:
         - strong
         - u
         - ul
+      use_summary: 0
       token_replace: 0
       autop: 0
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_if_meda_featured_image:
-    type: entity_reference_entity_view
+    type: media_thumbnail
     label: hidden
     settings:
-      view_mode: default
-      link: false
+      image_link: ''
+      image_style: hvrbox_image
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
 hidden:
   field_if_author: true

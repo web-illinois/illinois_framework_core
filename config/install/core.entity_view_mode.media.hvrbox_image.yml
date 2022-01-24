@@ -1,0 +1,10 @@
+uuid: 0b2ef2c6-806f-42ec-82d2-d33d5636662f
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.hvrbox_image
+label: 'Hvrbox image'
+targetEntityType: media
+cache: true

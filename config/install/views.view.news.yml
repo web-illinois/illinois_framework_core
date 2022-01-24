@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.news_card
+    - core.entity_view_mode.node.hvrbox_card
     - core.entity_view_mode.node.teaser
     - field.storage.node.body
     - field.storage.node.field_if_date
@@ -18,7 +18,7 @@ dependencies:
     - node
     - user
 _core:
-  default_config_hash: 3ndQAWvo7_BGEHO9P-E0jpqpNJ2XXlMD8bDdus5OGfA
+  default_config_hash: GimqJhXUrLHOYH_xAuDKxTFt6VSc0X5XdVW2Qmzug10
 id: news
 label: News
 module: views
@@ -1228,44 +1228,6 @@ display:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_if_date'
         - 'config:field.storage.node.field_if_meda_featured_image'
-  block_4:
-    id: block_4
-    display_title: 'News cards'
-    display_plugin: block
-    position: 5
-    display_options:
-      pager:
-        type: some
-        options:
-          offset: 0
-          items_per_page: 6
-      style:
-        type: default
-        options:
-          row_class: ''
-          default_row_class: true
-          uses_fields: false
-      row:
-        type: 'entity:node'
-        options:
-          relationship: none
-          view_mode: news_card
-      defaults:
-        css_class: false
-        pager: false
-        style: false
-        row: false
-      css_class: news-card
-      display_description: ''
-      display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
   page_1:
     id: page_1
     display_title: 'News Archive Page'

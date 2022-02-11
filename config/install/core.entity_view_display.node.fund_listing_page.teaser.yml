@@ -1,3 +1,4 @@
+uuid: 42acdd62-5022-4245-bc8a-a8984812d730
 langcode: en
 status: true
 dependencies:
@@ -12,22 +13,48 @@ dependencies:
     - field.field.node.fund_listing_page.field_write_in_fund
     - node.type.fund_listing_page
   module:
-    - text
+    - advanced_text_formatter
     - user
+_core:
+  default_config_hash: Kc43_mUJZ_3K0usfFljWd60zGjjR_CDSA82I-q3DIm4
 id: node.fund_listing_page.teaser
 targetEntityType: node
 bundle: fund_listing_page
 mode: teaser
 content:
   body:
+    type: advanced_text
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
     settings:
-      trim_length: 600
+      trim_length: '600'
+      ellipsis: '1'
+      word_boundary: '1'
+      use_summary: '1'
+      filter: drupal
+      format: trim_text
+      allowed_html:
+        - a
+        - b
+        - br
+        - dd
+        - dl
+        - dt
+        - em
+        - i
+        - li
+        - ol
+        - p
+        - strong
+        - u
+        - ul
+      token_replace: 0
+      autop: 0
     third_party_settings: {  }
+    weight: 101
     region: content
   links:
+    settings: {  }
+    third_party_settings: {  }
     weight: 100
     region: content
 hidden:

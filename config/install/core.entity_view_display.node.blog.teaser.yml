@@ -1,3 +1,4 @@
+uuid: b14ba128-34e4-49eb-8796-98e51fded6b8
 langcode: en
 status: true
 dependencies:
@@ -12,35 +13,59 @@ dependencies:
     - field.field.node.blog.field_tags
     - node.type.blog
   module:
-    - text
+    - advanced_text_formatter
     - user
+_core:
+  default_config_hash: l2HzeKwO6dZg3yi2vsrqb9HmqCsf0JBv4HFEdd843Qk
 id: node.blog.teaser
 targetEntityType: node
 bundle: blog
 mode: teaser
 content:
   body:
+    type: advanced_text
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 2
     settings:
-      trim_length: 600
+      trim_length: '600'
+      ellipsis: '1'
+      word_boundary: '1'
+      use_summary: '1'
+      filter: drupal
+      format: trim_text
+      allowed_html:
+        - a
+        - b
+        - br
+        - dd
+        - dl
+        - dt
+        - em
+        - i
+        - li
+        - ol
+        - p
+        - strong
+        - u
+        - ul
+      token_replace: 0
+      autop: 0
     third_party_settings: {  }
+    weight: 2
     region: content
   field_if_meda_featured_image:
     type: entity_reference_entity_view
-    weight: 1
-    region: content
     label: hidden
     settings:
-      link: true
       view_mode: default
+      link: true
     third_party_settings: {  }
-  links:
-    weight: 0
+    weight: 1
     region: content
+  links:
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_if_author: true
   field_if_date: true

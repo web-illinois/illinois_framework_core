@@ -1,3 +1,4 @@
+uuid: 2b2e5073-cc51-4f9b-83d1-3327f027bb7e
 langcode: en
 status: true
 dependencies:
@@ -8,23 +9,48 @@ dependencies:
     - field.field.node.giving_fund.field_gift_amounts
     - node.type.giving_fund
   module:
-    - text
+    - advanced_text_formatter
     - user
-third_party_settings: {}
+_core:
+  default_config_hash: GUN1D_20UJAGtzTd6Ow9KoqEJ3hKlV7M4z_uG0lcGZc
 id: node.giving_fund.teaser
 targetEntityType: node
 bundle: giving_fund
 mode: teaser
 content:
   body:
+    type: advanced_text
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
     settings:
-      trim_length: 600
+      trim_length: '600'
+      ellipsis: '1'
+      word_boundary: '1'
+      use_summary: '1'
+      filter: drupal
+      format: trim_text
+      allowed_html:
+        - a
+        - b
+        - br
+        - dd
+        - dl
+        - dt
+        - em
+        - i
+        - li
+        - ol
+        - p
+        - strong
+        - u
+        - ul
+      token_replace: 0
+      autop: 0
     third_party_settings: {  }
+    weight: 101
     region: content
   links:
+    settings: {  }
+    third_party_settings: {  }
     weight: 100
     region: content
 hidden:

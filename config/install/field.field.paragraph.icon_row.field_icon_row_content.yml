@@ -1,4 +1,3 @@
-uuid: 7402129c-af54-433e-9db3-3bfa5190dbb3
 langcode: en
 status: true
 dependencies:
@@ -8,8 +7,6 @@ dependencies:
     - paragraphs.paragraphs_type.icon_row_content
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: g6C2ycJ6XDKdxrgIR7FXj-Lc5zYbXrwwF3xzMsxsE2I
 id: paragraph.icon_row.field_icon_row_content
 field_name: field_icon_row_content
 entity_type: paragraph
@@ -23,21 +20,24 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       icon_row_content: icon_row_content
+    negate: 0
     target_bundles_drag_drop:
-      acc_content:
-        weight: 29
-        enabled: false
       accordion:
         weight: 28
+        enabled: false
+      accordion_content:
+        weight: 27
         enabled: false
       bb:
         weight: 30
         enabled: false
       bb_content:
         weight: 31
+        enabled: false
+      block_reference:
+        weight: 30
         enabled: false
       cards:
         weight: 32
@@ -57,11 +57,11 @@ settings:
       cta_narrow:
         weight: 37
         enabled: false
-      expand_collapse:
-        weight: 38
-        enabled: false
       feature_boxed:
         weight: 39
+        enabled: false
+      feature_grouped:
+        weight: 38
         enabled: false
       feature_split:
         weight: 40
@@ -72,35 +72,26 @@ settings:
       from_library:
         weight: 42
         enabled: false
-      grouped_feature:
+      hero:
+        weight: 42
+        enabled: false
+      hero_section_page:
         weight: 43
         enabled: false
       icon_row:
         weight: 44
         enabled: false
       icon_row_content:
-        enabled: true
         weight: 45
+        enabled: true
       intro_home:
         weight: 46
         enabled: false
       list:
         weight: 47
         enabled: false
-      list_collection:
-        weight: 48
-        enabled: false
-      list_collection_content:
-        weight: 49
-        enabled: false
       list_content:
         weight: 50
-        enabled: false
-      page_introduction:
-        weight: 51
-        enabled: false
-      rich_text:
-        weight: 52
         enabled: false
       rt:
         weight: 53

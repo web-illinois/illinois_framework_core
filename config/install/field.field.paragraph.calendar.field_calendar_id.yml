@@ -1,0 +1,23 @@
+uuid: 4ebc8e18-6c24-49ef-9b21-5380575a6c0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_calendar_id
+    - paragraphs.paragraphs_type.calendar
+id: paragraph.calendar.field_calendar_id
+field_name: field_calendar_id
+entity_type: paragraph
+bundle: calendar
+label: 'Calendar ID'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

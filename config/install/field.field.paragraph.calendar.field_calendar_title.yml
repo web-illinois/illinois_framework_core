@@ -1,0 +1,19 @@
+uuid: 92a34b05-34b3-4765-b1c4-cda51163ec7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_calendar_title
+    - paragraphs.paragraphs_type.calendar
+id: paragraph.calendar.field_calendar_title
+field_name: field_calendar_title
+entity_type: paragraph
+bundle: calendar
+label: 'Calendar Title'
+description: '<strong>Before using this paragraph type, be sure your webtools calendar widgets are set-up correctly. Follow the instructions in the <a href="https://drupal.webtheme.illinois.edu/paragraphs/webtools-calendar">Illinois Theme for Drupal documentation</a></strong>. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

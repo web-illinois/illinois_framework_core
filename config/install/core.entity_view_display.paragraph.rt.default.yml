@@ -17,28 +17,22 @@ targetEntityType: paragraph
 bundle: rt
 mode: default
 content:
-  field_rt_background_color:
-    weight: 2
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_rt_column:
     type: entity_reference_revisions_entity_view
-    weight: 1
     label: visually_hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 1
     region: content
   field_rt_title:
-    weight: 0
+    type: string
     label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 0
     region: content
-hidden: {  }
+hidden:
+  field_rt_background_color: true

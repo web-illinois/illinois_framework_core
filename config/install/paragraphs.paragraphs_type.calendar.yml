@@ -1,0 +1,10 @@
+uuid: 2c1d082a-bdd0-459f-81de-7df5db57dca4
+langcode: en
+status: true
+dependencies: {  }
+id: calendar
+label: 'Webtools Calendar'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

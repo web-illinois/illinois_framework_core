@@ -1,0 +1,41 @@
+uuid: 48e28c01-5cdc-4957-b198-64dd59a55520
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.calendar.field_calendar_id
+    - field.field.paragraph.calendar.field_calendar_title
+    - field.field.paragraph.calendar.field_calendar_type
+    - paragraphs.paragraphs_type.calendar
+  module:
+    - options
+id: paragraph.calendar.default
+targetEntityType: paragraph
+bundle: calendar
+mode: default
+content:
+  field_calendar_id:
+    type: number_integer
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_calendar_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_calendar_type:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

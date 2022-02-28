@@ -1,0 +1,27 @@
+uuid: 997c8415-410a-4045-bf63-1f5e1262d35e
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_calendar_type
+field_name: field_calendar_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'Full list with descriptions'
+    -
+      value: '5'
+      label: 'Simple list with title and date'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

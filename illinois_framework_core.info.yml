@@ -21,7 +21,6 @@ dependencies:
   - options
   - paragraphs
   - pathauto
-  - slick
   - taxonomy
   - text
   - video_embed_field

@@ -66,3 +66,12 @@ function illinois_framework_core_update_9207() {
   \Drupal::service('module_installer')->install(['video_embed_field']);
   \Drupal::service('module_installer')->install(['video_embed_wysiwyg']);
 }
+
+/**
+ * Uninstall Slick and Blazy modules
+ * Install redirect to login r4032login module
+ */
+function illinois_framework_core_update_9208() {
+  \Drupal::service('module_installer')->uninstall(['slick_views','slick','blazy']);
+  \Drupal::service('module_installer')->install(['r4032login']);
+}

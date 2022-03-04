@@ -11,12 +11,19 @@ dependencies:
     - entity_reference_revisions
     - options
 _core:
-  default_config_hash: aukpu3NB0C44uKJxEIUWtBpvdBrXf6gWPo4dXobeFls
+  default_config_hash: J3H8o9jSW8prkq78zORK2dZYK_tIfFKhcAKPAjGsyaI
 id: paragraph.rt.default
 targetEntityType: paragraph
 bundle: rt
 mode: default
 content:
+  field_rt_background_color:
+    type: list_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_rt_column:
     type: entity_reference_revisions_entity_view
     label: visually_hidden
@@ -34,5 +41,4 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden:
-  field_rt_background_color: true
+hidden: {  }

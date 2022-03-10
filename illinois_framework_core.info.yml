@@ -16,6 +16,7 @@ dependencies:
   - link
   - linkit
   - linkit_media_library
+  - media_remote
   - menu_ui
   - node
   - options

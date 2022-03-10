@@ -17,6 +17,9 @@ settings:
     -
       value: '5'
       label: 'Simple list with title and date'
+    -
+      value: '3'
+      label: 'Calendar Cards'
   allowed_values_function: ''
 module: options
 locked: false

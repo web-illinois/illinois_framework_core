@@ -1,0 +1,19 @@
+uuid: 3b7e26fb-c6d9-44f2-90a6-b688afc221d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+    - media_remote
+third_party_settings:
+  crop:
+    image_field: null
+id: mediaspace_illinois
+label: 'Mediaspace Illinois'
+description: 'For videos hosted on the <a href="medispace.illinois.edu">Media Space Illinois</a> campus service.'
+source: media_remote
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_media_remote
+field_map: {  }

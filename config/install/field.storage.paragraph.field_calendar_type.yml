@@ -5,6 +5,8 @@ dependencies:
   module:
     - options
     - paragraphs
+_core:
+  default_config_hash: AvOCE4qcDHdqAE4Tj4liTok3I3zgldriqb8_keCNPzg
 id: paragraph.field_calendar_type
 field_name: field_calendar_type
 entity_type: paragraph
@@ -19,6 +21,9 @@ settings:
       label: 'Simple list with title and date'
     -
       value: '3'
+      label: 'Simple list with icon'
+    -
+      value: '13'
       label: 'Calendar Cards'
   allowed_values_function: ''
 module: options

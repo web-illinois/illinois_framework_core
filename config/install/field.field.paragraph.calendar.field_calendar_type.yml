@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.calendar
   module:
     - options
+_core:
+  default_config_hash: bROmJP747ZOvZ2_-XBu95IfIJ9JDHB73G4eEEICl9Qk
 id: paragraph.calendar.field_calendar_type
 field_name: field_calendar_type
 entity_type: paragraph

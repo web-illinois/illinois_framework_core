@@ -75,3 +75,10 @@ function illinois_framework_core_update_9208() {
   \Drupal::service('module_installer')->uninstall(['slick_views','slick','blazy']);
   \Drupal::service('module_installer')->install(['r4032login']);
 }
+
+/**
+ * Install Media Remote module
+ */
+function illinois_framework_core_update_9209() {
+  \Drupal::service('module_installer')->install(['media_remote']);
+}

@@ -40,9 +40,10 @@ class BlockSelection extends DefaultSelection {
     foreach ($entities as $entity_id => $entity) {
       $block_theme = $entity->getTheme();
       $block_region = $entity->getRegion();
+      $default_theme = \Drupal::config('system.theme')->get('default');
 
       // Only add blocks that are in the hidden region of the main theme.
-      if ($block_theme == 'illinois_framework_theme' && $block_region == 'hidden') {
+      if ($block_theme == $default_theme && $block_region == 'hidden') {
         $bundle = $entity->bundle();
         $options[$bundle][$entity_id] = Html::escape($this->entityRepository->getTranslationFromContext($entity)
           ->label());

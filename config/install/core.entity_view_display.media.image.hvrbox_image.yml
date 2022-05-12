@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.hvrbox_image
+    - field.field.media.image.field_if_media_image_caption
+    - field.field.media.image.field_if_media_image_credit
+    - field.field.media.image.field_media_image
+    - image.style.hvrbox_image
+    - media.type.image
+  module:
+    - image
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: media.image.hvrbox_image
+targetEntityType: media
+bundle: image
+mode: hvrbox_image
+content:
+  field_media_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: hvrbox_image
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_if_media_image_caption: true
+  field_if_media_image_credit: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -849,7 +849,7 @@ display:
         pager: false
         fields: false
         header: false
-      css_class: 'news-block highlighted-news'
+      css_class: 'news-block highlighted-news fixed-width'
       display_description: ''
       header: {  }
       display_extenders: {  }

@@ -1,0 +1,23 @@
+uuid: 1dd68b22-7ae3-4eae-a930-092858b4d4f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_calendar_more
+    - paragraphs.paragraphs_type.calendar
+  module:
+    - options
+id: paragraph.calendar.field_calendar_more
+field_name: field_calendar_more
+entity_type: paragraph
+bundle: calendar
+label: 'More Events'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: more
+default_value_callback: ''
+settings: {  }
+field_type: list_string

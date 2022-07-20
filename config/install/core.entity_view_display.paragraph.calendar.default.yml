@@ -4,11 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.calendar.field_calendar_id
+    - field.field.paragraph.calendar.field_calendar_more
     - field.field.paragraph.calendar.field_calendar_title
     - field.field.paragraph.calendar.field_calendar_type
     - paragraphs.paragraphs_type.calendar
   module:
     - options
+_core:
+  default_config_hash: 99HgHH30SShQ8AOY-BiV0QUwZ0LlEc-i4fRaSsKjaCI
 id: paragraph.calendar.default
 targetEntityType: paragraph
 bundle: calendar
@@ -22,6 +25,13 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_calendar_more:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
     region: content
   field_calendar_title:
     type: string

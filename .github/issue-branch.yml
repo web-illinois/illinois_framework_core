@@ -1,4 +1,4 @@
-itSafeReplacementChar: '-'
+gitSafeReplacementChar: '-'
 branchName: '${assignee.login}/issue-${issue.number}-${issue.title,}'
 branches:
   - label: enhancement

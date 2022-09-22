@@ -6,7 +6,7 @@ dependencies:
     - options
     - paragraphs
 _core:
-  default_config_hash: W4yOgfmeNmlWkKnIbOPSund-XxuKDLdjSZ_G3E1KRNU
+  default_config_hash: OXDsWjP8q-Y1fKAaOFPJnxf_3SEcMvIaS5hWiorR9Jc
 id: paragraph.field_feature_grouped_background
 field_name: field_feature_grouped_background
 entity_type: paragraph
@@ -18,7 +18,7 @@ settings:
       label: White
     -
       value: grey
-      label: Grey
+      label: Gray
   allowed_values_function: ''
 module: options
 locked: false

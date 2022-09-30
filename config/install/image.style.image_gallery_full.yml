@@ -1,0 +1,24 @@
+uuid: a697bbf5-7d61-4b37-aec3-6aefb83cc8dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - imagick
+name: image_gallery_full
+label: 'Image gallery full'
+effects:
+  62a20100-f888-4eed-856f-3e336a89e646:
+    uuid: 62a20100-f888-4eed-856f-3e336a89e646
+    id: image_convert
+    weight: -9
+    data:
+      format: jpg
+      quality: '75'
+  3132d4a3-ddf2-47f9-aaf4-74d3f5865346:
+    uuid: 3132d4a3-ddf2-47f9-aaf4-74d3f5865346
+    id: image_scale
+    weight: -10
+    data:
+      width: 1200
+      height: 1200
+      upscale: false

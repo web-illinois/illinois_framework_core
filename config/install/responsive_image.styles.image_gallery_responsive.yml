@@ -1,0 +1,23 @@
+uuid: 079d28ea-7672-41c5-aa21-d606015d5f37
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.image_gallery_full
+    - image.style.image_gallery_mobile
+    - image.style.image_gallery_ta
+id: image_gallery_responsive
+label: 'Image gallery responsive'
+image_style_mappings:
+  -
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - image_gallery_full
+        - image_gallery_mobile
+        - image_gallery_ta
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+breakpoint_group: responsive_image
+fallback_image_style: image_gallery_mobile

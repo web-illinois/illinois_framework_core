@@ -1,0 +1,38 @@
+uuid: 5cb7ee3f-e797-4517-ac4d-8a71f2ef5336
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_gallery_img
+    - paragraphs.paragraphs_type.image_gallery
+  module:
+    - image
+id: paragraph.image_gallery.field_image_gallery_img
+field_name: field_image_gallery_img
+entity_type: paragraph
+bundle: image_gallery
+label: Image
+description: '<big>Use the optional <strong>Title</strong> field for Captions. <strong>Alternative text</strong> is required for accessibility purposes and should be descriptive of what the images are depicting. Alternative text will not be visible on the page.</big>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: true
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

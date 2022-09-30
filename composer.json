@@ -12,6 +12,7 @@
         "drupal/backup_migrate": "^5.0",
         "drupal/bamboo_twig": "^5.0",
         "drupal/block_exclude_pages": "^2.0",
+        "drupal/colorbox": "^2.0",
         "drupal/config_sync": "^2.0",
         "drupal/diff": "^1.0",
         "drupal/entity_usage": "^2.0@beta",

@@ -1,0 +1,24 @@
+uuid: d2e7dede-1343-4a29-8ded-5911dfd2761a
+langcode: en
+status: true
+dependencies:
+  module:
+    - imagick
+name: image_gallery_ta
+label: 'Image gallery tablet'
+effects:
+  05ad0fbd-6292-4a28-a829-ff4ee0b830f2:
+    uuid: 05ad0fbd-6292-4a28-a829-ff4ee0b830f2
+    id: image_convert
+    weight: -9
+    data:
+      format: jpg
+      quality: '75'
+  a54d3437-ba3c-439b-ae01-c964a23efcdc:
+    uuid: a54d3437-ba3c-439b-ae01-c964a23efcdc
+    id: image_scale
+    weight: -10
+    data:
+      width: 650
+      height: 650
+      upscale: false

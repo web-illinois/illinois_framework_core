@@ -1,0 +1,24 @@
+uuid: 730fcbb3-f6e4-4ae2-be0a-6be37cdb5745
+langcode: en
+status: true
+dependencies:
+  module:
+    - imagick
+name: image_gallery_mobile
+label: 'Image gallery mobile'
+effects:
+  6b75d741-6b4a-4f8d-9067-3d4d6cadc6a6:
+    uuid: 6b75d741-6b4a-4f8d-9067-3d4d6cadc6a6
+    id: image_convert
+    weight: -9
+    data:
+      format: jpg
+      quality: '75'
+  7c74bf08-b8d6-4f78-a63d-5a964493022c:
+    uuid: 7c74bf08-b8d6-4f78-a63d-5a964493022c
+    id: image_scale
+    weight: -10
+    data:
+      width: 325
+      height: 325
+      upscale: false

@@ -13,12 +13,12 @@ effects:
     weight: -9
     data:
       format: jpg
-      quality: '75'
+      quality: '85'
   3132d4a3-ddf2-47f9-aaf4-74d3f5865346:
     uuid: 3132d4a3-ddf2-47f9-aaf4-74d3f5865346
     id: image_scale
     weight: -10
     data:
       width: 1200
-      height: 1200
+      height: null
       upscale: false

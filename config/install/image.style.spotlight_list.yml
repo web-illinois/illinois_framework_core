@@ -1,7 +1,11 @@
 uuid: 4cf97978-fcdd-427f-8bc3-cd79cb425cad
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - imagick
+_core:
+  default_config_hash: 76ZB5jrdVbiwpSrUfXt5uhCn45WIF5DpLgFVGMwxFqU
 name: spotlight_list
 label: 'Spotlight List'
 effects:
@@ -13,4 +17,10 @@ effects:
       width: 150
       height: 200
       anchor: center-center
-
+  744abab8-f38d-4851-867c-cec0d7771759:
+    uuid: 744abab8-f38d-4851-867c-cec0d7771759
+    id: image_convert
+    weight: 2
+    data:
+      format: jpg
+      quality: '85'

@@ -1,9 +1,11 @@
 uuid: 94ecd653-665a-4772-a155-c7fd66cb8544
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - imagick
 _core:
-  default_config_hash: ArfA2s9SF67hDWzdTT9AhItzMO4E-xjngC5kxgTbTJo
+  default_config_hash: KoH_2Vu1_4567zGfeJTPB-YtIJBsAyuQjeT37z8STv4
 name: list_collection_image
 label: 'List collection image (300x300)'
 effects:
@@ -15,3 +17,10 @@ effects:
       width: 300
       height: null
       upscale: false
+  422488d5-38f7-4855-a1c1-96be17acc147:
+    uuid: 422488d5-38f7-4855-a1c1-96be17acc147
+    id: image_convert
+    weight: 2
+    data:
+      format: jpg
+      quality: '85'

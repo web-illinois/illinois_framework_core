@@ -6,12 +6,31 @@ dependencies:
     - crop.type.3_2_ratio
   module:
     - crop
+    - imagick
+_core:
+  default_config_hash: Fv4Q0GcMBqwkzkmvFomClizTTPzXuPofrLpQqo1Pe9w
 name: hero_image
 label: 'Hero Image'
 effects:
   5502f3b8-7964-4c7a-970b-b9e0435956fb:
     uuid: 5502f3b8-7964-4c7a-970b-b9e0435956fb
     id: crop_crop
-    weight: 1
+    weight: -10
     data:
       crop_type: 3_2_ratio
+      automatic_crop_provider: null
+  84d46685-bdbd-46eb-a0ad-b2da4d99af43:
+    uuid: 84d46685-bdbd-46eb-a0ad-b2da4d99af43
+    id: image_convert
+    weight: -8
+    data:
+      format: jpg
+      quality: '85'
+  e76ce379-46e9-41a6-8fbf-1698386acfdd:
+    uuid: e76ce379-46e9-41a6-8fbf-1698386acfdd
+    id: image_scale
+    weight: -9
+    data:
+      width: 2004
+      height: null
+      upscale: false

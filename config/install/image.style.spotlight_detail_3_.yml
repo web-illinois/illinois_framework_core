@@ -1,7 +1,11 @@
 uuid: 7bcd72c5-06d0-4bde-96e3-1d91c7a95d84
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - imagick
+_core:
+  default_config_hash: Wz51K78sEpiyEJ3FpMaWdi1rQKy3OUobbNgCLHs9Vo4
 name: spotlight_detail_3_
 label: 'Spotlight Detail 3:4'
 effects:
@@ -13,3 +17,10 @@ effects:
       width: 300
       height: 400
       anchor: center-center
+  7478d20c-536c-44f3-b223-57554863590c:
+    uuid: 7478d20c-536c-44f3-b223-57554863590c
+    id: image_convert
+    weight: 2
+    data:
+      format: jpg
+      quality: '85'

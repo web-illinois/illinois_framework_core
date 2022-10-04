@@ -1,6 +1,11 @@
+uuid: 0e82be58-571a-4372-845f-c9b90af9fa0e
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - imagick
+_core:
+  default_config_hash: nvWr1L_oWv75sks3TaBrkyFc1b67R-K3bwfHApUZi0Q
 name: highlighted_news
 label: 'Highlighted News'
 effects:
@@ -12,3 +17,10 @@ effects:
       width: 300
       height: 300
       anchor: center-center
+  4a0e66cc-40ff-4528-bb48-0cd1dd73106b:
+    uuid: 4a0e66cc-40ff-4528-bb48-0cd1dd73106b
+    id: image_convert
+    weight: 2
+    data:
+      format: jpg
+      quality: '85'

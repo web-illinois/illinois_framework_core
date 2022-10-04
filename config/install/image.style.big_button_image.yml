@@ -6,6 +6,9 @@ dependencies:
     - crop.type.2_1_ratio
   module:
     - crop
+    - imagick
+_core:
+  default_config_hash: RhWFLgIwbg2r28BfMvbm7zvxGc_4z4Mw4cUPMDyBM4A
 name: big_button_image
 label: 'Big Button Image'
 effects:
@@ -15,3 +18,19 @@ effects:
     weight: 1
     data:
       crop_type: 2_1_ratio
+      automatic_crop_provider: null
+  5c58ab9a-0432-4066-83a4-19df4ece4ffd:
+    uuid: 5c58ab9a-0432-4066-83a4-19df4ece4ffd
+    id: image_scale
+    weight: 2
+    data:
+      width: 720
+      height: null
+      upscale: false
+  c56deca5-bfad-4223-8231-7f37538d4cb6:
+    uuid: c56deca5-bfad-4223-8231-7f37538d4cb6
+    id: image_convert
+    weight: 3
+    data:
+      format: jpg
+      quality: '85'

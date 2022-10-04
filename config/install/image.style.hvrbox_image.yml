@@ -1,7 +1,11 @@
 uuid: 667fb140-b7f8-4691-bc80-b92b100d1207
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - imagick
+_core:
+  default_config_hash: ceC9fufFf4pD8XHlUtkKpbvG_8d6ocac-xiGhdSGOv0
 name: hvrbox_image
 label: 'Hvrbox image'
 effects:
@@ -13,3 +17,10 @@ effects:
       width: 1000
       height: 665
       anchor: center-center
+  46d18d5e-d629-4174-b1fc-e71fae168f7f:
+    uuid: 46d18d5e-d629-4174-b1fc-e71fae168f7f
+    id: image_convert
+    weight: 2
+    data:
+      format: jpg
+      quality: '85'

@@ -1,9 +1,11 @@
 uuid: 87e908ae-7c6f-4ec3-85a5-33ef66e1ff40
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - imagick
 _core:
-  default_config_hash: z0M1ffmIeL2tOMv8rA4CWw90xmxFKBdaM-sd_028Wtg
+  default_config_hash: 93__e9Tuz8CzIkbFNRR_T8DD5tMmcp7YXvp4bQRvDJo
 name: cards_image
 label: 'Cards Image'
 effects:
@@ -15,3 +17,10 @@ effects:
       width: 350
       height: 200
       anchor: center-center
+  5c22b2c9-be1c-496f-8dae-4039cc499472:
+    uuid: 5c22b2c9-be1c-496f-8dae-4039cc499472
+    id: image_convert
+    weight: 2
+    data:
+      format: jpg
+      quality: '85'

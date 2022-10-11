@@ -82,3 +82,10 @@ function illinois_framework_core_update_9208() {
 function illinois_framework_core_update_9209() {
   \Drupal::service('module_installer')->install(['media_remote']);
 }
+
+/**
+ * Install colorbox module
+ */
+function illinois_framework_core_update_9210() {
+  \Drupal::service('module_installer')->install(['colorbox']);
+}

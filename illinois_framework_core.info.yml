@@ -9,10 +9,12 @@ dependencies:
   - 'drupal:text'
   - 'drupal:user'
   - advanced_text_formatter
+  - colorbox
   - config_sync
   - file
   - image
   - image_widget_crop
+  - imagick
   - link
   - linkit
   - linkit_media_library

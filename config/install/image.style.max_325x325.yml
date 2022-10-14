@@ -1,18 +1,29 @@
+uuid: b463e329-323b-49de-bfaf-6d0ccc9d6dba
+langcode: en
+status: true
+dependencies:
+  module:
+    - imagick
+  enforced:
+    module:
+      - responsive_image
+_core:
+  default_config_hash: YbP9GLqlo6fjA8GIfiC8CzCOjkUm0Cf3A0_aRw8vHhE
 name: max_325x325
 label: 'Max 325x325'
 effects:
   cb842cc8-682f-42a6-bd05-5a1ac726f0d8:
+    uuid: cb842cc8-682f-42a6-bd05-5a1ac726f0d8
     id: image_scale
+    weight: 1
     data:
       width: 325
       height: 325
       upscale: false
-    weight: 1
-    uuid: cb842cc8-682f-42a6-bd05-5a1ac726f0d8
-langcode: en
-dependencies:
-  module:
-    - responsive_image
-  enforced:
-    module:
-      - responsive_image
+  067c6168-3dcc-4b44-b90e-ae5047a0ebc0:
+    uuid: 067c6168-3dcc-4b44-b90e-ae5047a0ebc0
+    id: image_convert
+    weight: 2
+    data:
+      format: jpg
+      quality: '85'

@@ -1,6 +1,11 @@
+uuid: 9320d768-fc93-433c-b8a9-8a652ea7905b
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - imagick
+_core:
+  default_config_hash: h867BykCOXn4JYbM4UvEj5MWi8lMrCKExl51xtVcFe8
 name: paragraphs_image
 label: 'Paragraphs Image'
 effects:
@@ -12,3 +17,10 @@ effects:
       width: 200
       height: null
       upscale: false
+  76b2c459-4d60-4c92-848b-66777a331d16:
+    uuid: 76b2c459-4d60-4c92-848b-66777a331d16
+    id: image_convert
+    weight: 2
+    data:
+      format: jpg
+      quality: '85'

@@ -1,18 +1,29 @@
+uuid: 2c2e6cf4-8e14-47e9-8577-f46e0434987f
+langcode: en
+status: true
+dependencies:
+  module:
+    - imagick
+  enforced:
+    module:
+      - responsive_image
+_core:
+  default_config_hash: MIWUEhKenWK-3vEZNN_FJwpmqggIZtfJ9LOLYryTqHI
 name: max_650x650
 label: 'Max 650x650'
 effects:
   949c201a-77f5-48f6-ba00-be91eb1aad47:
+    uuid: 949c201a-77f5-48f6-ba00-be91eb1aad47
     id: image_scale
+    weight: 1
     data:
       width: 650
       height: 650
       upscale: false
-    weight: 1
-    uuid: 949c201a-77f5-48f6-ba00-be91eb1aad47
-langcode: en
-dependencies:
-  module:
-    - responsive_image
-  enforced:
-    module:
-      - responsive_image
+  1f1d2130-9074-4a79-a0b6-043ddaa47c4b:
+    uuid: 1f1d2130-9074-4a79-a0b6-043ddaa47c4b
+    id: image_convert
+    weight: 2
+    data:
+      format: jpg
+      quality: '85'

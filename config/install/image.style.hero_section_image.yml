@@ -6,8 +6,9 @@ dependencies:
     - crop.type.4_1_ratio
   module:
     - crop
+    - imagick
 _core:
-  default_config_hash: 3zxPpycYFV5FQ-JY73veoFiGLjjoMrF0lIWJyoNkCCY
+  default_config_hash: Rd2k4Grv9XoWoN8qZ9JAA5YdVg9Na5CtRGzhCs-cU3c
 name: hero_section_image
 label: 'Hero Section Image'
 effects:
@@ -17,3 +18,19 @@ effects:
     weight: 1
     data:
       crop_type: 4_1_ratio
+      automatic_crop_provider: null
+  4e144eba-79a8-4e74-b4ca-a293633ac7aa:
+    uuid: 4e144eba-79a8-4e74-b4ca-a293633ac7aa
+    id: image_scale
+    weight: 2
+    data:
+      width: 2000
+      height: null
+      upscale: false
+  52dfac76-91d4-43bb-ac32-654a491fb671:
+    uuid: 52dfac76-91d4-43bb-ac32-654a491fb671
+    id: image_convert
+    weight: 3
+    data:
+      format: jpg
+      quality: '85'

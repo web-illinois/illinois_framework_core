@@ -1,7 +1,11 @@
 uuid: ce8386d1-1734-47a8-b788-daeffe094b78
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - imagick
+_core:
+  default_config_hash: OoGkg8eHesjN9qcn36kRkZqGzHZk-_SLJxgYqgjK9Co
 name: news_archive_thumbnail
 label: 'News archive thumbnail'
 effects:
@@ -13,3 +17,10 @@ effects:
       width: 100
       height: 100
       anchor: center-center
+  a25b39a0-e614-43b0-a58f-aacb3a3f3612:
+    uuid: a25b39a0-e614-43b0-a58f-aacb3a3f3612
+    id: image_convert
+    weight: 2
+    data:
+      format: jpg
+      quality: '85'

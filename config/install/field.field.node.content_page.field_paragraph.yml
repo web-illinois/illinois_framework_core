@@ -8,6 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.bb_content
     - paragraphs.paragraphs_type.cards_content
     - paragraphs.paragraphs_type.contact_content
+    - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.icon_row_content
     - paragraphs.paragraphs_type.list_content
     - paragraphs.paragraphs_type.rt_content
@@ -26,89 +27,96 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 1
     target_bundles:
       accordion_content: accordion_content
       bb_content: bb_content
       cards_content: cards_content
       contact_content: contact_content
+      from_library: from_library
       icon_row_content: icon_row_content
       list_content: list_content
       rt_content: rt_content
+    negate: 1
     target_bundles_drag_drop:
       accordion:
-        weight: 27
+        weight: -55
         enabled: false
       accordion_content:
+        weight: -54
         enabled: true
-        weight: 27
       bb:
-        weight: 28
+        weight: -53
         enabled: false
       bb_content:
+        weight: -52
         enabled: true
-        weight: 29
       block_reference:
-        weight: 30
+        weight: -51
+        enabled: false
+      calendar:
+        weight: -29
         enabled: false
       cards:
-        weight: 30
+        weight: -48
         enabled: false
       cards_content:
+        weight: -47
         enabled: true
-        weight: 31
       contact:
-        weight: 32
+        weight: -46
         enabled: false
       contact_content:
+        weight: -45
         enabled: true
-        weight: 33
       cta:
-        weight: 34
+        weight: -50
         enabled: false
       cta_narrow:
-        weight: 35
+        weight: -49
         enabled: false
       feature_boxed:
-        weight: 37
+        weight: -44
         enabled: false
       feature_grouped:
-        weight: 38
+        weight: -43
         enabled: false
       feature_split:
-        weight: 39
+        weight: -42
         enabled: false
       feature_video:
-        weight: 40
+        weight: -41
         enabled: false
       from_library:
-        weight: 41
-        enabled: false
+        weight: -40
+        enabled: true
       hero:
-        weight: 42
+        weight: -39
         enabled: false
       hero_section_page:
-        weight: 43
+        weight: -38
         enabled: false
       icon_row:
-        weight: 42
+        weight: -37
         enabled: false
       icon_row_content:
+        weight: -34
         enabled: true
-        weight: 43
+      image_gallery:
+        weight: -36
+        enabled: false
       intro_home:
-        weight: 44
+        weight: -35
         enabled: false
       list:
-        weight: 45
+        weight: -33
         enabled: false
       list_content:
+        weight: -32
         enabled: true
-        weight: 46
       rt:
-        weight: 49
+        weight: -31
         enabled: false
       rt_content:
+        weight: -30
         enabled: true
-        weight: 50
 field_type: entity_reference_revisions

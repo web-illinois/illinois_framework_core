@@ -31,84 +31,91 @@ settings:
       bb_content: bb_content
       cards_content: cards_content
       contact_content: contact_content
+      from_library: from_library
       icon_row_content: icon_row_content
       list_content: list_content
       rt_content: rt_content
     negate: 1
     target_bundles_drag_drop:
       accordion:
-        weight: -51
+        weight: -55
         enabled: false
       accordion_content:
-        weight: -50
+        weight: -54
         enabled: true
       bb:
-        weight: -49
+        weight: -53
         enabled: false
       bb_content:
-        weight: -48
+        weight: -52
         enabled: true
       block_reference:
-        weight: -47
+        weight: -51
+        enabled: false
+      calendar:
+        weight: -29
         enabled: false
       cards:
-        weight: -46
+        weight: -48
         enabled: false
       cards_content:
-        weight: -45
+        weight: -47
         enabled: true
       contact:
-        weight: -44
+        weight: -46
         enabled: false
       contact_content:
-        weight: -43
+        weight: -45
         enabled: true
       cta:
-        weight: -42
+        weight: -50
         enabled: false
       cta_narrow:
-        weight: -41
+        weight: -49
         enabled: false
       feature_boxed:
-        weight: -40
+        weight: -44
         enabled: false
       feature_grouped:
-        weight: -39
+        weight: -43
         enabled: false
       feature_split:
-        weight: -38
+        weight: -42
         enabled: false
       feature_video:
-        weight: -37
+        weight: -41
         enabled: false
       from_library:
-        weight: -36
-        enabled: false
+        weight: -40
+        enabled: true
       hero:
-        weight: -35
+        weight: -39
         enabled: false
       hero_section_page:
-        weight: -33
+        weight: -38
         enabled: false
       icon_row:
-        weight: -34
+        weight: -37
         enabled: false
       icon_row_content:
-        weight: -32
+        weight: -34
         enabled: true
+      image_gallery:
+        weight: -36
+        enabled: false
       intro_home:
-        weight: -31
+        weight: -35
         enabled: false
       list:
-        weight: -30
+        weight: -33
         enabled: false
       list_content:
-        weight: -29
+        weight: -32
         enabled: true
       rt:
-        weight: -28
+        weight: -31
         enabled: false
       rt_content:
-        weight: -27
+        weight: -30
         enabled: true
 field_type: entity_reference_revisions

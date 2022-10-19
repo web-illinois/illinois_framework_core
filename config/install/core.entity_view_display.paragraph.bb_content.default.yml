@@ -8,36 +8,39 @@ dependencies:
     - field.field.paragraph.bb_content.field_bb_content_image
     - field.field.paragraph.bb_content.field_bb_content_link
     - field.field.paragraph.bb_content.field_bb_content_title
+    - image.style.big_button_image
     - paragraphs.paragraphs_type.bb_content
   module:
     - image
     - link
     - text
 _core:
-  default_config_hash: zaNO5wfj4xP0_n6DyKNHa539s5g2QQuupxHdeYw2SrQ
+  default_config_hash: 3-qLatF2DrGVDCcIzNzfLdjfjxezszv3vp89GYJx95A
 id: paragraph.bb_content.default
 targetEntityType: paragraph
 bundle: bb_content
 mode: default
 content:
   field_bb_content_body:
-    weight: 1
+    type: text_default
     label: visually_hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 1
     region: content
   field_bb_content_image:
-    weight: 4
+    type: image
     label: visually_hidden
     settings:
-      image_style: ''
       image_link: ''
+      image_style: big_button_image
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
-    type: image
+    weight: 4
     region: content
   field_bb_content_link:
-    weight: 5
+    type: link
     label: visually_hidden
     settings:
       trim_length: 80
@@ -46,15 +49,15 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 5
     region: content
   field_bb_content_title:
-    weight: 3
+    type: string
     label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 3
     region: content
 hidden:
   field_bb_content_background: true

@@ -53,7 +53,7 @@ content:
     weight: 5
     label: above
     settings:
-      image_style: ''
+      image_style: cards_image
       image_link: ''
     third_party_settings: {  }
     type: image

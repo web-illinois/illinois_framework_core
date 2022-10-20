@@ -29,7 +29,7 @@ content:
     weight: 0
     label: visually_hidden
     settings:
-      image_style: ''
+      image_style: hero_section_image
       image_link: ''
     third_party_settings: {  }
     type: image

@@ -64,7 +64,7 @@ content:
     weight: 3
     label: visually_hidden
     settings:
-      image_style: ''
+      image_style: image_gallery_full
       image_link: ''
     third_party_settings: {  }
     type: image

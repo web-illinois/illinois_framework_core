@@ -8,7 +8,6 @@ dependencies:
     - paragraphs.paragraphs_type.bb_content
     - paragraphs.paragraphs_type.cards_content
     - paragraphs.paragraphs_type.contact_content
-    - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.icon_row_content
     - paragraphs.paragraphs_type.list_content
     - paragraphs.paragraphs_type.rt_content

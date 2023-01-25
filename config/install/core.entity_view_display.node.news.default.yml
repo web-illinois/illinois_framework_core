@@ -6,6 +6,8 @@ dependencies:
     - field.field.node.news.field_if_author
     - field.field.node.news.field_if_date
     - field.field.node.news.field_if_meda_featured_image
+    - field.field.node.news.field_if_metatags
+    - field.field.node.news.field_if_related_people
     - field.field.node.news.field_if_story_source
     - field.field.node.news.field_if_subtitle
     - field.field.node.news.field_paragraph
@@ -15,86 +17,97 @@ dependencies:
     - datetime
     - entity_reference_revisions
     - link
+    - metatag
     - text
     - user
+_core:
+  default_config_hash: c3XTXCyTjieO1Yqoe-b10sFGdxQ64-IcS00D2tiR3rY
 id: node.news.default
 targetEntityType: node
 bundle: news
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 3
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 3
     region: content
   field_if_author:
-    weight: 6
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 6
     region: content
   field_if_date:
-    weight: 7
+    type: datetime_custom
     label: hidden
     settings:
       timezone_override: ''
       date_format: 'F j, Y'
     third_party_settings: {  }
-    type: datetime_custom
+    weight: 7
     region: content
   field_if_meda_featured_image:
-    weight: 2
+    type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    weight: 2
+    region: content
+  field_if_metatags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
     region: content
   field_if_story_source:
-    weight: 8
+    type: link
     label: inline
     settings:
       trim_length: null
-      target: _blank
       url_only: false
       url_plain: false
       rel: '0'
+      target: _blank
     third_party_settings: {  }
-    type: link
+    weight: 8
     region: content
   field_if_subtitle:
-    weight: 0
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 0
     region: content
   field_paragraph:
-    weight: 4
+    type: entity_reference_revisions_entity_view
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
+    weight: 4
     region: content
   field_tags:
-    weight: 5
+    type: entity_reference_label
     label: hidden
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 5
     region: content
   links:
-    weight: 1
-    region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+    weight: 1
+    region: content
+hidden:
+  field_if_related_people: true

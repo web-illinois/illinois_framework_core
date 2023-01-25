@@ -89,3 +89,10 @@ function illinois_framework_core_update_9209() {
 function illinois_framework_core_update_9210() {
   \Drupal::service('module_installer')->install(['colorbox']);
 }
+
+/**
+ * Install open graph module
+ */
+function illinois_framework_core_update_9301() {
+  \Drupal::service('module_installer')->install(['metatag_open_graph']);
+}

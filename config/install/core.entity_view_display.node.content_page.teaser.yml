@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.content_page.body
     - field.field.node.content_page.field_if_meda_featured_image
+    - field.field.node.content_page.field_if_metatags
     - field.field.node.content_page.field_paragraph
     - field.field.node.content_page.field_sidebar
     - field.field.node.content_page.field_sidebar_paragraphs
@@ -17,38 +18,39 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 _core:
-  default_config_hash: 0rxIPJp_r5alzh-CEt0aPK9OQ5eURJqEo35_8cPfIyU
+  default_config_hash: gzP-_srALfLVzZbENN4Kp71ge-LI0D0yxqqVF5FFAIY
 id: node.content_page.teaser
 targetEntityType: node
 bundle: content_page
 mode: teaser
 content:
   body:
-    label: hidden
     type: text_summary_or_trimmed
-    weight: 2
+    label: hidden
     settings:
       trim_length: 200
     third_party_settings: {  }
+    weight: 2
     region: content
   field_if_meda_featured_image:
     type: entity_reference_entity_view
-    weight: 1
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 1
     region: content
   links:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
+  field_if_metatags: true
   field_paragraph: true
   field_sidebar: true
   field_sidebar_paragraphs: true

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.content_page.body
     - field.field.node.content_page.field_if_meda_featured_image
+    - field.field.node.content_page.field_if_metatags
     - field.field.node.content_page.field_paragraph
     - field.field.node.content_page.field_sidebar
     - field.field.node.content_page.field_sidebar_paragraphs
@@ -12,53 +13,61 @@ dependencies:
     - node.type.content_page
   module:
     - entity_reference_revisions
+    - metatag
     - text
     - user
 _core:
-  default_config_hash: LKJVZtpwQ1mhepFP3R71GmgiQUMOgHdqIteZLCDvPJo
+  default_config_hash: cSvSBJvh7XR4EV_2SFh9LxWLfrjHpRlarVquGxBKSnE
 id: node.content_page.default
 targetEntityType: node
 bundle: content_page
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 2
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 2
     region: content
   field_if_meda_featured_image:
     type: entity_reference_entity_view
-    weight: 1
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 1
+    region: content
+  field_if_metatags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_paragraph:
-    weight: 3
+    type: entity_reference_revisions_entity_view
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
+    weight: 3
     region: content
   field_tags:
     type: entity_reference_label
-    weight: 4
-    region: content
     label: above
     settings:
       link: true
     third_party_settings: {  }
-  links:
-    weight: 0
+    weight: 4
     region: content
+  links:
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_sidebar: true
   field_sidebar_paragraphs: true

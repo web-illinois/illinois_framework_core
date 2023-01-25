@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.news.field_if_author
     - field.field.node.news.field_if_date
     - field.field.node.news.field_if_meda_featured_image
+    - field.field.node.news.field_if_metatags
     - field.field.node.news.field_if_related_people
     - field.field.node.news.field_if_story_source
     - field.field.node.news.field_if_subtitle
@@ -25,7 +26,7 @@ third_party_settings:
     enabled: false
     allow_custom: false
 _core:
-  default_config_hash: c3XTXCyTjieO1Yqoe-b10sFGdxQ64-IcS00D2tiR3rY
+  default_config_hash: 69fMV_WBe-7VqplxixfK3ZB40578C0Vy5trj60vQlXc
 id: node.news.hvrbox_card
 targetEntityType: node
 bundle: news
@@ -73,6 +74,7 @@ content:
 hidden:
   field_if_author: true
   field_if_date: true
+  field_if_metatags: true
   field_if_related_people: true
   field_if_story_source: true
   field_if_subtitle: true

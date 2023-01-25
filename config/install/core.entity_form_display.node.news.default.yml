@@ -7,6 +7,8 @@ dependencies:
     - field.field.node.news.field_if_author
     - field.field.node.news.field_if_date
     - field.field.node.news.field_if_meda_featured_image
+    - field.field.node.news.field_if_metatags
+    - field.field.node.news.field_if_related_people
     - field.field.node.news.field_if_story_source
     - field.field.node.news.field_if_subtitle
     - field.field.node.news.field_paragraph
@@ -16,9 +18,12 @@ dependencies:
     - datetime
     - link
     - media_library
+    - metatag
     - paragraphs
     - path
     - text
+_core:
+  default_config_hash: q2-l1nwPL8YS6Ioa4WpfjcPLkcnPhSF1kL9PUx82W8k
 id: node.news.default
 targetEntityType: node
 bundle: news
@@ -27,13 +32,13 @@ content:
   body:
     type: text_textarea_with_summary
     weight: 11
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 5
@@ -41,44 +46,54 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_if_author:
+    type: string_textfield
     weight: 2
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_if_date:
+    type: datetime_default
     weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_if_meda_featured_image:
+    type: media_library_widget
     weight: 15
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    type: media_library_widget
+  field_if_metatags:
+    type: metatag_firehose
+    weight: 26
     region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
   field_if_story_source:
+    type: link_default
     weight: 13
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_if_subtitle:
+    type: string_textfield
     weight: 1
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_paragraph:
+    type: paragraphs
     weight: 12
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -93,18 +108,16 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-    type: paragraphs
-    region: content
   field_tags:
+    type: entity_reference_autocomplete
     weight: 14
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   path:
     type: path
     weight: 8
@@ -113,24 +126,24 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 6
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 10
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 7
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -143,16 +156,17 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 4
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   url_redirects:
     weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_if_related_people: true

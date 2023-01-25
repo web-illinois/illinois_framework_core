@@ -1,0 +1,8 @@
+uuid: ec12d743-1008-4a4c-8328-3f9ed0e00d4f
+langcode: en
+status: true
+dependencies: {  }
+id: node__news
+label: 'Content: News'
+tags:
+  og_image: '[site:url][node:field_if_meda_featured_image:entity:field_media_image]'

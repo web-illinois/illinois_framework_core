@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.content_page.body
     - field.field.node.content_page.field_if_meda_featured_image
+    - field.field.node.content_page.field_if_metatags
     - field.field.node.content_page.field_paragraph
     - field.field.node.content_page.field_sidebar
     - field.field.node.content_page.field_sidebar_paragraphs
@@ -12,11 +13,12 @@ dependencies:
     - node.type.content_page
   module:
     - media_library
+    - metatag
     - paragraphs
     - path
     - text
 _core:
-  default_config_hash: gEEdVC8jw9tQ9J_U_LA6WjaM6Ik0zV7s4dZOrtfwJ2k
+  default_config_hash: mx0WuLGwqkgNpyNrzzezkKfVT-x_WIF_Zn_jcs9ldNM
 id: node.content_page.default
 targetEntityType: node
 bundle: content_page
@@ -44,6 +46,14 @@ content:
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  field_if_metatags:
+    type: metatag_firehose
+    weight: 26
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_paragraph:
     type: paragraphs

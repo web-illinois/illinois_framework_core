@@ -1,0 +1,8 @@
+uuid: 5cd2c6ea-aa96-4e07-b62c-c0d908b417b2
+langcode: en
+status: true
+dependencies: {  }
+id: node__content_page
+label: 'Content: Content Page'
+tags:
+  og_image: '[site:url][node:field_if_meda_featured_image:entity:field_media_image]'

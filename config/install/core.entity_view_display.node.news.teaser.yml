@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.news.field_if_author
     - field.field.node.news.field_if_date
     - field.field.node.news.field_if_meda_featured_image
+    - field.field.node.news.field_if_metatags
     - field.field.node.news.field_if_related_people
     - field.field.node.news.field_if_story_source
     - field.field.node.news.field_if_subtitle
@@ -19,7 +20,7 @@ dependencies:
     - datetime
     - user
 _core:
-  default_config_hash: eOEeG2LfyBr7TB9q6umoAdHn6QWysWF3HGpX9Ry6214
+  default_config_hash: in5tzT6wnLrH3xE1snc52oGhGVHkX6pvJ5-SMuu5fiY
 id: node.news.teaser
 targetEntityType: node
 bundle: news
@@ -75,6 +76,7 @@ content:
     region: content
 hidden:
   field_if_author: true
+  field_if_metatags: true
   field_if_related_people: true
   field_if_story_source: true
   field_if_subtitle: true

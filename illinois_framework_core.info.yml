@@ -20,6 +20,7 @@ dependencies:
   - linkit_media_library
   - media_remote
   - menu_ui
+  - metatag_open_graph
   - node
   - options
   - paragraphs

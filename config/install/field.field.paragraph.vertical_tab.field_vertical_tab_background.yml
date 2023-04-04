@@ -1,0 +1,23 @@
+uuid: a990fcb4-1ce0-469c-bbd3-63ef0d4dd121
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_vertical_tab_background
+    - paragraphs.paragraphs_type.vertical_tab
+  module:
+    - options
+id: paragraph.vertical_tab.field_vertical_tab_background
+field_name: field_vertical_tab_background
+entity_type: paragraph
+bundle: vertical_tab
+label: 'Background color'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: il-theme-blue
+default_value_callback: ''
+settings: {  }
+field_type: list_string

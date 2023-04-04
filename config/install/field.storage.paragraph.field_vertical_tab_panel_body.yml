@@ -1,0 +1,19 @@
+uuid: ecf4697f-5bde-45c5-9f35-bca12e5b04d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_vertical_tab_panel_body
+field_name: field_vertical_tab_panel_body
+entity_type: paragraph
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,115 @@
+uuid: 345b15b5-da94-4ce4-b13f-0406389c3dfc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_vertical_tab
+    - paragraphs.paragraphs_type.vertical_tab
+    - paragraphs.paragraphs_type.vertical_tab_panel
+  module:
+    - entity_reference_revisions
+id: paragraph.vertical_tab.field_vertical_tab
+field_name: field_vertical_tab
+entity_type: paragraph
+bundle: vertical_tab
+label: 'Vertical Tab'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      vertical_tab_panel: vertical_tab_panel
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 30
+        enabled: false
+      accordion_content:
+        weight: 31
+        enabled: false
+      bb:
+        weight: 32
+        enabled: false
+      bb_content:
+        weight: 33
+        enabled: false
+      block_reference:
+        weight: 34
+        enabled: false
+      calendar:
+        weight: 35
+        enabled: false
+      cards:
+        weight: 36
+        enabled: false
+      cards_content:
+        weight: 37
+        enabled: false
+      contact:
+        weight: 38
+        enabled: false
+      contact_content:
+        weight: 39
+        enabled: false
+      cta:
+        weight: 40
+        enabled: false
+      cta_narrow:
+        weight: 41
+        enabled: false
+      feature_boxed:
+        weight: 42
+        enabled: false
+      feature_grouped:
+        weight: 43
+        enabled: false
+      feature_split:
+        weight: 44
+        enabled: false
+      feature_video:
+        weight: 45
+        enabled: false
+      from_library:
+        weight: 46
+        enabled: false
+      hero:
+        weight: 47
+        enabled: false
+      hero_section_page:
+        weight: 48
+        enabled: false
+      icon_row:
+        weight: 49
+        enabled: false
+      icon_row_content:
+        weight: 50
+        enabled: false
+      image_gallery:
+        weight: 51
+        enabled: false
+      intro_home:
+        weight: 52
+        enabled: false
+      list:
+        weight: 53
+        enabled: false
+      list_content:
+        weight: 54
+        enabled: false
+      rt:
+        weight: 55
+        enabled: false
+      rt_content:
+        weight: 56
+        enabled: false
+      vertical_tab:
+        weight: 57
+        enabled: false
+      vertical_tab_panel:
+        weight: 58
+        enabled: true
+field_type: entity_reference_revisions

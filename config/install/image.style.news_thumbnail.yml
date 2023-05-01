@@ -1,0 +1,24 @@
+uuid: 70e8b166-87c1-492a-9c6f-0afcd1003711
+langcode: en
+status: true
+dependencies:
+  module:
+    - imagick
+name: news_thumbnail
+label: 'News Thumbnail'
+effects:
+  000ffaca-e351-4863-a725-b49719bed24e:
+    uuid: 000ffaca-e351-4863-a725-b49719bed24e
+    id: image_convert
+    weight: 1
+    data:
+      format: jpg
+      quality: '80'
+  d6347747-eda9-4571-b650-eca4252cac05:
+    uuid: d6347747-eda9-4571-b650-eca4252cac05
+    id: image_scale
+    weight: 2
+    data:
+      width: 100
+      height: null
+      upscale: false

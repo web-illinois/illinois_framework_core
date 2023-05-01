@@ -5,22 +5,22 @@ dependencies:
   module:
     - imagick
 _core:
-  default_config_hash: nvWr1L_oWv75sks3TaBrkyFc1b67R-K3bwfHApUZi0Q
+  default_config_hash: qBBSFOUex4V7kQuMYHUds8KdUgGAWoJI_lJWRKGXpKQ
 name: highlighted_news
 label: 'Highlighted News'
 effects:
-  e54890e1-3c8a-4a2e-b04c-fd31fe3b9359:
-    uuid: e54890e1-3c8a-4a2e-b04c-fd31fe3b9359
-    id: image_scale_and_crop
-    weight: 1
-    data:
-      width: 300
-      height: 300
-      anchor: center-center
   4a0e66cc-40ff-4528-bb48-0cd1dd73106b:
     uuid: 4a0e66cc-40ff-4528-bb48-0cd1dd73106b
     id: image_convert
-    weight: 2
+    weight: -9
     data:
       format: jpg
       quality: '85'
+  8b850e04-1590-4439-b40a-f59534dece15:
+    uuid: 8b850e04-1590-4439-b40a-f59534dece15
+    id: image_scale
+    weight: -10
+    data:
+      width: 300
+      height: null
+      upscale: false

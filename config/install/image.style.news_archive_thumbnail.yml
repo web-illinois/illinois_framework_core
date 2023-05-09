@@ -5,7 +5,7 @@ dependencies:
   module:
     - imagick
 _core:
-  default_config_hash: 8dSEwYWGXSZh-2QnoRgKPzdEIBiGfVaxMVzsU-bO_uc
+  default_config_hash: OoGkg8eHesjN9qcn36kRkZqGzHZk-_SLJxgYqgjK9Co
 name: news_archive_thumbnail
 label: 'News archive thumbnail'
 effects:

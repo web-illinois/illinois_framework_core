@@ -5,7 +5,7 @@ dependencies:
   module:
     - imagick
 _core:
-  default_config_hash: qnvWr1L_oWv75sks3TaBrkyFc1b67R-K3bwfHApUZi0Q
+  default_config_hash: nvWr1L_oWv75sks3TaBrkyFc1b67R-K3bwfHApUZi0Q
 name: highlighted_news
 label: 'Highlighted News'
 effects:

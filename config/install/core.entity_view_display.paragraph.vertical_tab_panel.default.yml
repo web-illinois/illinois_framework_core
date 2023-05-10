@@ -1,0 +1,29 @@
+uuid: 8259b150-a807-4a5e-8eb1-11ffb642e7a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.vertical_tab_panel.field_vertical_tab_panel_body
+    - field.field.paragraph.vertical_tab_panel.field_vertical_tab_panel_title
+    - paragraphs.paragraphs_type.vertical_tab_panel
+id: paragraph.vertical_tab_panel.default
+targetEntityType: paragraph
+bundle: vertical_tab_panel
+mode: default
+content:
+  field_vertical_tab_panel_body:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_vertical_tab_panel_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

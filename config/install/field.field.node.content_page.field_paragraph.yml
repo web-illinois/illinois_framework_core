@@ -1,3 +1,4 @@
+uuid: 5e823bab-6a56-4e3e-8d0a-333b69c67cc9
 langcode: en
 status: true
 dependencies:
@@ -8,11 +9,15 @@ dependencies:
     - paragraphs.paragraphs_type.bb_content
     - paragraphs.paragraphs_type.cards_content
     - paragraphs.paragraphs_type.contact_content
+    - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.icon_row_content
     - paragraphs.paragraphs_type.list_content
     - paragraphs.paragraphs_type.rt_content
+    - paragraphs.paragraphs_type.vertical_tab_panel
   module:
     - entity_reference_revisions
+_core:
+  default_config_hash: DLOAJywuIKAg7018JxVFvmdWlabNyCR6Eobn4_W6Jko
 id: node.content_page.field_paragraph
 field_name: field_paragraph
 entity_type: node
@@ -35,6 +40,7 @@ settings:
       icon_row_content: icon_row_content
       list_content: list_content
       rt_content: rt_content
+      vertical_tab_panel: vertical_tab_panel
     negate: 1
     target_bundles_drag_drop:
       accordion:
@@ -117,5 +123,11 @@ settings:
         enabled: false
       rt_content:
         weight: -30
+        enabled: true
+      vertical_tab:
+        weight: 57
+        enabled: false
+      vertical_tab_panel:
+        weight: 58
         enabled: true
 field_type: entity_reference_revisions

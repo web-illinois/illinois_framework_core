@@ -1,0 +1,42 @@
+uuid: 41760e6f-e60b-42ce-8f14-564d16f79a5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.vertical_tab.field_vertical_tab
+    - field.field.paragraph.vertical_tab.field_vertical_tab_background
+    - field.field.paragraph.vertical_tab.field_vertical_tab_title
+    - paragraphs.paragraphs_type.vertical_tab
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.vertical_tab.default
+targetEntityType: paragraph
+bundle: vertical_tab
+mode: default
+content:
+  field_vertical_tab:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_vertical_tab_background:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_vertical_tab_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

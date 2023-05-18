@@ -105,28 +105,32 @@
             });
         });
 
-        // Form validation on submit
-        $("#gift_form", context).on("submit", function() {
-          var totalValue = document.getElementById("gift_total").innerText;
-          if( $("input[class='other-fund-name']", context).val().length ) {
-            if( $("input:radio.other-fund-radio:checked", context).val() == 0 ) {
+      // Form validation on submit
+      $("#gift_form", context).on("submit", function() {
+        var totalValue = document.getElementById("gift_total").innerText;
+        // elements with class "other-fund-name" exist
+        var otherfundexists = document.getElementsByClassName('other-fund-name');
+        if (otherfundexists.length > 0) {
+          if ($("input[class='other-fund-name']", context).val().length) {
+            if ($("input:radio.other-fund-radio:checked", context).val() == 0) {
               alert("Please select or enter an amount for the other fund.");
               return false;
             }
           }
-          if( $("input:radio.other-fund-radio:checked", context).val() != 0 ) {
-            if( $("input[class='other-fund-name']", context).val().length == 0 ) {
+          if ($("input:radio.other-fund-radio:checked", context).val() != 0) {
+            if ($("input[class='other-fund-name']", context).val().length == 0) {
               alert("Please specify the fund you wish to donate to in the 'Other' section.");
               return false;
             }
           }
-          if (totalValue == "$0.00" || totalValue == "$NAN") {
-              alert("Please select or enter an amount for at least one fund.");
-              return false;
-          } else {
-              return true;
-          }
-        });
+        }
+        if (totalValue == "$0.00" || totalValue == "$NAN") {
+          alert("Please select or enter an amount for at least one fund.");
+          return false;
+        } else {
+          return true;
+        }
+      });
     }
   }
 })(jQuery, Drupal);

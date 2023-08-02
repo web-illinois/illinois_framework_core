@@ -15,7 +15,7 @@ dependencies:
     - taxonomy
     - user
 _core:
-  default_config_hash: Qds4rlHsybFXc81zoTtv2F_b9Dhdw_so9h1TlqSc9wk
+  default_config_hash: y7YtO8ldLaC4D7q82usxySTvQNYEz5B69_h-laFSuzQ
 id: spotlight_list
 label: 'Spotlight List'
 module: views

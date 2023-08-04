@@ -4,8 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.vertical_tab_panel.field_vertical_tab_panel_body
+    - field.field.paragraph.vertical_tab_panel.field_vertical_tab_panel_body_fo
     - field.field.paragraph.vertical_tab_panel.field_vertical_tab_panel_title
     - paragraphs.paragraphs_type.vertical_tab_panel
+  module:
+    - text
+_core:
+  default_config_hash: pbtVdsf4zga9n6TQctDh9PrjKj5V_f-N5HKwjqO3eMg
 id: paragraph.vertical_tab_panel.default
 targetEntityType: paragraph
 bundle: vertical_tab_panel
@@ -17,6 +22,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_vertical_tab_panel_body_fo:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
     region: content
   field_vertical_tab_panel_title:
     type: string

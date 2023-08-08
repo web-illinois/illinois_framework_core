@@ -1,0 +1,121 @@
+uuid: 89cf5f26-5cfa-493b-954b-bb3cd091b836
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cards_content
+    - paragraphs.paragraphs_type.cards_content
+    - paragraphs.paragraphs_type.content_slider
+  module:
+    - entity_reference_revisions
+id: paragraph.content_slider.field_cards_content
+field_name: field_cards_content
+entity_type: paragraph
+bundle: content_slider
+label: 'Cards content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      cards_content: cards_content
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 32
+        enabled: false
+      accordion_content:
+        weight: 33
+        enabled: false
+      bb:
+        weight: 34
+        enabled: false
+      bb_content:
+        weight: 35
+        enabled: false
+      block_reference:
+        weight: 36
+        enabled: false
+      calendar:
+        weight: 37
+        enabled: false
+      cards:
+        weight: 38
+        enabled: false
+      cards_content:
+        weight: 39
+        enabled: true
+      contact:
+        weight: 40
+        enabled: false
+      contact_content:
+        weight: 41
+        enabled: false
+      content_slider:
+        weight: 42
+        enabled: false
+      content_slider_cards:
+        weight: 43
+        enabled: false
+      cta:
+        weight: 44
+        enabled: false
+      cta_narrow:
+        weight: 45
+        enabled: false
+      feature_boxed:
+        weight: 46
+        enabled: false
+      feature_grouped:
+        weight: 47
+        enabled: false
+      feature_split:
+        weight: 48
+        enabled: false
+      feature_video:
+        weight: 49
+        enabled: false
+      from_library:
+        weight: 50
+        enabled: false
+      hero:
+        weight: 51
+        enabled: false
+      hero_section_page:
+        weight: 52
+        enabled: false
+      icon_row:
+        weight: 53
+        enabled: false
+      icon_row_content:
+        weight: 54
+        enabled: false
+      image_gallery:
+        weight: 55
+        enabled: false
+      intro_home:
+        weight: 56
+        enabled: false
+      list:
+        weight: 57
+        enabled: false
+      list_content:
+        weight: 58
+        enabled: false
+      rt:
+        weight: 59
+        enabled: false
+      rt_content:
+        weight: 60
+        enabled: false
+      vertical_tab:
+        weight: 61
+        enabled: false
+      vertical_tab_panel:
+        weight: 62
+        enabled: false
+field_type: entity_reference_revisions

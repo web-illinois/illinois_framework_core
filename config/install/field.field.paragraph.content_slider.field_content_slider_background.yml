@@ -1,0 +1,21 @@
+uuid: 99c6edb2-4933-4cb8-b7d8-b59e90c6b563
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content_slider_background
+    - paragraphs.paragraphs_type.content_slider
+  module:
+    - options
+id: paragraph.content_slider.field_content_slider_background
+field_name: field_content_slider_background
+entity_type: paragraph
+bundle: content_slider
+label: 'Section Background'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

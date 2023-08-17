@@ -1,14 +1,12 @@
-uuid: 34d3182d-408e-4ec1-8ee2-35ace639b35b
+uuid: aab6b100-7e9e-4b19-82d5-02f7ff10ad7c
 langcode: en
 status: true
 dependencies:
   module:
     - options
     - paragraphs
-_core:
-  default_config_hash: U3dniLwUN3Dbs-gDEVrgAESLItCp5swnHYfAUto4194
-id: paragraph.field_cards_background
-field_name: field_cards_background
+id: paragraph.field_content_slider_background
+field_name: field_content_slider_background
 entity_type: paragraph
 type: list_string
 settings:

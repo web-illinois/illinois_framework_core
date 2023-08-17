@@ -1,0 +1,54 @@
+uuid: 82ed23da-0460-44cb-b0ef-0a367ce21807
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_slider.field_cards_content
+    - field.field.paragraph.content_slider.field_content_slider_background
+    - field.field.paragraph.content_slider.field_content_slider_subtitle
+    - field.field.paragraph.content_slider.field_content_slider_title
+    - paragraphs.paragraphs_type.content_slider
+  module:
+    - paragraphs
+id: paragraph.content_slider.default
+targetEntityType: paragraph
+bundle: content_slider
+mode: default
+content:
+  field_cards_content:
+    type: entity_reference_paragraphs
+    weight: 3
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: cards_content
+    third_party_settings: {  }
+  field_content_slider_background:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_content_slider_subtitle:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_content_slider_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

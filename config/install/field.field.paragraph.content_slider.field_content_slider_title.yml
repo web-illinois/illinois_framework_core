@@ -1,0 +1,19 @@
+uuid: 8e29c95d-5e17-4f87-be39-96a606652741
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content_slider_title
+    - paragraphs.paragraphs_type.content_slider
+id: paragraph.content_slider.field_content_slider_title
+field_name: field_content_slider_title
+entity_type: paragraph
+bundle: content_slider
+label: 'Section Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

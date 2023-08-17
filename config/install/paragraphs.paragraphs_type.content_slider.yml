@@ -1,0 +1,10 @@
+uuid: f5617955-4e75-49ce-adb2-adc07988e8c5
+langcode: en
+status: true
+dependencies: {  }
+id: content_slider
+label: 'Content slider'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

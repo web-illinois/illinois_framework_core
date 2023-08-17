@@ -5,8 +5,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_vertical_tab_panel_body
     - paragraphs.paragraphs_type.vertical_tab_panel
-_core:
-  default_config_hash: 0_OIBi05iOpUhBauJ1urUs8tH5xMynerCyCbBmxPtWw
 id: paragraph.vertical_tab_panel.field_vertical_tab_panel_body
 field_name: field_vertical_tab_panel_body
 entity_type: paragraph

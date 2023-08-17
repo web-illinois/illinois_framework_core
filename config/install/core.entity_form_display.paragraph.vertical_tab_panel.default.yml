@@ -9,8 +9,6 @@ dependencies:
     - paragraphs.paragraphs_type.vertical_tab_panel
   module:
     - text
-_core:
-  default_config_hash: fEpt7g6KT3K_75buJTxETqRvVicjYmUTiwW5UF0oNfs
 id: paragraph.vertical_tab_panel.default
 targetEntityType: paragraph
 bundle: vertical_tab_panel

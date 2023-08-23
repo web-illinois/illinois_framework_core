@@ -14,10 +14,10 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: il-theme-white
+      value: white
       label: White
     -
-      value: il-theme-blue
+      value: illiniblue
       label: 'Illini Blue'
   allowed_values_function: ''
 module: options

@@ -4,15 +4,18 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.vertical_tab_panel.field_vertical_tab_panel_body
+    - field.field.paragraph.vertical_tab_panel.field_vertical_tab_panel_body_fo
     - field.field.paragraph.vertical_tab_panel.field_vertical_tab_panel_title
     - paragraphs.paragraphs_type.vertical_tab_panel
+  module:
+    - text
 id: paragraph.vertical_tab_panel.default
 targetEntityType: paragraph
 bundle: vertical_tab_panel
 mode: default
 content:
-  field_vertical_tab_panel_body:
-    type: string_textarea
+  field_vertical_tab_panel_body_fo:
+    type: text_textarea
     weight: 1
     region: content
     settings:
@@ -29,4 +32,5 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_vertical_tab_panel_body: true
   status: true

@@ -86,11 +86,7 @@
             ]
         },
         "drupal-libraries": {
-            "library-directory": "docroot/libraries",
-            "libraries": [
-              {"name": "blazy", "package": "npm-asset/blazy"},
-              {"name": "slick", "package": "npm-asset/slick-carousel"}
-            ]
+            "library-directory": "docroot/libraries"
           },
         "installer-types": [
             "bower-asset",

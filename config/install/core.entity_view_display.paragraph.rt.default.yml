@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.rt.field_menu_reference
     - field.field.paragraph.rt.field_rt_background_color
     - field.field.paragraph.rt.field_rt_column
     - field.field.paragraph.rt.field_rt_title
@@ -11,12 +12,21 @@ dependencies:
     - entity_reference_revisions
     - options
 _core:
-  default_config_hash: J3H8o9jSW8prkq78zORK2dZYK_tIfFKhcAKPAjGsyaI
+  default_config_hash: 32QZSiyXySKzbcY1i9dipd05UHSo45mAV_3ebySQKM4
 id: paragraph.rt.default
 targetEntityType: paragraph
 bundle: rt
 mode: default
 content:
+  field_menu_reference:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_rt_background_color:
     type: list_default
     label: visually_hidden

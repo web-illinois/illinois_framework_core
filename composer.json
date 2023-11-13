@@ -94,6 +94,11 @@
         ],
         "patchLevel": {
             "drupal/core": "-p2"
+        },
+        "patches": {
+            "drupal/video_embed_field": {
+                "3311063 - Add support for Ckeditor 5": "https://www.drupal.org/files/issues/2023-11-02/3311063-42.patch"
+            }
         }
     },
     "repositories": {

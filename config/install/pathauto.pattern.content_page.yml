@@ -9,13 +9,13 @@ type: 'canonical_entities:node'
 pattern: '[node:menu-link:parents:join-path]/[node:title]'
 selection_criteria:
   e7c430f2-8c8a-472d-9dd3-6e41d531ba40:
-    id: node_type
-    bundles:
-      content_page: content_page
+    id: 'entity_bundle:node'
     negate: false
+    uuid: e7c430f2-8c8a-472d-9dd3-6e41d531ba40
     context_mapping:
       node: node
-    uuid: e7c430f2-8c8a-472d-9dd3-6e41d531ba40
+    bundles:
+      content_page: content_page
 selection_logic: and
 weight: -5
 relationships: {  }

@@ -9,13 +9,13 @@ type: 'canonical_entities:node'
 pattern: 'news/[node:field_if_date:value]/[node:title]'
 selection_criteria:
   f0b0ee3f-e10b-45c3-a416-182d93f800ba:
-    id: node_type
-    bundles:
-      news: news
+    id: 'entity_bundle:node'
     negate: false
+    uuid: f0b0ee3f-e10b-45c3-a416-182d93f800ba
     context_mapping:
       node: node
-    uuid: f0b0ee3f-e10b-45c3-a416-182d93f800ba
+    bundles:
+      news: news
 selection_logic: and
 weight: -5
 relationships: {  }

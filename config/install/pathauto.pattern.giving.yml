@@ -9,13 +9,13 @@ type: 'canonical_entities:node'
 pattern: 'giving/[node:title]'
 selection_criteria:
   e901eb7e-32d2-4ad8-a27c-a4b98b0ffc71:
-    id: node_type
-    bundles:
-      fund_listing_page: fund_listing_page
+    id: 'entity_bundle:node'
     negate: false
+    uuid: e901eb7e-32d2-4ad8-a27c-a4b98b0ffc71
     context_mapping:
       node: node
-    uuid: e901eb7e-32d2-4ad8-a27c-a4b98b0ffc71
+    bundles:
+      fund_listing_page: fund_listing_page
 selection_logic: and
 weight: -5
 relationships: {  }

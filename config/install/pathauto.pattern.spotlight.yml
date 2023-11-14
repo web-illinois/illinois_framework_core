@@ -9,13 +9,13 @@ type: 'canonical_entities:node'
 pattern: '/spotlight/[node:field_type:entity:name]/[node:title]'
 selection_criteria:
   18bfdda1-981c-43e9-870b-c3b91418d56a:
-    id: node_type
-    bundles:
-      spotlight: spotlight
+    id: 'entity_bundle:node'
     negate: false
+    uuid: 18bfdda1-981c-43e9-870b-c3b91418d56a
     context_mapping:
       node: node
-    uuid: 18bfdda1-981c-43e9-870b-c3b91418d56a
+    bundles:
+      spotlight: spotlight
 selection_logic: and
 weight: -5
 relationships: {  }

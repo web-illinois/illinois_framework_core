@@ -1,3 +1,4 @@
+uuid: 7f937449-fd52-4f14-bebc-fba65a585d85
 langcode: en
 status: true
 dependencies:
@@ -11,6 +12,7 @@ dependencies:
     - field.field.node.news.field_if_story_source
     - field.field.node.news.field_if_subtitle
     - field.field.node.news.field_paragraph
+    - field.field.node.news.field_show_featured_image
     - field.field.node.news.field_tags
     - node.type.news
   module:
@@ -18,10 +20,11 @@ dependencies:
     - entity_reference_revisions
     - link
     - metatag
+    - options
     - text
     - user
 _core:
-  default_config_hash: c3XTXCyTjieO1Yqoe-b10sFGdxQ64-IcS00D2tiR3rY
+  default_config_hash: ZO9zTnYdmjDJHt7O-ezadwaUS5dEIl2U7axkOxSkUPs
 id: node.news.default
 targetEntityType: node
 bundle: news
@@ -95,6 +98,13 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 4
+    region: content
+  field_show_featured_image:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
     region: content
   field_tags:
     type: entity_reference_label

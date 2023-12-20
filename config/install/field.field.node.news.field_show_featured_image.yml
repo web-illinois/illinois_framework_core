@@ -1,0 +1,23 @@
+uuid: 6fba46e1-82ad-423c-9d88-3cdad35a7ae6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_featured_image
+    - node.type.news
+  module:
+    - options
+id: node.news.field_show_featured_image
+field_name: field_show_featured_image
+entity_type: node
+bundle: news
+label: 'Show featured image in article'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'yes'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

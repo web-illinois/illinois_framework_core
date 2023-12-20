@@ -1,0 +1,27 @@
+uuid: eb6d4b91-f840-495d-878c-f41835a56c9d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_show_featured_image
+field_name: field_show_featured_image
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'yes'
+      label: 'Show image'
+    -
+      value: 'no'
+      label: 'Hide image'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

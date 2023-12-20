@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.news.field_if_story_source
     - field.field.node.news.field_if_subtitle
     - field.field.node.news.field_paragraph
+    - field.field.node.news.field_show_featured_image
     - field.field.node.news.field_tags
     - node.type.news
   module:
@@ -23,7 +24,7 @@ dependencies:
     - path
     - text
 _core:
-  default_config_hash: q2-l1nwPL8YS6Ioa4WpfjcPLkcnPhSF1kL9PUx82W8k
+  default_config_hash: ZMmKx7SpyxuNcVM_QJPPJBdewunQiLYsfzIb-JbkNio
 id: node.news.default
 targetEntityType: node
 bundle: news
@@ -61,14 +62,14 @@ content:
     third_party_settings: {  }
   field_if_meda_featured_image:
     type: media_library_widget
-    weight: 15
+    weight: 16
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_if_metatags:
     type: metatag_firehose
-    weight: 26
+    weight: 17
     region: content
     settings:
       sidebar: true
@@ -107,6 +108,12 @@ content:
       features:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
+    third_party_settings: {  }
+  field_show_featured_image:
+    type: options_select
+    weight: 15
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete

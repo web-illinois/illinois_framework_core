@@ -96,6 +96,9 @@
         "patches": {
             "drupal/video_embed_field": {
                 "3311063 - Add support for Ckeditor 5": "https://www.drupal.org/files/issues/2024-03-13/3311063-56.patch"
+            },
+            "drupal/linkit_media_library": {
+                "https://www.drupal.org/project/linkit_media_library/issues/3329877": "https://git.drupalcode.org/project/linkit_media_library/-/merge_requests/5.diff"
             }
         }
     },

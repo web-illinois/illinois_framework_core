@@ -222,3 +222,37 @@ function illinois_framework_core_update_9700() {
   $editoria11y_config->set('live_h3', '.paragraph-type--cta .ck-editor__editable');
   $editoria11y_config->save(TRUE);
 }
+
+/**
+ * Update ckeditor dependency in editor.editor.full_html and editor.editor.basic_html
+ */
+function illinois_framework_core_update_9800() {
+  $config_factory = \Drupal::configFactory();
+
+  // Edit the full editor configuration
+  $editor_config_full_html = $config_factory->getEditable('editor.editor.full_html');
+  // Check if config exists
+  if (!$editor_config_full_html->isNew()) {
+    $dependencies = $editor_config_full_html->get('dependencies.module') ?: [];
+
+    // Remove the unwanted ckeditor module dependency
+    if (in_array('ckeditor', $dependencies)) {
+      $dependencies = array_diff($dependencies, ['ckeditor']);
+      $editor_config_full_html->set('dependencies.module', array_values($dependencies));
+      $editor_config_full_html->save();
+    }
+  }
+
+  $editor_config_basic_html = $config_factory->getEditable('editor.editor.basic_html');
+  // Check if config exists
+  if (!$editor_config_basic_html->isNew()) {
+    $dependencies = $editor_config_basic_html->get('dependencies.module') ?: [];
+
+    // Remove the unwanted ckeditor module dependency
+    if (in_array('ckeditor', $dependencies)) {
+      $dependencies = array_diff($dependencies, ['ckeditor']);
+      $editor_config_basic_html->set('dependencies.module', array_values($dependencies));
+      $editor_config_basic_html->save();
+    }
+  }
+}

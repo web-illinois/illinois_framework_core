@@ -256,3 +256,41 @@ function illinois_framework_core_update_9800() {
     }
   }
 }
+
+/**
+* Delete giving_fund and fund_listing_page content and content types.
+*/
+function illinois_framework_core_update_9900() {
+  $storage = \Drupal::entityTypeManager()->getStorage('node');
+
+  // Delete giving_fund items first.
+  $giving_fund_ids = $storage->getQuery()
+    ->condition('type', 'giving_fund')
+    ->accessCheck(FALSE)
+    ->execute();
+  if (!empty($giving_fund_ids)) {
+    $nodes = $storage->loadMultiple($giving_fund_ids);
+    $storage->delete($nodes);
+  }
+
+  // Delete fund_listing_page items second.
+  $fund_listing_ids = $storage->getQuery()
+    ->condition('type', 'fund_listing_page')
+    ->accessCheck(FALSE)
+    ->execute();
+  if (!empty($fund_listing_ids)) {
+    $nodes = $storage->loadMultiple($fund_listing_ids);
+    $storage->delete($nodes);
+  }
+
+  // Delete the content types.
+  // We delete fund_listing_page first because it has an entity reference field
+  // (field_funds) that references giving_fund.
+  $content_types = ['fund_listing_page', 'giving_fund'];
+  foreach ($content_types as $content_type) {
+    $type = \Drupal::entityTypeManager()->getStorage('node_type')->load($content_type);
+    if ($type) {
+      $type->delete();
+    }
+  }
+}

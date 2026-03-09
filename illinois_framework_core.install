@@ -228,7 +228,7 @@ function illinois_framework_core_update_9700() {
  */
 function illinois_framework_core_update_10500() {
   $query = \Drupal::entityQuery('paragraph');
-  $results = $query 
+  $results = $query
   ->accessCheck(true)
   ->condition('field_hero_background', NULL, 'IS NOT NULL')
   ->execute();
@@ -236,7 +236,7 @@ function illinois_framework_core_update_10500() {
     $paragraph = \Drupal::entityTypeManager()->getStorage('paragraph')->load($result);
     $background = $paragraph->field_hero_background;
     $settings = explode(",", $background->getString());
-      switch($settings[0]){  
+      switch($settings[0]){
         case 'image':
           $background->set(0, 'blue');
           \Drupal::messenger()->addMessage("Found image, set to blue");
@@ -255,4 +255,22 @@ function illinois_framework_core_update_10500() {
     $paragraph->set('field_hero_background',$background->getString());
     $paragraph->save();
   }
+}
+/**
+ * Switch Gin to use the classic (core) toolbar instead of experimental.
+ */
+function illinois_framework_core_update_11000() {
+  // Ensure core toolbar module is enabled.
+  if (!\Drupal::moduleHandler()->moduleExists('toolbar')) {
+    \Drupal::service('module_installer')->install(['toolbar']);
+  }
+  // Update Gin configuration.
+  $config = \Drupal::configFactory()->getEditable('gin.settings');
+  // This is the toolbar setting.
+  $config->set('classic_toolbar', TRUE);
+  // Optional: disable experimental toolbar if present.
+  if ($config->get('enable_gin_toolbar') !== NULL) {
+    $config->set('enable_gin_toolbar', FALSE);
+  }
+  $config->save(TRUE);
 }

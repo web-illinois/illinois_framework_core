@@ -197,6 +197,25 @@ function illinois_framework_core_update_9400() {
  * Uninstall Video Embed WYSIWYG and Video Embed Field modules
  */
 function illinois_framework_core_update_9500() {
+  $config_factory = \Drupal::configFactory();
+  $filter_config = $config_factory->getEditable('filter.format.basic_html');
+
+  $filters = $filter_config->get('filters');
+
+  if (array_key_exists('video_embed_wysiwyg', $filters)) {
+    unset($filters['video_embed_wysiwyg']);
+    $filter_config->set('filters', $filters);
+  }
+
+  $dependencies = $filter_config->get('dependencies');
+
+  if (array_key_exists('module', $dependencies)) {
+    $dependencies['module'] = array_diff($dependencies['module'], ['video_embed_wysiwyg']);
+    $filter_config->set('dependencies', $dependencies);
+  }
+
+  $filter_config->save(TRUE);
+  
   \Drupal::service('module_installer')->uninstall(['video_embed_wysiwyg','video_embed_field']);
 }
 

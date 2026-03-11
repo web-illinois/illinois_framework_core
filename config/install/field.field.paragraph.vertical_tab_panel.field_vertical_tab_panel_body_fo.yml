@@ -1,0 +1,21 @@
+uuid: 1f732bfe-f8c4-4e63-88cb-8e11a0216add
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_vertical_tab_panel_body_fo
+    - paragraphs.paragraphs_type.vertical_tab_panel
+  module:
+    - text
+id: paragraph.vertical_tab_panel.field_vertical_tab_panel_body_fo
+field_name: field_vertical_tab_panel_body_fo
+entity_type: paragraph
+bundle: vertical_tab_panel
+label: 'Body Formatted'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

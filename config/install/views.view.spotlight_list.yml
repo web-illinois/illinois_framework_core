@@ -7,12 +7,10 @@ dependencies:
     - field.storage.node.field_if_meda_featured_image
     - image.style.news_thumbnail
     - node.type.spotlight
-    - taxonomy.vocabulary.spotlight_type
   module:
     - advanced_text_formatter
     - media
     - node
-    - taxonomy
     - user
 _core:
   default_config_hash: y7YtO8ldLaC4D7q82usxySTvQNYEz5B69_h-laFSuzQ
@@ -252,6 +250,7 @@ display:
         type: mini
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 10
           total_pages: null
           id: 0
@@ -301,55 +300,7 @@ display:
             field_identifier: created
           exposed: false
           granularity: second
-      arguments:
-        name:
-          id: name
-          table: taxonomy_term_field_data
-          field: name
-          relationship: field_type
-          group_type: group
-          admin_label: ''
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: string
-          default_action: ignore
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: true
-          title: '{{ arguments.name }} Spotlights'
-          default_argument_type: fixed
-          default_argument_options:
-            argument: ''
-          default_argument_skip_url: false
-          summary_options:
-            base_path: ''
-            count: true
-            override: false
-            items_per_page: 25
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: true
-          validate:
-            type: taxonomy_term_name
-            fail: 'not found'
-          validate_options:
-            bundles:
-              spotlight_type: spotlight_type
-            access: true
-            operation: view
-            transform: true
-          glossary: false
-          limit: 0
-          case: ucwords
-          path_case: lower
-          transform_dash: true
-          break_phrase: false
-          add_table: false
-          require_value: false
+      arguments: {  }
       filters:
         status:
           id: status
@@ -400,17 +351,8 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      relationships:
-        field_type:
-          id: field_type
-          table: node__field_type
-          field: field_type
-          relationship: none
-          group_type: group
-          admin_label: 'field_type: Taxonomy term'
-          plugin_id: standard
-          required: false
-      css_class: 'spotlight-list news-page fixed-width'
+      relationships: {  }
+      css_class: 'spotlight-list news-page'
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -419,7 +361,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
@@ -433,13 +374,12 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: spotlight/%
+      path: spotlight/all
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions

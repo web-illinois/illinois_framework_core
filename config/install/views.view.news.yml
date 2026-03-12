@@ -544,20 +544,7 @@ display:
         header: false
       css_class: news-block
       display_description: ''
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text
-          empty: false
-          content:
-            value: '<h2>[view:title]</h2>'
-            format: basic_html
-          tokenize: false
+      header: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -1339,8 +1326,10 @@ display:
         fields: false
         filters: false
         filter_groups: false
+        header: false
       css_class: 'news-page fixed-width'
       display_description: ''
+      header: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -1356,15 +1345,29 @@ display:
         - 'config:field.storage.node.field_if_meda_featured_image'
   block_4:
     id: block_4
-    display_title: 'Hoverbox block 2-col'
+    display_title: 'Hoverbox Demo 2-column'
     display_plugin: block
     position: 5
     display_options:
       pager:
-        type: some
+        type: mini
         options:
           offset: 0
-          items_per_page: 2
+          pagination_heading_level: h4
+          items_per_page: 15
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
       filters:
         status:
           id: status
@@ -1442,9 +1445,9 @@ display:
       style:
         type: default
         options:
+          grouping: {  }
           row_class: ''
           default_row_class: false
-          uses_fields: false
       row:
         type: 'entity:node'
         options:
@@ -1459,7 +1462,7 @@ display:
         filter_groups: false
         header: false
         footer: false
-      css_class: 'hvrbox-card fixed-width hvrbox-col-2'
+      css_class: 'hvrbox-card hvrbox-col-2 fixed-width'
       display_description: ''
       header:
         area:
@@ -1495,12 +1498,13 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
   block_5:
     id: block_5
-    display_title: 'Hoverbox block 3-col'
+    display_title: 'Hoverbox Demo 3-column'
     display_plugin: block
     position: 5
     display_options:
@@ -1617,9 +1621,9 @@ display:
       style:
         type: default
         options:
+          grouping: {  }
           row_class: ''
           default_row_class: false
-          uses_fields: false
       row:
         type: 'entity:node'
         options:
@@ -1635,7 +1639,7 @@ display:
         filter_groups: false
         header: false
         footer: false
-      css_class: 'hvrbox-card fixed-width hvrbox-col-3'
+      css_class: 'hvrbox-card col-3'
       display_description: ''
       header:
         area:
@@ -2089,7 +2093,7 @@ display:
         fields: false
         filters: false
         filter_groups: false
-      css_class: 'news-page fixed-width'
+      css_class: news-page
       display_description: ''
       display_extenders: {  }
       path: news

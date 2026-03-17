@@ -21,7 +21,7 @@ function illinois_framework_core_configure_toolbar() {
   $config = \Drupal::configFactory()->getEditable('gin.settings');
 
   // Enable classic toolbar.
-  $config->set('classic_toolbar', TRUE);
+  $config->set('classic_toolbar', 'vertical');
 
   // Disable experimental Gin toolbar if present.
   if ($config->get('enable_gin_toolbar') !== NULL) {

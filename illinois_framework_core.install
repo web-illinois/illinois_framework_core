@@ -5,6 +5,25 @@
  */
 function illinois_framework_core_install() {
   illinois_framework_core_set_image_processor();
+  illinois_framework_core_configure_toolbar();
+}
+
+/**
+ * Enables toolbar and configures Gin toolbar settings.
+ */
+function illinois_framework_core_configure_toolbar() {
+  // Ensure core toolbar module is enabled.
+  if (!\Drupal::moduleHandler()->moduleExists('toolbar')) {
+    \Drupal::service('module_installer')->install(['toolbar']);
+  }
+
+  // Update Gin configuration.
+  $config = \Drupal::configFactory()->getEditable('gin.settings');
+
+  // Enable classic toolbar.
+  $config->set('classic_toolbar', 'vertical');
+
+  $config->save(TRUE);
 }
 
 /**
@@ -312,4 +331,10 @@ function illinois_framework_core_update_9900() {
       $type->delete();
     }
   }
+}
+/**
+ * Switch Gin to use the classic (core) toolbar instead of experimental.
+ */
+function illinois_framework_core_update_9951() {
+  illinois_framework_core_configure_toolbar();
 }

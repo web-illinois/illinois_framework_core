@@ -23,11 +23,6 @@ function illinois_framework_core_configure_toolbar() {
   // Enable classic toolbar.
   $config->set('classic_toolbar', 'vertical');
 
-  // Disable experimental Gin toolbar if present.
-  if ($config->get('enable_gin_toolbar') !== NULL) {
-    $config->set('enable_gin_toolbar', FALSE);
-  }
-
   $config->save(TRUE);
 }
 

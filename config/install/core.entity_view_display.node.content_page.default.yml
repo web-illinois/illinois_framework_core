@@ -1,3 +1,4 @@
+uuid: 4f209c5c-93c6-4ad4-9b5f-d4bd9dab0da7
 langcode: en
 status: true
 dependencies:
@@ -15,6 +16,8 @@ dependencies:
     - metatag
     - text
     - user
+_core:
+  default_config_hash: cSvSBJvh7XR4EV_2SFh9LxWLfrjHpRlarVquGxBKSnE
 id: node.content_page.default
 targetEntityType: node
 bundle: content_page

@@ -6,7 +6,6 @@ dependencies:
     - field.field.paragraph.cta.field_cta_background
     - field.field.paragraph.cta.field_cta_body
     - field.field.paragraph.cta.field_cta_button
-    - field.field.paragraph.cta.field_cta_fingerprint
     - field.field.paragraph.cta.field_cta_icon
     - field.field.paragraph.cta.field_cta_layout
     - field.field.paragraph.cta.field_cta_subtitle
@@ -17,7 +16,7 @@ dependencies:
     - link
     - text
 _core:
-  default_config_hash: imbdqTUHiELF4SBGnRXXlG3cT4OXrHaVVkbrpi2zitU
+  default_config_hash: eYTOVcYUVKko_DdEEIgSU4R8NhCKiIKpUbz7rPGhCR8
 id: paragraph.cta.default
 targetEntityType: paragraph
 bundle: cta
@@ -44,12 +43,6 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
-    third_party_settings: {  }
-  field_cta_fingerprint:
-    type: options_select
-    weight: 2
-    region: content
-    settings: {  }
     third_party_settings: {  }
   field_cta_layout:
     type: options_select

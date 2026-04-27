@@ -38,13 +38,6 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_intro_home_fingerprint:
-    weight: 0
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_intro_home_layout:
     weight: 2
     label: hidden

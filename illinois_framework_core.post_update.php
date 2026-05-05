@@ -37,14 +37,3 @@ function illinois_framework_core_post_update_cta_title_optional(&$sandbox) {
     $field_config->save();
   }
 }
-
-/**
- * Change the field_cta_button number of instances (cardinality) on the CTA paragraph from 2 to 3.
- */
-function illinois_framework_core_post_update_cta_button_cardinality(&$sandbox) {
-    $field_storage = FieldStorageConfig::loadByName('paragraph', 'cta', 'field_cta_button');
-    if (!empty($field_storage)) {
-      $field_storage->setCardinality(3);
-      $field_storage->save();
-  }
-}

@@ -37,3 +37,31 @@ function illinois_framework_core_post_update_cta_title_optional(&$sandbox) {
     $field_config->save();
   }
 }
+
+/**
+ * Remove the user search page from default Drupal search.
+ */
+function illinois_framework_core_post_update_remove_user_search_page(&$sandbox) {
+  $search_user = \Drupal::configFactory()->getEditable('search.page.user_search');
+
+  if ($search_user) {
+    $search_user->delete();
+    return "Deleted user search page.";
+  } else{
+    return "No user search page found.";
+  }
+}
+
+/**
+ * Remove the help search page from default Drupal search.
+ */
+function illinois_framework_core_post_update_remove_help_search_page(&$sandbox) {
+  $search_help = \Drupal::configFactory()->getEditable('search.page.help_search');
+
+  if ($search_help) {
+    $search_help->delete();
+    return "Deleted help search page.";
+  } else{
+    return "No help search page found.";
+  }
+}

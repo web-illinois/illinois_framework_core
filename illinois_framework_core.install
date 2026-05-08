@@ -197,6 +197,25 @@ function illinois_framework_core_update_9400() {
  * Uninstall Video Embed WYSIWYG and Video Embed Field modules
  */
 function illinois_framework_core_update_9500() {
+  $config_factory = \Drupal::configFactory();
+  $filter_config = $config_factory->getEditable('filter.format.basic_html');
+
+  $filters = $filter_config->get('filters');
+
+  if (array_key_exists('video_embed_wysiwyg', $filters)) {
+    unset($filters['video_embed_wysiwyg']);
+    $filter_config->set('filters', $filters);
+  }
+
+  $dependencies = $filter_config->get('dependencies');
+
+  if (array_key_exists('module', $dependencies)) {
+    $dependencies['module'] = array_diff($dependencies['module'], ['video_embed_wysiwyg']);
+    $filter_config->set('dependencies', $dependencies);
+  }
+
+  $filter_config->save(TRUE);
+
   \Drupal::service('module_installer')->uninstall(['video_embed_wysiwyg','video_embed_field']);
 }
 
@@ -224,11 +243,83 @@ function illinois_framework_core_update_9700() {
 }
 
 /**
+ * Update ckeditor dependency in editor.editor.full_html and editor.editor.basic_html
+ */
+function illinois_framework_core_update_9800() {
+  $config_factory = \Drupal::configFactory();
+
+  // Edit the full editor configuration
+  $editor_config_full_html = $config_factory->getEditable('editor.editor.full_html');
+  // Check if config exists
+  if (!$editor_config_full_html->isNew()) {
+    $dependencies = $editor_config_full_html->get('dependencies.module') ?: [];
+
+    // Remove the unwanted ckeditor module dependency
+    if (in_array('ckeditor', $dependencies)) {
+      $dependencies = array_diff($dependencies, ['ckeditor']);
+      $editor_config_full_html->set('dependencies.module', array_values($dependencies));
+      $editor_config_full_html->save();
+    }
+  }
+
+  $editor_config_basic_html = $config_factory->getEditable('editor.editor.basic_html');
+  // Check if config exists
+  if (!$editor_config_basic_html->isNew()) {
+    $dependencies = $editor_config_basic_html->get('dependencies.module') ?: [];
+
+    // Remove the unwanted ckeditor module dependency
+    if (in_array('ckeditor', $dependencies)) {
+      $dependencies = array_diff($dependencies, ['ckeditor']);
+      $editor_config_basic_html->set('dependencies.module', array_values($dependencies));
+      $editor_config_basic_html->save();
+    }
+  }
+}
+
+/**
+* Delete giving_fund and fund_listing_page content and content types.
+*/
+function illinois_framework_core_update_9900() {
+  $storage = \Drupal::entityTypeManager()->getStorage('node');
+
+  // Delete giving_fund items first.
+  $giving_fund_ids = $storage->getQuery()
+    ->condition('type', 'giving_fund')
+    ->accessCheck(FALSE)
+    ->execute();
+  if (!empty($giving_fund_ids)) {
+    $nodes = $storage->loadMultiple($giving_fund_ids);
+    $storage->delete($nodes);
+  }
+
+  // Delete fund_listing_page items second.
+  $fund_listing_ids = $storage->getQuery()
+    ->condition('type', 'fund_listing_page')
+    ->accessCheck(FALSE)
+    ->execute();
+  if (!empty($fund_listing_ids)) {
+    $nodes = $storage->loadMultiple($fund_listing_ids);
+    $storage->delete($nodes);
+  }
+
+  // Delete the content types.
+  // We delete fund_listing_page first because it has an entity reference field
+  // (field_funds) that references giving_fund.
+  $content_types = ['fund_listing_page', 'giving_fund'];
+  foreach ($content_types as $content_type) {
+    $type = \Drupal::entityTypeManager()->getStorage('node_type')->load($content_type);
+    if ($type) {
+      $type->delete();
+    }
+  }
+}
+
+/**
  * Converts Hero Background field to use only current theme settings from il-hero component
  */
 function illinois_framework_core_update_10500() {
   $query = \Drupal::entityQuery('paragraph');
-  $results = $query 
+  $results = $query
   ->accessCheck(true)
   ->condition('field_hero_background', NULL, 'IS NOT NULL')
   ->execute();
@@ -236,7 +327,7 @@ function illinois_framework_core_update_10500() {
     $paragraph = \Drupal::entityTypeManager()->getStorage('paragraph')->load($result);
     $background = $paragraph->field_hero_background;
     $settings = explode(",", $background->getString());
-      switch($settings[0]){  
+      switch($settings[0]){
         case 'image':
           $background->set(0, 'blue');
           \Drupal::messenger()->addMessage("Found image, set to blue");

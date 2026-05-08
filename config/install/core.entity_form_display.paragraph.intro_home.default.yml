@@ -33,12 +33,6 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_intro_home_fingerprint:
-    weight: 1
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_intro_home_layout:
     weight: 2
     settings: {  }

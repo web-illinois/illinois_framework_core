@@ -1,5 +1,5 @@
 <?php
-use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\field\Entity\FieldConfig;
 /**
  * @file
  * Post update functions for Illinois Framework Core Module.
@@ -25,7 +25,6 @@ function illinois_framework_core_post_update_hide_cta_icon(&$sandbox) {
 
   return 'The CTA paragraph form display was not found.';
 }
-
 /**
  * Make the field_title on the CTA paragraph form display optional, not required.
  */

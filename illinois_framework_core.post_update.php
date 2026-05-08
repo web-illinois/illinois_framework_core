@@ -97,3 +97,36 @@ function illinois_framework_core_post_update_remove_intro_home_fingerprint(&$san
 
   return 'Removed field_intro_home_fingerprint from intro_home paragraph bundle.';
 }
+
+/**
+ * Remove field_cta_fingerprint from cta paragraph bundle.
+ */
+function illinois_framework_core_post_update_remove_cta_fingerprint(&$sandbox) {
+  $field_name = 'field_cta_fingerprint';
+  $entity_type = 'paragraph';
+  $bundle = 'cta';
+
+  $entity_type_manager = \Drupal::entityTypeManager();
+
+  // Delete the field instance (bundle-specific).
+  $field_config_id = "{$entity_type}.{$bundle}.{$field_name}";
+  $field_config = $entity_type_manager
+    ->getStorage('field_config')
+    ->load($field_config_id);
+
+  if ($field_config) {
+    $field_config->delete();
+  }
+
+  // Delete the field storage.
+  $field_storage_id = "{$entity_type}.{$field_name}";
+  $field_storage = $entity_type_manager
+    ->getStorage('field_storage_config')
+    ->load($field_storage_id);
+
+  if ($field_storage) {
+    $field_storage->delete();
+  }
+
+  return 'Removed field_cta_fingerprint from cta paragraph bundle.';
+}

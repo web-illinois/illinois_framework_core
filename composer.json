@@ -32,7 +32,8 @@
         "drupal/r4032login": "^2.1",
         "drupal/redirect": "^1.6",
         "drupal/twig_field_value": "^2.0",
-        "drupal/twig_tweak": "^3.2"
+        "drupal/twig_tweak": "^3.2",
+        "turbojettechnologies/colorbox":"~1.7.0"
     },
     "config": {
         "lock": false,

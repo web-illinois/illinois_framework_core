@@ -1,0 +1,27 @@
+uuid: f8844553-3b4d-4044-b9ec-2ab1406f5cec
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_spotlight_format
+field_name: field_spotlight_format
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: small
+      label: 'Small photo'
+    -
+      value: large
+      label: 'Large photo'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

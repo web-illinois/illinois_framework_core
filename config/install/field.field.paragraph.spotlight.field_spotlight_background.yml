@@ -1,0 +1,21 @@
+uuid: 708c727e-c351-4f13-9222-f62bc32601db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_spotlight_background
+    - paragraphs.paragraphs_type.spotlight
+  module:
+    - options
+id: paragraph.spotlight.field_spotlight_background
+field_name: field_spotlight_background
+entity_type: paragraph
+bundle: spotlight
+label: Theme
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

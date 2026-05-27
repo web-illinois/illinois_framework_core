@@ -3,24 +3,25 @@ langcode: en
 status: true
 dependencies:
   module:
+    - focal_point
     - imagick
 _core:
-  default_config_hash: 76ZB5jrdVbiwpSrUfXt5uhCn45WIF5DpLgFVGMwxFqU
+  default_config_hash: Qdzq58ZrrJZp5vRF4TgCHGhidBYhVT21LqZtPASpZFA
 name: spotlight_list
 label: 'Spotlight List'
 effects:
-  5210c395-c2d7-4b58-95bc-9ac57465fa4c:
-    uuid: 5210c395-c2d7-4b58-95bc-9ac57465fa4c
-    id: image_scale_and_crop
-    weight: 1
-    data:
-      width: 150
-      height: 200
-      anchor: center-center
   744abab8-f38d-4851-867c-cec0d7771759:
     uuid: 744abab8-f38d-4851-867c-cec0d7771759
     id: image_convert
-    weight: 2
+    weight: -9
     data:
       format: jpg
       quality: '85'
+  e9e070a6-67ff-47df-af00-71685703d7a6:
+    uuid: e9e070a6-67ff-47df-af00-71685703d7a6
+    id: focal_point_scale_and_crop
+    weight: -10
+    data:
+      width: 150
+      height: 150
+      crop_type: focal_point

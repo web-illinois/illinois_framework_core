@@ -1,0 +1,80 @@
+uuid: 4a94fa2f-8871-4341-ba9f-389b993f30c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.spotlight.field_spotlight_background
+    - field.field.paragraph.spotlight.field_spotlight_body
+    - field.field.paragraph.spotlight.field_spotlight_button
+    - field.field.paragraph.spotlight.field_spotlight_format
+    - field.field.paragraph.spotlight.field_spotlight_image
+    - field.field.paragraph.spotlight.field_spotlight_subtitle
+    - field.field.paragraph.spotlight.field_spotlight_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.spotlight
+  module:
+    - focal_point
+    - link
+    - text
+id: paragraph.spotlight.default
+targetEntityType: paragraph
+bundle: spotlight
+mode: default
+content:
+  field_spotlight_background:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_spotlight_body:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_spotlight_button:
+    type: link_default
+    weight: 5
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_spotlight_format:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_spotlight_image:
+    type: image_focal_point
+    weight: 6
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+      preview_link: true
+      offsets: '50,50'
+    third_party_settings: {  }
+  field_spotlight_subtitle:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_spotlight_title:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

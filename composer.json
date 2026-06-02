@@ -31,7 +31,6 @@
         "drupal/pathologic": "^2.0@alpha",
         "drupal/r4032login": "^2.1",
         "drupal/redirect": "^1.6",
-        "drupal/trash": "^3.0",
         "drupal/twig_field_value": "^2.0",
         "drupal/twig_tweak": "^3.2",
         "bower-asset/colorbox": "^1.6"

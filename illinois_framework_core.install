@@ -347,6 +347,3 @@ function illinois_framework_core_update_10500() {
     $paragraph->save();
   }
 }
-function illinois_framework_core_update_10600() {
-  \Drupal::service('module_installer')->install(['trash']);
-}

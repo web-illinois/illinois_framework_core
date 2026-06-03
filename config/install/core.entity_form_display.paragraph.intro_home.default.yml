@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.paragraph.intro_home.field_intro_home_background
     - field.field.paragraph.intro_home.field_intro_home_button
-    - field.field.paragraph.intro_home.field_intro_home_fingerprint
     - field.field.paragraph.intro_home.field_intro_home_layout
     - field.field.paragraph.intro_home.field_intro_home_text_lg
     - field.field.paragraph.intro_home.field_intro_home_text_sm

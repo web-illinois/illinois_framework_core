@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.spotlight.body
-    - field.field.node.spotlight.field_department_tags
     - field.field.node.spotlight.field_effective_dates
     - field.field.node.spotlight.field_if_meda_featured_image
     - field.field.node.spotlight.field_if_related_people
@@ -130,7 +129,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_department_tags: true
   promote: true
   sticky: true
   uid: true

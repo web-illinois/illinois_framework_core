@@ -349,15 +349,8 @@ function illinois_framework_core_update_10500() {
 }
 
 /**
- * Install the focal_point module.
+ * Install the focal_point and media_library_edit module.
  */
 function illinois_framework_core_update_10600() {
-  \Drupal::service('module_installer')->install(['focal_point']);
-}
-
-/**
- * Install the media_library_edit module.
- */
-function illinois_framework_core_update_10700() {
-  \Drupal::service('module_installer')->install(['media_library_edit']);
+  \Drupal::service('module_installer')->install(['focal_point','media_library_edit']);
 }

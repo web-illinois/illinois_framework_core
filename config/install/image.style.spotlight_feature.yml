@@ -1,0 +1,25 @@
+uuid: f283289d-201d-4684-bc06-6d64fd70e07e
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+    - imagick
+name: spotlight_feature
+label: 'Spotlight Feature'
+effects:
+  2f87d69e-8efe-4c3e-932f-f977f96378c8:
+    uuid: 2f87d69e-8efe-4c3e-932f-f977f96378c8
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 450
+      height: 450
+      crop_type: focal_point
+  1ef1009f-fa48-4bf5-878e-3f90c87e2a9b:
+    uuid: 1ef1009f-fa48-4bf5-878e-3f90c87e2a9b
+    id: image_convert
+    weight: 2
+    data:
+      format: jpg
+      quality: '85'

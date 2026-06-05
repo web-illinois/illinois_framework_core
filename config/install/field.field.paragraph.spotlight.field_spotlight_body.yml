@@ -1,0 +1,23 @@
+uuid: 59fa4c3d-4aaf-4a41-abab-9e307332fb58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_spotlight_body
+    - paragraphs.paragraphs_type.spotlight
+  module:
+    - text
+id: paragraph.spotlight.field_spotlight_body
+field_name: field_spotlight_body
+entity_type: paragraph
+bundle: spotlight
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

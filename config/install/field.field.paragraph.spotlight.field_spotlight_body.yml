@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_spotlight_body
-    - filter.format.basic_html
     - paragraphs.paragraphs_type.spotlight
   module:
     - text

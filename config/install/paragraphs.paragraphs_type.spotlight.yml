@@ -1,7 +1,9 @@
 uuid: 03a25ee3-1e30-486f-9bbd-9b0c57acddaa
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - paragraphs
 id: spotlight
 label: Spotlight
 icon_uuid: null

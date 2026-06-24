@@ -7,12 +7,14 @@ dependencies:
     - paragraphs.paragraphs_type.spacer
   module:
     - options
+_core:
+  default_config_hash: 7Hl2qKnZIm5NPRCFtMkBzHHNXIGJFnyrhb_ewzSIFtQ
 id: paragraph.spacer.field_size
 field_name: field_size
 entity_type: paragraph
 bundle: spacer
 label: Size
-description: ''
+description: "The spacer size field allows selection of the vertical size (height) specified for the spacer paragraph.  Possible values include:\r\n    Small (20 px)\r\n    Medium (40 px), the default option\r\n    Large (80 px)"
 required: true
 translatable: false
 default_value:

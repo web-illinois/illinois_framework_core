@@ -35,5 +35,14 @@ The Illinois Drupal Framework Core module includes the config to create a predef
 - [Twig Field Value](https://www.drupal.org/project/twig_field_value)
 - [Twig Tweak](https://www.drupal.org/project/twig_tweak)
 
+# Adding a new component
+## In illinois_framework_theme
+- Implement a new template file (twig) to reference the component to be added
+- Use a name for the template file name reference in the hook suggestions listed as available OR develop a new hook suggestion.  Generally suggestions for this purpose are in the format "paragraph--<paragraph_name>.html.twig"
+- The template file paragraph.html.twig may be used as a starting point for development. Review techniques in other templates in the templates/paragraphs directory for producing the results you desire"
+- Make sure that the template has access to the required javascript and css (library) for proper formatting. All component libraries listed in the Illinois Toolkit are available without additional development
+## In illinois_framework_core
+- Make sure that additional fields and configuration applicable to your methodology for implementation of the component have been added to illinois_framework_core
+
 # Contributing
 The WIGG Drupal group is welcoming contributions from anyone on campus. Please see the [WIGG Drupal webpage](https://wigg.illinois.edu/membership/drupal/) for more information.

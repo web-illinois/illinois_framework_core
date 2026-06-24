@@ -12,12 +12,14 @@ dependencies:
   - colorbox
   - config_sync
   - file
+  - focal_point
   - image
   - image_widget_crop
   - imagick
   - link
   - linkit
   - linkit_media_library
+  - media_library_edit
   - media_remote
   - menu_ui
   - metatag_open_graph

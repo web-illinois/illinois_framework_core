@@ -9,7 +9,7 @@ id: paragraph.block_reference.field_block_reference_title
 field_name: field_block_reference_title
 entity_type: paragraph
 bundle: block_reference
-label: 'Block reference_title'
+label: 'Title'
 description: ''
 required: false
 translatable: false

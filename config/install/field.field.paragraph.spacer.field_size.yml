@@ -14,7 +14,7 @@ field_name: field_size
 entity_type: paragraph
 bundle: spacer
 label: Size
-description: "The spacer size field allows selection of the vertical size (height) specified for the spacer paragraph.  Possible values include:\r\n    Small (20 px)\r\n    Medium (40 px), the default option\r\n    Large (80 px)"
+description: "Choose how much empty vertical space to add: Small (20px), Medium (40px), or Large (80px). Use this to give items more breathing room when they feel too close together."
 required: true
 translatable: false
 default_value:

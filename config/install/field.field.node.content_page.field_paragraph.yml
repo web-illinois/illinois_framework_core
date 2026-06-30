@@ -40,90 +40,99 @@ settings:
     negate: 1
     target_bundles_drag_drop:
       accordion:
-        weight: -55
+        weight: -65
         enabled: false
       accordion_content:
-        weight: -54
+        weight: -64
         enabled: true
       bb:
-        weight: -53
+        weight: -63
         enabled: false
       bb_content:
-        weight: -52
+        weight: -62
         enabled: true
       block_reference:
-        weight: -51
+        weight: -61
         enabled: false
       calendar:
-        weight: -29
+        weight: -34
         enabled: false
       cards:
-        weight: -48
+        weight: -58
         enabled: false
       cards_content:
-        weight: -47
+        weight: -57
         enabled: true
       contact:
-        weight: -46
+        weight: -56
         enabled: false
       contact_content:
-        weight: -45
+        weight: -55
         enabled: true
+      content_slider:
+        weight: -54
+        enabled: false
       cta:
-        weight: -50
+        weight: -60
         enabled: false
       cta_narrow:
-        weight: -49
+        weight: -59
         enabled: false
       feature_boxed:
-        weight: -44
+        weight: -53
         enabled: false
       feature_grouped:
-        weight: -43
+        weight: -52
         enabled: false
       feature_split:
-        weight: -42
+        weight: -51
         enabled: false
       feature_video:
-        weight: -41
+        weight: -50
         enabled: false
       from_library:
-        weight: -40
+        weight: -49
         enabled: true
       hero:
-        weight: -39
+        weight: -48
         enabled: false
       hero_section_page:
-        weight: -38
+        weight: -47
         enabled: false
       icon_row:
-        weight: -37
+        weight: -46
         enabled: false
       icon_row_content:
-        weight: -34
+        weight: -43
         enabled: true
       image_gallery:
-        weight: -36
+        weight: -45
         enabled: false
       intro_home:
-        weight: -35
+        weight: -44
         enabled: false
       list:
-        weight: -33
+        weight: -42
         enabled: false
       list_content:
-        weight: -32
+        weight: -41
         enabled: true
       rt:
-        weight: -31
+        weight: -40
         enabled: false
       rt_content:
-        weight: -30
+        weight: -39
         enabled: true
+      spacer:
+        weight: -37
+        enabled: false
+      spotlight:
+        weight: -36
+        enabled: false
       vertical_tab:
-        weight: 57
+        weight: -35
         enabled: false
       vertical_tab_panel:
-        weight: 58
+        weight: -38
         enabled: true
 field_type: entity_reference_revisions

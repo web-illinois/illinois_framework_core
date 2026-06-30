@@ -1,8 +1,5 @@
 <?php
 use Drupal\field\Entity\FieldConfig;
-use Drupal\Core\Config\FileStorage;
-use Drupal\Core\Config\InstallStorage;
-
 /**
  * @file
  * Post update functions for Illinois Framework Core Module.
@@ -324,50 +321,5 @@ function illinois_framework_core_post_update_replace_il_button_classes(&$sandbox
   // Step 5: Final message when the batch is complete.
   if ($sandbox['#finished'] >= 1) {
     return 'Successfully updated ' . $sandbox['total'] . ' revisions by replacing "il-button" with "ilw-button".';
-  }
-}
-
-function illinois_framework_core_post_update_add_pargraph_spacer_blockreference_modifications(&$sandbox) {
-
-  // 1. Locate the config/install directory of your module.
-  $module_path = \Drupal::service('extension.list.module')->getPath('illinois_framework_core');
-  $config_path = $module_path . '/' . InstallStorage::CONFIG_INSTALL_DIRECTORY;
-  $source_storage = new FileStorage($config_path);
-
-  // 2. Define all the configuration files related to your new paragraph.
-  // Replace "my_new_paragraph" with your actual paragraph bundle machine name.
-  $config_files = [
-    'paragraphs.paragraphs_type.spacer',
-    'field.storage.paragraph.field_size', // Example field storage
-    'field.field.paragraph.spacer.field_size', // Example field instance
-    'core.entity_form_display.paragraph.spacer.default',
-    'core.entity_view_display.paragraph.spacer.default',
-  ];
-
-  $config_manager = \Drupal::service('config.manager');
-  $entity_type_manager = \Drupal::service('entity_type.manager');
-
-  foreach ($config_files as $config_name) {
-    // Check if the configuration already exists to prevent overwriting active changes.
-    if (\Drupal::configFactory()->get($config_name)->isNew()) {
-      $config_data = $source_storage->read($config_name);
-
-      if ($config_data) {
-        // Determine the entity type from the configuration name prefix.
-        $entity_type_id = $config_manager->getEntityTypeIdByName($config_name);
-
-        if ($entity_type_id) {
-          // Create and save the new configuration entity.
-          $storage = $entity_type_manager->getStorage($entity_type_id);
-          $entity = $storage->createFromStorageOverride($config_data);
-          $entity->save();
-        } else {
-          // If it's simple configuration (not an entity), save it via config factory.
-          \Drupal::configFactory()->getEditable($config_name)
-            ->setData($config_data)
-            ->save();
-        }
-      }
-    }
   }
 }

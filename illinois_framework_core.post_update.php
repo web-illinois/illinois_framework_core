@@ -132,15 +132,63 @@ function illinois_framework_core_post_update_remove_cta_fingerprint(&$sandbox) {
 }
 
 /**
- * Replace 'il-button' with 'ilw-button' in all formatted text fields across all revisions.
+ * Replace legacy 'il-button' classes with 'ilw-button' classes everywhere.
  */
 function illinois_framework_core_post_update_replace_il_button_classes(&$sandbox) {
+  $replacements = [
+    'il-button' => 'ilw-button',
+    'il-white-blue' => 'ilw-theme-blue',
+    'il-white-orange' => 'ilw-theme-orange',
+    'il-blue' => 'ilw-theme-blue-1',
+    'il-orange' => 'ilw-theme-orange-1',
+  ];
+
+  return _illinois_framework_core_replace_text_in_content($sandbox, $replacements);
+}
+
+/**
+ * Replace numbered theme button classes with their semantic 'solid' variants.
+ */
+function illinois_framework_core_post_update_replace_theme_button_solid_classes(&$sandbox) {
+  $replacements = [
+    'ilw-theme-blue-1' => 'ilw-theme-blue-solid',
+    'ilw-theme-orange-1' => 'ilw-theme-orange-solid',
+  ];
+
+  return _illinois_framework_core_replace_text_in_content($sandbox, $replacements);
+}
+
+/**
+ * This is a helper function that will find and replace text strings across all
+ * formatted text fields and revisions.
+ *
+ * Generic batch helper for post-update hooks. It scans every content entity
+ * type's text/text_long/text_with_summary fields (including all revisions and
+ * translations) for the given search strings and replaces each occurrence with
+ * its mapped value. Replacements are matched with hyphen-aware word boundaries
+ * so partial class names are not corrupted, and entities are saved in-place
+ * without creating new revisions.
+ *
+ * @param array $sandbox
+ *   The batch sandbox passed in by the calling post-update hook. Each hook has
+ *   its own sandbox, so batch state stays isolated between hooks.
+ * @param array $replacements
+ *   An associative array mapping each string to search for to its replacement,
+ *   e.g. ['old-class' => 'new-class'].
+ *
+ * @return string|null
+ *   A status message when the batch finishes, or NULL while still processing.
+ */
+function _illinois_framework_core_replace_text_in_content(array &$sandbox, array $replacements) {
+  $search_strings = array_keys($replacements);
+
   // Step 1: Initialize the sandbox on the first pass.
   if (!isset($sandbox['total'])) {
     $sandbox['revisions_to_process'] = [];
     $sandbox['total'] = 0;
     $sandbox['processed'] = 0;
 
+    $database = \Drupal::database();
     $field_map = \Drupal::service('entity_field.manager')->getFieldMap();
     $text_field_types = ['text', 'text_long', 'text_with_summary'];
 
@@ -155,10 +203,20 @@ function illinois_framework_core_post_update_replace_il_button_classes(&$sandbox
       foreach ($fields as $field_name => $field_info) {
         if (in_array($field_info['type'], $text_field_types)) {
           try {
-            // Query all revisions that contain the old class in this field.
+            // Query all revisions that contain ANY of the search strings in
+            // this field, using an OR condition group.
             $query = \Drupal::entityQuery($entity_type)
-              ->condition($field_name . '.value', '%il-button%', 'LIKE')
               ->accessCheck(FALSE);
+
+            $or_group = $query->orConditionGroup();
+            foreach ($search_strings as $search_string) {
+              $or_group->condition(
+                $field_name . '.value',
+                '%' . $database->escapeLike($search_string) . '%',
+                'LIKE'
+              );
+            }
+            $query->condition($or_group);
 
             if ($is_revisionable) {
               $query->allRevisions();
@@ -202,7 +260,7 @@ function illinois_framework_core_post_update_replace_il_button_classes(&$sandbox
   // Step 2: If no entities were found, we are already done.
   if ($sandbox['total'] == 0) {
     $sandbox['#finished'] = 1;
-    return 'No entities found containing "il-button" in any formatted text fields.';
+    return 'No entities found containing any of the search strings in formatted text fields.';
   }
 
   // Step 3: Process a chunk of entities (50 at a time is a safe limit).
@@ -259,15 +317,17 @@ function illinois_framework_core_post_update_replace_il_button_classes(&$sandbox
             if (!empty($item['value'])) {
               $text = $item['value'];
 
-              if (str_contains($text, 'il-button')) {
-                $replacements = [
-                  'il-button' => 'ilw-button',
-                  'il-white-blue' => 'ilw-theme-blue',
-                  'il-white-orange' => 'ilw-theme-orange',
-                  'il-blue' => 'ilw-theme-blue-1',
-                  'il-orange' => 'ilw-theme-orange-1',
-                ];
+              // Only attempt replacements when the text contains at least one
+              // of the search strings.
+              $contains_search_string = FALSE;
+              foreach ($search_strings as $search_string) {
+                if (str_contains($text, $search_string)) {
+                  $contains_search_string = TRUE;
+                  break;
+                }
+              }
 
+              if ($contains_search_string) {
                 $updated_text = $text;
                 foreach ($replacements as $old_class => $new_class) {
                   $updated_text = preg_replace('/(?<![\w-])' . preg_quote($old_class, '/') . '(?![\w-])/', $new_class, $updated_text);
@@ -320,6 +380,6 @@ function illinois_framework_core_post_update_replace_il_button_classes(&$sandbox
 
   // Step 5: Final message when the batch is complete.
   if ($sandbox['#finished'] >= 1) {
-    return 'Successfully updated ' . $sandbox['total'] . ' revisions by replacing "il-button" with "ilw-button".';
+    return 'Successfully processed ' . $sandbox['total'] . ' revisions for text replacement.';
   }
 }

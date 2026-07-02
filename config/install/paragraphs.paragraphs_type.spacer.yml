@@ -1,0 +1,10 @@
+uuid: a33caf4b-77d7-4506-b5be-e9d2f6452a97
+langcode: en
+status: true
+dependencies: {  }
+id: spacer
+label: Spacer
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

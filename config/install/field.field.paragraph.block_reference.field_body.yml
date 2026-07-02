@@ -1,0 +1,27 @@
+uuid: b3624185-1943-47cc-ae77-0affdb551913
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.block_reference
+  module:
+    - text
+id: paragraph.block_reference.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: block_reference
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - basic_html
+    - sourcecode
+    - full_html
+field_type: text_with_summary

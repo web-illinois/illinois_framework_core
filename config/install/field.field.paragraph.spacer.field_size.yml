@@ -1,0 +1,25 @@
+uuid: 126e8593-6f8f-4fa8-9020-30751c8fde92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_size
+    - paragraphs.paragraphs_type.spacer
+  module:
+    - options
+_core:
+  default_config_hash: 7Hl2qKnZIm5NPRCFtMkBzHHNXIGJFnyrhb_ewzSIFtQ
+id: paragraph.spacer.field_size
+field_name: field_size
+entity_type: paragraph
+bundle: spacer
+label: Size
+description: "Choose how much empty vertical space to add: Small (20px), Medium (40px), or Large (80px). Use this to give items more breathing room when they feel too close together."
+required: true
+translatable: false
+default_value:
+  -
+    value: medium
+default_value_callback: ''
+settings: {  }
+field_type: list_string

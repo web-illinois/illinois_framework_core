@@ -1,0 +1,21 @@
+uuid: f02e95a2-28ad-4704-abfb-1b0f475f4732
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accordion_compact
+    - paragraphs.paragraphs_type.accordion
+id: paragraph.accordion.field_accordion_compact
+field_name: field_accordion_compact
+entity_type: paragraph
+bundle: accordion
+label: Compact
+description: 'Displays in compact view'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -3,6 +3,7 @@ core_version_requirement: ^9 || ^10
 type: module
 package: 'Illinois Framework'
 description: 'Shared functionality for the Illinois Framework.'
+version: '5.x-dev'
 dependencies:
   - 'drupal:node'
   - 'drupal:path'

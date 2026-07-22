@@ -1,166 +1,33 @@
 <?php
-use Drupal\field\Entity\FieldConfig;
+
 /**
  * @file
  * Post update functions for Illinois Framework Core Module.
  */
 
-/**
- * Hide the field_cta_icon on the CTA paragraph form display.
- */
-function illinois_framework_core_post_update_hide_cta_icon(&$sandbox) {
-  // Load the specific form display config entity.
-  $form_display = \Drupal::entityTypeManager()
-    ->getStorage('entity_form_display')
-    ->load('paragraph.cta.default');
-
-  if ($form_display) {
-    // The removeComponent method completely strips the field's widget settings
-    // from the 'content' array and automatically registers it in 'hidden'.
-    $form_display->removeComponent('field_cta_icon')
-      ->save();
-
-    return 'The field_cta_icon has been hidden on the CTA paragraph form display.';
-  }
-
-  return 'The CTA paragraph form display was not found.';
-}
-/**
- * Make the field_title on the CTA paragraph form display optional, not required.
- */
-function illinois_framework_core_post_update_cta_title_optional(&$sandbox) {
-  $field_config = FieldConfig::loadByName('paragraph', 'cta', 'field_cta_title');
-
-  if ($field_config) {
-    $field_config->setRequired(FALSE);
-    $field_config->save();
-  }
-}
+use Drupal\Core\Entity\ContentEntityTypeInterface;
 
 /**
- * Remove the user search page from default Drupal search.
+ * Implements hook_removed_post_updates().
  */
-function illinois_framework_core_post_update_remove_user_search_page(&$sandbox) {
-  $search_user = \Drupal::configFactory()->getEditable('search.page.user_search');
-
-  if ($search_user) {
-    $search_user->delete();
-    return "Deleted user search page.";
-  } else{
-    return "No user search page found.";
-  }
-}
-
-/**
- * Remove the help search page from default Drupal search.
- */
-function illinois_framework_core_post_update_remove_help_search_page(&$sandbox) {
-  $search_help = \Drupal::configFactory()->getEditable('search.page.help_search');
-
-  if ($search_help) {
-    $search_help->delete();
-    return "Deleted help search page.";
-  } else{
-    return "No help search page found.";
-  }
-}
-
-/**
- * Remove field_intro_home_fingerprint from intro_home paragraph bundle.
- */
-function illinois_framework_core_post_update_remove_intro_home_fingerprint(&$sandbox) {
-  $field_name = 'field_intro_home_fingerprint';
-  $entity_type = 'paragraph';
-  $bundle = 'intro_home';
-
-  $entity_type_manager = \Drupal::entityTypeManager();
-
-  // Delete the field instance (bundle-specific).
-  $field_config_id = "{$entity_type}.{$bundle}.{$field_name}";
-  $field_config = $entity_type_manager
-    ->getStorage('field_config')
-    ->load($field_config_id);
-
-  if ($field_config) {
-    $field_config->delete();
-  }
-
-  // Delete the field storage.
-  $field_storage_id = "{$entity_type}.{$field_name}";
-  $field_storage = $entity_type_manager
-    ->getStorage('field_storage_config')
-    ->load($field_storage_id);
-
-  if ($field_storage) {
-    $field_storage->delete();
-  }
-
-  return 'Removed field_intro_home_fingerprint from intro_home paragraph bundle.';
-}
-
-/**
- * Remove field_cta_fingerprint from cta paragraph bundle.
- */
-function illinois_framework_core_post_update_remove_cta_fingerprint(&$sandbox) {
-  $field_name = 'field_cta_fingerprint';
-  $entity_type = 'paragraph';
-  $bundle = 'cta';
-
-  $entity_type_manager = \Drupal::entityTypeManager();
-
-  // Delete the field instance (bundle-specific).
-  $field_config_id = "{$entity_type}.{$bundle}.{$field_name}";
-  $field_config = $entity_type_manager
-    ->getStorage('field_config')
-    ->load($field_config_id);
-
-  if ($field_config) {
-    $field_config->delete();
-  }
-
-  // Delete the field storage.
-  $field_storage_id = "{$entity_type}.{$field_name}";
-  $field_storage = $entity_type_manager
-    ->getStorage('field_storage_config')
-    ->load($field_storage_id);
-
-  if ($field_storage) {
-    $field_storage->delete();
-  }
-
-  return 'Removed field_cta_fingerprint from cta paragraph bundle.';
-}
-
-/**
- * Replace legacy 'il-button' classes with 'ilw-button' classes everywhere.
- */
-function illinois_framework_core_post_update_replace_il_button_classes(&$sandbox) {
-  $replacements = [
-    'il-button' => 'ilw-button',
-    'il-white-blue' => 'ilw-theme-blue',
-    'il-white-orange' => 'ilw-theme-orange',
-    'il-blue' => 'ilw-theme-blue-1',
-    'il-orange' => 'ilw-theme-orange-1',
+function illinois_framework_core_removed_post_updates() {
+  // The 6.x branch requires sites to be on the latest 5.x release before
+  // upgrading, so all post-update hooks from the 5.x cycle have been removed.
+  // See https://github.com/web-illinois/illinois_framework_theme/issues/1328.
+  return [
+    'illinois_framework_core_post_update_hide_cta_icon' => '6.0.0',
+    'illinois_framework_core_post_update_cta_title_optional' => '6.0.0',
+    'illinois_framework_core_post_update_remove_user_search_page' => '6.0.0',
+    'illinois_framework_core_post_update_remove_help_search_page' => '6.0.0',
+    'illinois_framework_core_post_update_remove_intro_home_fingerprint' => '6.0.0',
+    'illinois_framework_core_post_update_remove_cta_fingerprint' => '6.0.0',
+    'illinois_framework_core_post_update_replace_il_button_classes' => '6.0.0',
+    'illinois_framework_core_post_update_replace_theme_button_solid_classes' => '6.0.0',
   ];
-
-  return _illinois_framework_core_replace_text_in_content($sandbox, $replacements);
 }
 
 /**
- * Replace numbered theme button classes with their semantic 'solid' variants.
- */
-function illinois_framework_core_post_update_replace_theme_button_solid_classes(&$sandbox) {
-  $replacements = [
-    'ilw-theme-blue-1' => 'ilw-theme-blue-solid',
-    'ilw-theme-orange-1' => 'ilw-theme-orange-solid',
-  ];
-
-  return _illinois_framework_core_replace_text_in_content($sandbox, $replacements);
-}
-
-/**
- * This is a helper function that will find and replace text strings across all
- * formatted text fields and revisions.
+ * Finds and replaces text strings across all formatted text fields.
  *
  * Generic batch helper for post-update hooks. It scans every content entity
  * type's text/text_long/text_with_summary fields (including all revisions and
@@ -194,7 +61,7 @@ function _illinois_framework_core_replace_text_in_content(array &$sandbox, array
 
     foreach ($field_map as $entity_type => $fields) {
       $entity_type_def = \Drupal::entityTypeManager()->getDefinition($entity_type, FALSE);
-      if (!$entity_type_def instanceof \Drupal\Core\Entity\ContentEntityTypeInterface) {
+      if (!$entity_type_def instanceof ContentEntityTypeInterface) {
         continue;
       }
 
@@ -245,7 +112,8 @@ function _illinois_framework_core_replace_text_in_content(array &$sandbox, array
                 }
               }
             }
-          } catch (\Exception $e) {
+          }
+          catch (\Exception $e) {
             // Ignore if the entity type doesn't support the query properly.
           }
         }
@@ -290,7 +158,8 @@ function _illinois_framework_core_replace_text_in_content(array &$sandbox, array
 
       if ($is_revisionable) {
         $entity = $storage->loadRevision($identifier);
-      } else {
+      }
+      else {
         $entity = $storage->load($identifier);
       }
 

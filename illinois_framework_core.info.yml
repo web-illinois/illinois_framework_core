@@ -3,7 +3,6 @@ core_version_requirement: ^9 || ^10
 type: module
 package: 'Illinois Framework'
 description: 'Shared functionality for the Illinois Framework.'
-version: '5.x-dev'
 dependencies:
   - 'drupal:node'
   - 'drupal:path'
@@ -30,3 +29,8 @@ dependencies:
   - pathauto
   - taxonomy
   - text
+
+# Information added by web-illinois packaging script on 2026-07-22
+version: '5.2.0'
+project: 'illinois_framework_core'
+datestamp: 1784750964

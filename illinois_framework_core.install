@@ -32,3 +32,45 @@ function illinois_framework_core_update_last_removed() {
   // See https://github.com/web-illinois/illinois_framework_theme/issues/1328.
   return 10600;
 }
+
+/**
+ * Removes leftover CKEditor 4 keys from CKEditor 5 text editor configuration.
+ *
+ * Sites upgraded from CKEditor 4 can retain settings that have no CKEditor 5
+ * equivalent, such as the grouped-toolbar "rows" structure and the "stylescombo"
+ * plugin. These report "missing schema". This runs as a hook_update_N (rather
+ * than a post-update) so it executes before CKEditor 5's own post-update hooks
+ * re-save and validate these editors, which would otherwise surface the warning.
+ */
+function illinois_framework_core_update_10601() {
+  $config_factory = \Drupal::configFactory();
+  $cleaned = [];
+
+  foreach ($config_factory->listAll('editor.editor.') as $config_name) {
+    $editor = $config_factory->getEditable($config_name);
+    if ($editor->get('editor') !== 'ckeditor5') {
+      continue;
+    }
+
+    $changed = FALSE;
+    if ($editor->get('settings.toolbar.rows') !== NULL) {
+      $editor->clear('settings.toolbar.rows');
+      $changed = TRUE;
+    }
+    if ($editor->get('settings.plugins.stylescombo') !== NULL) {
+      $editor->clear('settings.plugins.stylescombo');
+      $changed = TRUE;
+    }
+
+    if ($changed) {
+      $editor->save(TRUE);
+      $cleaned[] = $config_name;
+    }
+  }
+
+  if ($cleaned) {
+    return 'Removed leftover CKEditor 4 settings from: ' . implode(', ', $cleaned) . '.';
+  }
+
+  return 'No leftover CKEditor 4 editor settings were found.';
+}

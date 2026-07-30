@@ -1,0 +1,97 @@
+# Schema for Illinois Framework Core custom configuration.
+#
+# NOTE: All custom schema is intentionally kept in this single, provider-named
+# file. Config schema files are discovered per provider (module) name, so a file
+# named after a *different* installed module (e.g. media_remote.schema.yml) is
+# shadowed by that module's own schema file and never loads. Keeping everything
+# in illinois_framework_core.schema.yml avoids that collision.
+#
+# The imagick "Convert" effect keys (format/quality) are added to the core
+# image.effect.image_convert type via hook_config_schema_info_alter() in
+# illinois_framework_core.module, because overriding a core-defined type from
+# another module's schema file does not reliably win on load order.
+
+# Settings schema for the custom "blocks" entity reference selection handler
+# (Drupal\illinois_framework_core\Plugin\EntityReferenceSelection\BlockSelection).
+# Without this, field.field.paragraph.block_reference.field_block_reference
+# reports "missing schema" for handler_settings.target_bundles/auto_create.
+entity_reference_selection.blocks:
+  type: mapping
+  label: 'Blocks selection handler settings'
+  mapping:
+    target_bundles:
+      type: ignore
+      label: 'Target bundles'
+    auto_create:
+      type: integer
+      label: 'Create referenced entities if they do not already exist'
+
+# Display settings for the custom Mediaspace field formatter
+# (media_remote_illinois_mediaspace). Provided here (rather than in a
+# media_remote.schema.yml) to avoid a filename collision with the media_remote
+# contrib module, which would otherwise shadow it.
+field.formatter.settings.media_remote_illinois_mediaspace:
+  type: mapping
+  label: 'Mediaspace display format settings'
+  mapping:
+    formatter_class:
+      type: string
+      label: 'Formatter class name'
+    width:
+      type: ignore
+      label: 'Iframe width'
+    height:
+      type: ignore
+      label: 'Iframe height'
+
+# The contrib advanced_text_formatter module ships no config schema of its own.
+# Provide schema for the "advanced_text" formatter used by the framework's node
+# and view displays. The numeric/checkbox settings are stored inconsistently
+# across the shipped configs (some integers, some quoted strings), so they use
+# the "ignore" primitive to avoid spurious type-mismatch reports.
+field.formatter.settings.advanced_text:
+  type: mapping
+  label: 'Advanced text field formatter settings'
+  mapping:
+    trim_length:
+      type: ignore
+      label: 'Trim length'
+    ellipsis:
+      type: ignore
+      label: 'Add ellipsis'
+    word_boundary:
+      type: ignore
+      label: 'Truncate on word boundary'
+    use_summary:
+      type: ignore
+      label: 'Use summary'
+    token_replace:
+      type: ignore
+      label: 'Replace tokens'
+    link_to_entity:
+      type: ignore
+      label: 'Link to entity'
+    filter:
+      type: string
+      label: 'Filter'
+    format:
+      type: string
+      label: 'Text format'
+    allowed_html:
+      type: sequence
+      label: 'Allowed HTML tags'
+      sequence:
+        type: string
+    autop:
+      type: ignore
+      label: 'Convert line breaks into HTML'
+
+# Widget third party settings added by advanced_text_formatter to text widgets
+# (the "Show token tree" toggle on entity form displays).
+field.widget.third_party.advanced_text_formatter:
+  type: mapping
+  label: 'Advanced Text Formatter widget third party settings'
+  mapping:
+    show_token_tree:
+      type: integer
+      label: 'Show token tree'

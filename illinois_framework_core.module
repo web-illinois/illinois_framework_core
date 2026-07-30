@@ -18,3 +18,28 @@ function illinois_framework_core_theme() {
 function illinois_framework_core_preprocess_field(&$variables) {
   $variables['node'] = $variables['element']['#object'];
 }
+
+/**
+ * Implements hook_config_schema_info_alter().
+ *
+ * The imagick module lets editors set a target "format" and "quality" on the
+ * core "Convert" (image_convert) image effect, but ships no schema for those
+ * keys. Core's image.effect.image_convert only defines "extension", so image
+ * styles using this effect report "missing schema" for data.format and
+ * data.quality. Add the keys here (rather than redefining the type in a schema
+ * file) so the change reliably applies regardless of module load order.
+ */
+function illinois_framework_core_config_schema_info_alter(&$definitions) {
+  if (isset($definitions['image.effect.image_convert']['mapping'])) {
+    $definitions['image.effect.image_convert']['mapping'] += [
+      'format' => [
+        'type' => 'string',
+        'label' => 'Format',
+      ],
+      'quality' => [
+        'type' => 'string',
+        'label' => 'Quality',
+      ],
+    ];
+  }
+}

@@ -252,3 +252,50 @@ function _illinois_framework_core_replace_text_in_content(array &$sandbox, array
     return 'Successfully processed ' . $sandbox['total'] . ' revisions for text replacement.';
   }
 }
+
+/**
+ * Removes obsolete Bootstrap (b4_ and b5_) keys from the theme settings.
+ *
+ * The Illinois Framework theme no longer uses Bootstrap (its base theme is now
+ * stable9), so the Bootstrap 4/5 scheme-selector settings are dead config. Left
+ * in place they report "missing schema" now that their schema has been removed.
+ */
+function illinois_framework_core_post_update_remove_bootstrap_theme_settings() {
+  $config = \Drupal::configFactory()->getEditable('illinois_framework_theme.settings');
+  if ($config->isNew()) {
+    return 'The illinois_framework_theme.settings config does not exist; nothing to clean up.';
+  }
+
+  $obsolete_keys = [
+    'b4_top_container',
+    'b4_body_schema',
+    'b4_body_bg_schema',
+    'b4_navbar_schema',
+    'b4_navbar_bg_schema',
+    'b4_footer_schema',
+    'b4_footer_bg_schema',
+    'b5_top_container',
+    'b5_top_container_config',
+    'b5_body_schema',
+    'b5_body_bg_schema',
+    'b5_navbar_schema',
+    'b5_navbar_bg_schema',
+    'b5_footer_schema',
+    'b5_footer_bg_schema',
+  ];
+
+  $removed = [];
+  foreach ($obsolete_keys as $key) {
+    if ($config->get($key) !== NULL) {
+      $config->clear($key);
+      $removed[] = $key;
+    }
+  }
+
+  if ($removed) {
+    $config->save(TRUE);
+    return 'Removed obsolete Bootstrap theme settings: ' . implode(', ', $removed) . '.';
+  }
+
+  return 'No obsolete Bootstrap theme settings were found.';
+}

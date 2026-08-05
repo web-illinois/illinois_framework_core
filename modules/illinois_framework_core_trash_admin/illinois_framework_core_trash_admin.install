@@ -1,0 +1,35 @@
+<?php
+
+use Drupal\user\Entity\Role;
+
+/**
+ * Synchronizes Trash permissions with the Content Manager role.
+ */
+function _illinois_framework_core_trash_admin_sync_role() {
+  // Load the existing Content Manager role.
+  $role = Role::load('content_manager');
+
+  if (!$role) {
+    \Drupal::logger('illinois_framework_core_trash_admin')->warning(
+      'The "content_manager" role does not exist.'
+    );
+    return;
+  }
+
+  $permission_handler = \Drupal::service('user.permissions');
+
+  foreach ($permission_handler->getPermissions() as $permission => $definition) {
+    if (($definition['provider'] ?? NULL) === 'trash') {
+      $role->grantPermission($permission);
+    }
+  }
+
+  $role->save();
+}
+
+/**
+ * Implements hook_install().
+ */
+function illinois_framework_core_trash_admin_install() {
+  _illinois_framework_core_trash_admin_sync_role();
+}

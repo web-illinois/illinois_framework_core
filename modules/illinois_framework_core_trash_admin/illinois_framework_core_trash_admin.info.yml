@@ -1,0 +1,9 @@
+name: Illinois Framework Core - Trash Administrator
+type: module
+description: Creates the Trash Administrator role and assigns all Trash permissions.
+package: Illinois Framework
+core_version_requirement: ^10
+
+dependencies:
+  - illinois_framework_core:illinois_framework_core
+  - trash:trash

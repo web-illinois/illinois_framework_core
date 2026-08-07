@@ -33,3 +33,26 @@ function _illinois_framework_core_trash_admin_sync_role() {
 function illinois_framework_core_trash_admin_install() {
   _illinois_framework_core_trash_admin_sync_role();
 }
+
+/**
+ * Implements hook_uninstall().
+ */
+function illinois_framework_core_trash_admin_uninstall() {
+  // Remove all Trash permissions from the Content Manager role.
+  if ($role = Role::load('content_manager')) {
+    $permission_handler = \Drupal::service('user.permissions');
+
+    foreach ($permission_handler->getPermissions() as $permission => $definition) {
+      if (($definition['provider'] ?? NULL) === 'trash') {
+        $role->revokePermission($permission);
+      }
+    }
+
+    $role->save();
+  }
+
+  // Uninstall the Trash module if it is enabled.
+  if (\Drupal::moduleHandler()->moduleExists('trash')) {
+    \Drupal::service('module_installer')->uninstall(['trash']);
+  }
+}

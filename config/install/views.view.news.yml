@@ -1017,20 +1017,7 @@ display:
         header: false
       css_class: 'highlighted-news fixed-width'
       display_description: ''
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text
-          empty: false
-          content:
-            value: "<style>\r\n.highlighted-news .highlighted-news-wrapper {\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n</style>\r\n<p>&nbsp;</p>\r\n<h3>Department News</h3>"
-            format: full_source
-          tokenize: false
+      header: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1

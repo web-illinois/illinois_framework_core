@@ -17,6 +17,70 @@ function illinois_framework_core_set_image_processor() {
   $system_image_config->save(TRUE);
 }
 
+use Drupal\Core\Extension\ExtensionVersion;
+
+/**
+ * Implements hook_requirements().
+ */
+function illinois_framework_core_requirements($phase) {
+  $requirements = [];
+
+  if ($phase === 'runtime') {
+    // Retrieve module extension data to get the current version of each Illinois Framework Element.
+    $extension_list = \Drupal::service('extension.list.module');
+    $illinois_framework_elements = [
+      'profile' => "illinois_framework_profile",
+      'core' => "illinois_framework_core",
+      'theme' => "illinois_framework_theme",
+    ];
+
+    foreach ($illinois_framework_elements as $index => $element) {
+      switch ($index) {
+        case 'profile':
+          $profile = \Drupal::installProfile();
+          $profile_extension = \Drupal::service('extension.list.profile')
+            ->get($profile);
+          $version = $profile_extension->info['version'] ?? t('N/A');
+
+          $requirements[$element . '_version'] = [
+            'title' => t('Illinois Framework Profile'),
+            'value' => t($version),
+            'severity' => REQUIREMENT_INFO,
+          ];
+          break;
+        case 'core':
+          echo $element;
+          $module_info = $extension_list->getExtensionInfo($element);
+          $version = $module_info['version'] ?? t('Unknown');
+
+          $requirements[$element . '_version'] = [
+            'title' => t('Illinois Framework Core'),
+            'value' => $version,
+            'severity' => REQUIREMENT_INFO,
+          ];
+          break;
+        case 'theme':
+          $theme_handler = \Drupal::service('theme_handler');
+          $themes = $theme_handler->listInfo();
+          $default_theme = \Drupal::config('system.theme')->get('default');
+
+          if (isset($themes[$default_theme])) {
+            $theme_info = $themes[$default_theme]->info;
+            $requirements['active_theme'] = [
+              'title' => t('Illinois Framework Theme'),
+              'value' => t($version),
+              'severity' => REQUIREMENT_INFO,
+            ];
+            break;
+          }
+      }
+    }
+
+    return $requirements;
+  }
+}
+
+
 /**
  * Enable config sync module
  */

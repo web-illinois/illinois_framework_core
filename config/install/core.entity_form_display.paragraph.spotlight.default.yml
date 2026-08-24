@@ -16,6 +16,8 @@ dependencies:
     - focal_point
     - link
     - text
+_core:
+  default_config_hash: y1ITvuFMyizcXOnnKHffIx99n6XYbeuirWoFoqbScxg
 id: paragraph.spotlight.default
 targetEntityType: paragraph
 bundle: spotlight
@@ -61,7 +63,7 @@ content:
     third_party_settings: {  }
   field_spotlight_subtitle:
     type: string_textfield
-    weight: 3
+    weight: 2
     region: content
     settings:
       size: 60
@@ -69,7 +71,7 @@ content:
     third_party_settings: {  }
   field_spotlight_title:
     type: string_textfield
-    weight: 2
+    weight: 3
     region: content
     settings:
       size: 60

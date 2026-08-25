@@ -23,6 +23,52 @@ function illinois_framework_core_set_image_processor() {
 }
 
 /**
+ * Implements hook_requirements().
+ */
+function illinois_framework_core_requirements($phase) {
+  $requirements = [];
+
+  if ($phase !== 'runtime') {
+    return $requirements;
+  }
+
+  // Report the installed version of each Illinois Framework element on the
+  // Status Report page. The profile is keyed by its actual machine name, which
+  // differs from the module/theme names (e.g. "illinois_framework").
+  $elements = [
+    \Drupal::installProfile() => [
+      'title' => t('Illinois Framework Profile'),
+      'list' => \Drupal::service('extension.list.profile'),
+    ],
+    'illinois_framework_core' => [
+      'title' => t('Illinois Framework Core'),
+      'list' => \Drupal::service('extension.list.module'),
+    ],
+    'illinois_framework_theme' => [
+      'title' => t('Illinois Framework Theme'),
+      'list' => \Drupal::service('extension.list.theme'),
+    ],
+  ];
+
+  foreach ($elements as $name => $element) {
+    /** @var \Drupal\Core\Extension\ExtensionList $list */
+    $list = $element['list'];
+    if (!$list->exists($name)) {
+      continue;
+    }
+
+    $info = $list->getExtensionInfo($name);
+    $requirements[$name . '_version'] = [
+      'title' => $element['title'],
+      'value' => $info['version'] ?? t('Unknown'),
+      'severity' => REQUIREMENT_INFO,
+    ];
+  }
+
+  return $requirements;
+}
+
+/**
  * Implements hook_update_last_removed().
  */
 function illinois_framework_core_update_last_removed() {

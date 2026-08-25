@@ -1,18 +1,39 @@
 <?php
+
+/**
+ * @file
+ * Install, update and uninstall hooks for the Trash Administrator module.
+ */
+
 /**
  * Implements hook_install().
  */
 function illinois_framework_core_trash_admin_install() {
+  // Entity types that use the trash bin in this distribution.
+  $entity_type_ids = [
+    'node',
+    'path_alias',
+    'menu_link_content',
+    'media',
+    'taxonomy_term',
+  ];
+
   \Drupal::configFactory()
     ->getEditable('trash.settings')
-    ->set('enabled_entity_types', [
-      'node' => [],
-      'path_alias' => [],
-      'menu_link_content' => [],
-      'media' => [],
-      'taxonomy_term' => [],
-    ])
+    ->set('enabled_entity_types', array_fill_keys($entity_type_ids, []))
     ->set('auto_purge.enabled', TRUE)
     ->set('auto_purge.after', '365 days')
     ->save();
+
+  $permissions = [
+    'access trash',
+    'view deleted entities',
+  ];
+  // Trash generates a restore/purge permission per enabled entity type.
+  foreach ($entity_type_ids as $entity_type_id) {
+    $permissions[] = "restore $entity_type_id entities";
+    $permissions[] = "purge $entity_type_id entities";
+  }
+
+  user_role_grant_permissions('content_manager', $permissions);
 }

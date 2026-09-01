@@ -9,7 +9,7 @@
         "drupal/backup_migrate": "^5.0",
         "drupal/bamboo_twig": "^6.0",
         "drupal/block_exclude_pages": "^2.1@beta",
-        "drupal/colorbox": "^2.0",
+        "drupal/colorbox": "^2.2",
         "drupal/config_sync": "^3.0@alpha",
         "drupal/ckeditor5_bookmark": "^1.0",
         "drupal/ctools": "^4.0",
@@ -36,8 +36,7 @@
         "drupal/redirect": "^1.6",
         "drupal/trash": "^3.0",
         "drupal/twig_field_value": "^2.0",
-        "drupal/twig_tweak": "^3.2",
-        "bower-asset/colorbox": "^1.6"
+        "drupal/twig_tweak": "^3.2"
     },
     "config": {
         "lock": false,
@@ -71,9 +70,7 @@
                 "type:drupal-core"
             ],
             "docroot/libraries/{$name}": [
-                "type:drupal-library",
-                "type:bower-asset",
-                "type:npm-asset"
+                "type:drupal-library"
             ],
             "docroot/modules/contrib/{$name}": [
                 "type:drupal-module"
@@ -85,10 +82,6 @@
                 "type:drupal-theme"
             ]
         },
-        "installer-types": [
-            "bower-asset",
-            "npm-asset"
-        ],
         "patchLevel": {
             "drupal/core": "-p2"
         }

@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\Core\Extension\Requirement\RequirementSeverity;
+
 /**
  * @file
  * Install and update hooks for the Illinois Framework Core module.
@@ -19,7 +21,7 @@ function illinois_framework_core_set_image_processor() {
   $config_factory = \Drupal::configFactory();
   $system_image_config = $config_factory->getEditable('system.image');
   $system_image_config->set('toolkit', 'imagick');
-  $system_image_config->save(TRUE);
+  $system_image_config->save();
 }
 
 /**
@@ -61,7 +63,7 @@ function illinois_framework_core_requirements($phase) {
     $requirements[$name . '_version'] = [
       'title' => $element['title'],
       'value' => $info['version'] ?? t('Unknown'),
-      'severity' => REQUIREMENT_INFO,
+      'severity' => RequirementSeverity::Info,
     ];
   }
 
@@ -109,7 +111,7 @@ function illinois_framework_core_update_10601() {
     }
 
     if ($changed) {
-      $editor->save(TRUE);
+      $editor->save();
       $cleaned[] = $config_name;
     }
   }

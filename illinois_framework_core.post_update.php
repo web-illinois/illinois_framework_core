@@ -293,7 +293,7 @@ function illinois_framework_core_post_update_remove_bootstrap_theme_settings() {
   }
 
   if ($removed) {
-    $config->save(TRUE);
+    $config->save();
     return 'Removed obsolete Bootstrap theme settings: ' . implode(', ', $removed) . '.';
   }
 

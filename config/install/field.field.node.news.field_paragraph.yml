@@ -91,9 +91,7 @@ settings:
       hero:
         weight: -39
         enabled: false
-      hero_section_page:
-        weight: -38
-        enabled: false
+      
       icon_row:
         weight: -37
         enabled: false

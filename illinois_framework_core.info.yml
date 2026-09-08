@@ -12,6 +12,7 @@ dependencies:
   - advanced_text_formatter
   - colorbox
   - config_sync
+  - custom_status_report
   - file
   - focal_point
   - image

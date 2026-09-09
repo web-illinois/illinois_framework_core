@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Entity\ContentEntityTypeInterface;
+use Drupal\Core\Entity\RevisionableStorageInterface;
 
 /**
  * Implements hook_removed_post_updates().
@@ -52,6 +53,7 @@ function _illinois_framework_core_replace_text_in_content(array &$sandbox, array
   // Step 1: Initialize the sandbox on the first pass.
   if (!isset($sandbox['total'])) {
     $sandbox['revisions_to_process'] = [];
+    $sandbox['revisionable'] = [];
     $sandbox['total'] = 0;
     $sandbox['processed'] = 0;
 
@@ -65,7 +67,9 @@ function _illinois_framework_core_replace_text_in_content(array &$sandbox, array
         continue;
       }
 
-      $is_revisionable = $entity_type_def->isRevisionable();
+      $storage = \Drupal::entityTypeManager()->getStorage($entity_type);
+      $is_revisionable = $entity_type_def->isRevisionable() && $storage instanceof RevisionableStorageInterface;
+      $sandbox['revisionable'][$entity_type] = $is_revisionable;
 
       foreach ($fields as $field_name => $field_info) {
         if (in_array($field_info['type'], $text_field_types)) {
@@ -146,22 +150,24 @@ function _illinois_framework_core_replace_text_in_content(array &$sandbox, array
     $items = array_diff_key($items, $current_items);
 
     $storage = \Drupal::entityTypeManager()->getStorage($entity_type);
-    $is_revisionable = \Drupal::entityTypeManager()->getDefinition($entity_type)->isRevisionable();
 
     // We need to group by ID to reset cache effectively.
     $entity_ids_in_chunk = [];
+
+    if (!empty($sandbox['revisionable'][$entity_type]) && $storage instanceof RevisionableStorageInterface) {
+      $is_revisionable = TRUE;
+      $entities = $storage->loadMultipleRevisions(array_keys($current_items));
+    }
+    else {
+      $is_revisionable = FALSE;
+      $entities = $storage->loadMultiple(array_keys($current_items));
+    }
 
     foreach ($current_items as $identifier => $data) {
       $id = $data['id'];
       $fields_to_check = $data['fields'];
       $entity_ids_in_chunk[] = $id;
-
-      if ($is_revisionable) {
-        $entity = $storage->loadRevision($identifier);
-      }
-      else {
-        $entity = $storage->load($identifier);
-      }
+      $entity = $entities[$identifier] ?? NULL;
 
       if (!$entity) {
         $sandbox['processed']++;

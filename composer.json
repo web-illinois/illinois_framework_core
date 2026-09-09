@@ -11,6 +11,7 @@
         "drupal/block_exclude_pages": "^2.1@beta",
         "drupal/colorbox": "^2.0",
         "drupal/config_sync": "^3.0@alpha",
+        "drupal/custom_status_report": "^1.0",
         "drupal/ckeditor5_bookmark": "^1.0",
         "drupal/ctools": "^4.0",
         "drupal/diff": "^1.0",

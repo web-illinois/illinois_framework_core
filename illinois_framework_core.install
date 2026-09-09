@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\Core\Extension\Requirement\RequirementSeverity;
+
 /**
  * @file
  * Install and update hooks for the Illinois Framework Core module.
@@ -20,7 +22,7 @@ function illinois_framework_core_set_image_processor() {
   $config_factory = \Drupal::configFactory();
   $system_image_config = $config_factory->getEditable('system.image');
   $system_image_config->set('toolkit', 'imagick');
-  $system_image_config->save(TRUE);
+  $system_image_config->save();
 }
 
 /**
@@ -43,7 +45,7 @@ function illinois_framework_core_enable_general_info_card() {
     $weight['illinois_framework'] = (empty($weight) ? 0 : max($weight) + 1);
     $config->set('card_visibility', $visibility)
       ->set('card_weight', $weight)
-      ->save(TRUE);
+      ->save();
   }
 }
 
@@ -88,7 +90,7 @@ function illinois_framework_core_update_10601() {
     }
 
     if ($changed) {
-      $editor->save(TRUE);
+      $editor->save();
       $cleaned[] = $config_name;
     }
   }

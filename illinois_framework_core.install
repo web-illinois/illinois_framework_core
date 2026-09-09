@@ -116,3 +116,22 @@ function illinois_framework_core_update_10602() {
 
   return 'Custom Status Report module is not installed; no changes made.';
 }
+
+/**
+ * Enables the Custom Status Report module.
+ *
+ * The module became a dependency of illinois_framework_core after some
+ * sites already had the profile installed, so existing installs won't have
+ * it enabled automatically. Install it here, then register the "Illinois
+ * Framework" general-info card.
+ */
+function illinois_framework_core_update_10603() {
+  if (\Drupal::moduleHandler()->moduleExists('custom_status_report')) {
+    return 'Custom Status Report module is already enabled; no changes made.';
+  }
+
+  \Drupal::service('module_installer')->install(['custom_status_report']);
+  illinois_framework_core_enable_general_info_card();
+
+  return 'Enabled the Custom Status Report module and added the Illinois Framework card.';
+}

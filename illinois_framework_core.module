@@ -14,7 +14,44 @@ function illinois_framework_core_theme() {
     ),
   );
 }
+/**
+ * @file
+ * Primary module hooks for Illinois Framework Core.
+ */
 
+/**
+ * Implements hook_requirements_alter().
+ *
+ * Adds an "Illinois Framework" card to the General System Information
+ * section of the status report page (admin/reports/status), showing the
+ * installed version of the core module, theme, and install profile. The
+ * "Custom Status Report" module (a dependency of this module) is what
+ * actually renders any requirement flagged with 'add_to_general_info' as a
+ * card in that section.
+ */
+function illinois_framework_core_requirements_alter(array &$requirements): void {
+  $profile_info = \Drupal::service('extension.list.profile')->getExtensionInfo(\Drupal::installProfile());
+  $module_info = \Drupal::service('extension.list.module')->getExtensionInfo('illinois_framework_core');
+  $theme_info = \Drupal::service('extension.list.theme')->getExtensionInfo('illinois_framework_theme');
+
+  $requirements['illinois_framework'] = [
+    'title' => t('Illinois Framework'),
+    'value' => [
+      '#theme' => 'item_list',
+      '#items' => [
+        t('Profile: @version', ['@version' => $profile_info['version'] ?? t('Unknown')]),
+        t('Core: @version', ['@version' => $module_info['version'] ?? t('Unknown')]),
+        t('Theme: @version', ['@version' => $theme_info['version'] ?? t('Unknown')]),
+      ],
+    ],
+    'severity' => REQUIREMENT_OK,
+    'add_to_general_info' => TRUE,
+  ];
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
 function illinois_framework_core_preprocess_field(&$variables) {
   $variables['node'] = $variables['element']['#object'];
 }

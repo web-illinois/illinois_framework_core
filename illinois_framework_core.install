@@ -9,7 +9,8 @@
  * Implements hook_install().
  */
 function illinois_framework_core_install() {
-  illinois_framework_core_set_image_processor()illinois_framework_core_enable_general_info_card();
+  illinois_framework_core_set_image_processor();
+  illinois_framework_core_enable_general_info_card();
 }
 
 /**
@@ -107,30 +108,15 @@ function illinois_framework_core_update_10601() {
  * illinois_framework_core_install(), so retroactively add the card here.
  */
 function illinois_framework_core_update_10602() {
-  illinois_framework_core_enable_general_info_card();
-
   if (\Drupal::moduleHandler()->moduleExists('custom_status_report')) {
-    return 'Added the Illinois Framework card to the General System Information section.';
+    echo 'Custom Status Report module is already enabled.;';
+  } else {
+    \Drupal::service('module_installer')->install(['custom_status_report']);
+    echo 'Custom Status Report module is enabled.';
   }
 
-  return 'Custom Status Report module is not installed; no changes made.';
-}
-
-/**
- * Enables the Custom Status Report module.
- *
- * The module became a dependency of illinois_framework_core after some
- * sites already had the profile installed, so existing installs won't have
- * it enabled automatically. Install it here, then register the "Illinois
- * Framework" general-info card.
- */
-function illinois_framework_core_update_10603() {
-  if (\Drupal::moduleHandler()->moduleExists('custom_status_report')) {
-    return 'Custom Status Report module is already enabled; no changes made.';
-  }
-
-  \Drupal::service('module_installer')->install(['custom_status_report']);
   illinois_framework_core_enable_general_info_card();
-
-  return 'Enabled the Custom Status Report module and added the Illinois Framework card.';
+  return 'Confirmed Custom Status Report enabled and added the Illinois Framework card.';
 }
+
+

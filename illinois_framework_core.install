@@ -9,8 +9,7 @@
  * Implements hook_install().
  */
 function illinois_framework_core_install() {
-  illinois_framework_core_set_image_processor();
-  illinois_framework_core_enable_general_info_card();
+  illinois_framework_core_set_image_processor()illinois_framework_core_enable_general_info_card();
 }
 
 /**

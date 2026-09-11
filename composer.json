@@ -12,7 +12,7 @@
         "drupal/colorbox": "^2.0",
         "drupal/config_sync": "^3.0@alpha",
         "drupal/ckeditor5_bookmark": "^1.0",
-        "drupal/diff": "^1.0",
+        "drupal/diff": "^2.1",
         "drupal/editoria11y": "^2.2",
         "drupal/entity_usage": "^2.0@beta",
         "drupal/extlink": "^1.3",

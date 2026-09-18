@@ -9,7 +9,7 @@
         "drupal/backup_migrate": "^5.0",
         "drupal/bamboo_twig": "^6.0",
         "drupal/block_exclude_pages": "^2.1@beta",
-        "drupal/colorbox": "^2.0",
+        "drupal/colorbox": "~2.1.5",
         "drupal/config_sync": "^3.0@alpha",
         "drupal/custom_status_report": "^1.0",
         "drupal/ckeditor5_bookmark": "^1.0",

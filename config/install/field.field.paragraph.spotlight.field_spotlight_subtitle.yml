@@ -9,7 +9,7 @@ id: paragraph.spotlight.field_spotlight_subtitle
 field_name: field_spotlight_subtitle
 entity_type: paragraph
 bundle: spotlight
-label: Subtitle
+label: Intro
 description: ''
 required: false
 translatable: false

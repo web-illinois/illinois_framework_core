@@ -14,7 +14,7 @@
         "drupal/custom_status_report": "^1.0",
         "drupal/ckeditor5_bookmark": "^1.0",
         "drupal/ctools": "^4.0",
-        "drupal/diff": "^1.0",
+        "drupal/diff": "^2.1",
         "drupal/editoria11y": "^2.2",
         "drupal/entity_usage": "^2.0@beta",
         "drupal/extlink": "^2.0",

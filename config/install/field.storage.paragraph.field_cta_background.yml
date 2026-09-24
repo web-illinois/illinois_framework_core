@@ -21,10 +21,10 @@ settings:
       label: 'Orange Gradient'
     -
       value: illiniblue
-      label: 'Illini Blue'
+      label: Blue
     -
       value: illiniorange
-      label: 'Illini Orange'
+      label: Orange
     -
       value: gray
       label: Gray

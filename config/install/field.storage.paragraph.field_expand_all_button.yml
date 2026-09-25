@@ -1,0 +1,18 @@
+uuid: a3bad11b-2034-435e-9bfc-5aee85a20d45
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_expand_all_button
+field_name: field_expand_all_button
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

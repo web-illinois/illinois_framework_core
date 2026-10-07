@@ -14,7 +14,6 @@ The Illinois Drupal Framework Core module includes the config to create a predef
 - [Backup Migrate](https://www.drupal.org/project/backup_migrate)
 - [Bamboo Twig](https://www.drupal.org/project/bamboo_twig)
 - [CKEditor 5 Bookmark](https://www.drupal.org/project/ckeditor5_bookmark)
-- [Devel](https://www.drupal.org/project/devel)
 - [Diff](https://www.drupal.org/project/diff)
 - [Drush](https://www.drupal.org/project/drush)
 - [Editoria11y](https://www.drupal.org/project/editoria11y)
@@ -32,6 +31,7 @@ The Illinois Drupal Framework Core module includes the config to create a predef
 - [Pathauto](https://www.drupal.org/project/pathauto)
 - [Pathologic](https://www.drupal.org/project/pathologic)
 - [Redirect](https://www.drupal.org/project/redirect)
+- [Trash](https://www.drupal.org/project/trash) (Not installed by default, but available)
 - [Twig Field Value](https://www.drupal.org/project/twig_field_value)
 - [Twig Tweak](https://www.drupal.org/project/twig_tweak)
 

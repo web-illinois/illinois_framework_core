@@ -15,13 +15,19 @@ settings:
   allowed_values:
     -
       value: illiniblue
-      label: 'Illini Blue'
+      label: Blue
+    -
+      value: orange
+      label: Orange
     -
       value: bluegradient
       label: 'Blue Gradient'
     -
       value: orangegradient
       label: 'Orange Gradient'
+    -
+      value: gray
+      label: Gray
     -
       value: white
       label: White

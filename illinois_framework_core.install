@@ -121,4 +121,75 @@ function illinois_framework_core_update_10602() {
   return 'Confirmed Custom Status Report enabled and added the Illinois Framework card.';
 }
 
+/**
+ * Updates Feature Video background values to Toolkit theme names.
+ */
+function illinois_framework_core_update_10603() {
+  $database = \Drupal::database();
+  $column = 'field_feature_video_background_value';
+  $value_map = [
+    'illiniblue' => 'blue',
+    'illiniorange' => 'orange',
+    'bluegradient' => 'blue-gradient',
+    'orangegradient' => 'orange-gradient',
+  ];
+  $updated = 0;
 
+  $field_storage = \Drupal\field\Entity\FieldStorageConfig::loadByName(
+    'paragraph',
+    'field_feature_video_background'
+  );
+  if ($field_storage) {
+    $paragraph_storage = \Drupal::entityTypeManager()->getStorage('paragraph');
+    $table_mapping = $paragraph_storage->getTableMapping([$field_storage]);
+    $tables = [
+      $table_mapping->getDedicatedDataTableName($field_storage),
+      $table_mapping->getDedicatedRevisionTableName($field_storage),
+    ];
+
+    foreach ($tables as $table) {
+      if (!$database->schema()->tableExists($table)) {
+        continue;
+      }
+
+      foreach ($value_map as $original_value => $updated_value) {
+        $updated += $database->update($table)
+          ->fields([$column => $updated_value])
+          ->condition($column, $original_value)
+          ->execute();
+      }
+    }
+  }
+
+  // Update the active field storage configuration for existing sites. Content
+  // must be migrated first because Drupal prevents removing allowed values
+  // that are still in use.
+  if ($field_storage) {
+    $field_storage->setSetting('allowed_values', [
+      'blue' => 'Blue',
+      'orange' => 'Orange',
+      'gray' => 'Gray',
+      'blue-gradient' => 'Blue Gradient',
+      'orange-gradient' => 'Orange Gradient',
+      'white' => 'White',
+    ])->save();
+  }
+
+  $field = \Drupal\field\Entity\FieldConfig::loadByName(
+    'paragraph',
+    'feature_video',
+    'field_feature_video_background'
+  );
+  if ($field) {
+    $field->setLabel('Theme')->save();
+  }
+
+  // Direct database updates bypass entity and render cache invalidation.
+  \Drupal::entityTypeManager()->getStorage('paragraph')->resetCache();
+  \Drupal::entityTypeManager()->getViewBuilder('paragraph')->resetCache();
+
+  return sprintf(
+    'Updated %d Feature Video background value(s) and the active field configuration to Toolkit theme names.',
+    $updated
+  );
+}

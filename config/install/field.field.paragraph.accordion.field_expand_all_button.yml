@@ -1,0 +1,21 @@
+uuid: 6d09c73c-e080-487c-9e62-5be838b07f56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_expand_all_button
+    - paragraphs.paragraphs_type.accordion
+id: paragraph.accordion.field_expand_all_button
+field_name: field_expand_all_button
+entity_type: paragraph
+bundle: accordion
+label: 'Expand All Button'
+description: 'Show the Expand All/Collapse All Buttons to the user for the Accordion'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

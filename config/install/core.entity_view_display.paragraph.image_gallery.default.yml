@@ -8,11 +8,9 @@ dependencies:
     - field.field.paragraph.image_gallery.field_image_gallery_img
     - field.field.paragraph.image_gallery.field_image_gallery_subtitle
     - field.field.paragraph.image_gallery.field_image_gallery_title
-    - image.style.image_gallery_full
-    - image.style.image_gallery_mobile
     - paragraphs.paragraphs_type.image_gallery
   module:
-    - colorbox
+    - image
     - options
     - text
 id: paragraph.image_gallery.default
@@ -35,16 +33,10 @@ content:
     weight: 3
     region: content
   field_image_gallery_img:
-    type: colorbox
+    type: image_url
     label: hidden
     settings:
-      colorbox_node_style: image_gallery_mobile
-      colorbox_node_style_first: image_gallery_mobile
-      colorbox_image_style: image_gallery_full
-      colorbox_gallery: post
-      colorbox_gallery_custom: ''
-      colorbox_caption: title
-      colorbox_caption_custom: ''
+      image_style: image_gallery_full
     third_party_settings: {  }
     weight: 1
     region: content
@@ -53,6 +45,7 @@ content:
     label: hidden
     settings:
       link_to_entity: false
+      link_rel: canonical
     third_party_settings: {  }
     weight: 2
     region: content
@@ -61,6 +54,7 @@ content:
     label: hidden
     settings:
       link_to_entity: false
+      link_rel: canonical
     third_party_settings: {  }
     weight: 0
     region: content

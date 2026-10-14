@@ -121,4 +121,134 @@ function illinois_framework_core_update_10602() {
   return 'Confirmed Custom Status Report enabled and added the Illinois Framework card.';
 }
 
+/**
+ * Replace gray image gallery backgrounds with white and remove the gray option.
+ */
+function illinois_framework_core_update_10603() {
+  $database = \Drupal::database();
+  $config_factory = \Drupal::configFactory();
+  $storage = $config_factory->getEditable('field.storage.paragraph.field_image_gallery_background');
+  if ($storage->isNew()) {
+    return t('The image gallery background field does not exist.');
+  }
 
+  // Update all translations and revisions without creating new revisions or
+  // invoking entity save hooks during a database update.
+  $paragraph_storage = \Drupal::entityTypeManager()->getStorage('paragraph');
+  $definition = \Drupal::entityDefinitionUpdateManager()->getFieldStorageDefinition('field_image_gallery_background', 'paragraph');
+  $table_mapping = $paragraph_storage->getTableMapping();
+  // Drupal hashes dedicated table names that exceed its length limit.
+  foreach ([
+    $table_mapping->getDedicatedDataTableName($definition),
+    $table_mapping->getDedicatedRevisionTableName($definition),
+  ] as $table) {
+    if ($database->schema()->tableExists($table)) {
+      $database->update($table)
+        ->fields(['field_image_gallery_background_value' => 'white'])
+        ->condition('bundle', 'image_gallery')
+        ->condition('field_image_gallery_background_value', 'gray')
+        ->execute();
+    }
+  }
+
+  // Preserve any site-specific options while removing gray and ensuring white.
+  $allowed_values = [];
+  $has_white = FALSE;
+  foreach ($storage->get('settings.allowed_values') ?? [] as $option) {
+    if ($option['value'] !== 'gray') {
+      $allowed_values[] = $option;
+      $has_white = $has_white || $option['value'] === 'white';
+    }
+  }
+  if (!$has_white) {
+    $allowed_values[] = ['value' => 'white', 'label' => 'White'];
+  }
+  $storage->set('settings.allowed_values', $allowed_values)->save(TRUE);
+
+  $field = $config_factory->getEditable('field.field.paragraph.image_gallery.field_image_gallery_background');
+  if (!$field->isNew()) {
+    $defaults = $field->get('default_value') ?? [];
+    foreach ($defaults as &$default) {
+      if (($default['value'] ?? NULL) === 'gray') {
+        $default['value'] = 'white';
+      }
+    }
+    unset($default);
+    $field->set('default_value', $defaults)->save(TRUE);
+  }
+
+  $paragraph_storage->resetCache();
+  \Drupal::service('entity_field.manager')->clearCachedFieldDefinitions();
+  // Paragraphs can be rendered inside cached parent entities.
+  \Drupal::service('cache_tags.invalidator')->invalidateTags(['rendered', 'paragraph_values']);
+
+  return t('Replaced gray image gallery backgrounds with white and removed the gray option.');
+}
+
+/**
+ * Migrate the image gallery formatter and uninstall Colorbox.
+ */
+function illinois_framework_core_update_10604() {
+  $config_factory = \Drupal::configFactory();
+  $display_name = 'core.entity_view_display.paragraph.image_gallery.default';
+  $display = $config_factory->getEditable($display_name);
+  $component = $display->get('content.field_image_gallery_img');
+  if (($component['type'] ?? NULL) === 'colorbox') {
+    $component['type'] = 'image_url';
+    $component['settings'] = ['image_style' => 'image_gallery_full'];
+    $display->set('content.field_image_gallery_img', $component);
+    $modules = $display->get('dependencies.module') ?? [];
+    $modules = array_diff($modules, ['colorbox']);
+    $modules[] = 'image';
+    $modules = array_values(array_unique($modules));
+    sort($modules);
+    $display->set('dependencies.module', $modules)->save(TRUE);
+  }
+
+  if (!\Drupal::moduleHandler()->moduleExists('colorbox')) {
+    return t('Updated the gallery formatter. Colorbox is already uninstalled.');
+  }
+
+  // Do not cascade the uninstall to installed dependent modules or themes.
+  $module_list = \Drupal::service('extension.list.module');
+  $module_list->reset();
+  $modules = $module_list->getList();
+  $extensions = $config_factory->get('core.extension');
+  foreach (array_keys($modules['colorbox']->required_by) as $dependent) {
+    if ($extensions->get('module.' . $dependent) !== NULL || $extensions->get('theme.' . $dependent) !== NULL) {
+      throw new \Drupal\Core\Utility\UpdateException('Cannot uninstall Colorbox because an installed extension requires it: ' . $dependent);
+    }
+  }
+
+  // Preserve site-specific displays and other configuration that still uses
+  // Colorbox. Config Sync snapshots are managed by the module uninstall.
+  $config_storage = \Drupal::service('config.storage');
+  foreach ($config_storage->listAll() as $name) {
+    $data = $config_storage->read($name);
+    if (str_starts_with($name, 'config_snapshot.snapshot.')) {
+      continue;
+    }
+    if (in_array('colorbox', $data['dependencies']['module'] ?? [], TRUE)) {
+      throw new \Drupal\Core\Utility\UpdateException('Replace the remaining Colorbox usage before retrying this update: ' . $name);
+    }
+    foreach ($data['content'] ?? [] as $item) {
+      if (is_array($item) && ($item['type'] ?? NULL) === 'colorbox') {
+        throw new \Drupal\Core\Utility\UpdateException('Replace the remaining Colorbox formatter before retrying this update: ' . $name);
+      }
+    }
+  }
+
+  if (!\Drupal::service('module_installer')->uninstall(['colorbox'], FALSE)) {
+    throw new \Drupal\Core\Utility\UpdateException('Colorbox could not be uninstalled. Restore its code and retry this update.');
+  }
+
+  return t('Updated the image gallery formatter and uninstalled Colorbox.');
+}
+
+/**
+ * Repair gray gallery backgrounds in revision tables with hashed names.
+ */
+function illinois_framework_core_update_10605() {
+  // Repeat the idempotent migration using Drupal's actual field table mapping.
+  return illinois_framework_core_update_10603();
+}

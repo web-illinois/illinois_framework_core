@@ -13,7 +13,7 @@ id: paragraph.bb.field_bb_background
 field_name: field_bb_background
 entity_type: paragraph
 bundle: bb
-label: 'Card Background'
+label: 'Theme'
 description: ''
 required: true
 translatable: false

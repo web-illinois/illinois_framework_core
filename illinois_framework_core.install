@@ -121,4 +121,49 @@ function illinois_framework_core_update_10602() {
   return 'Confirmed Custom Status Report enabled and added the Illinois Framework card.';
 }
 
+/**
+ * Updates Cards paragraph background values to the current theme options.
+ *
+ * White is now represented by a blank value, and Illini Blue is now Blue.
+ */
+function illinois_framework_core_update_10603() {
+  $value_map = [
+    'white' => '',
+    'illiniblue' => 'blue',
+  ];
+  $paragraph_storage = \Drupal::entityTypeManager()->getStorage('paragraph');
+  $paragraph_ids = \Drupal::entityQuery('paragraph')
+    ->accessCheck(FALSE)
+    ->condition('type', 'cards')
+    ->condition('field_cards_background', array_keys($value_map), 'IN')
+    ->execute();
+
+  foreach ($paragraph_storage->loadMultiple($paragraph_ids) as $paragraph) {
+    $old_value = $paragraph->get('field_cards_background')->value;
+    $paragraph->set('field_cards_background', $value_map[$old_value]);
+    $paragraph->save();
+  }
+
+  return 'Updated ' . count($paragraph_ids) . ' Cards paragraph theme values.';
+}
+
+/**
+ * Updates Big Banner paragraph background values to the current theme options.
+ */
+function illinois_framework_core_update_10604() {
+  $paragraph_storage = \Drupal::entityTypeManager()->getStorage('paragraph');
+  $paragraph_ids = \Drupal::entityQuery('paragraph')
+    ->accessCheck(FALSE)
+    ->condition('type', 'bb')
+    ->condition('field_bb_background', 'illiniblue')
+    ->execute();
+
+  foreach ($paragraph_storage->loadMultiple($paragraph_ids) as $paragraph) {
+    $paragraph->set('field_bb_background', 'blue');
+    $paragraph->save();
+  }
+
+  return 'Updated ' . count($paragraph_ids) . ' Big Banner paragraph theme values.';
+}
+
 

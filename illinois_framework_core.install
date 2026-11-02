@@ -151,17 +151,22 @@ function illinois_framework_core_update_10603() {
     }
   }
 
-  // Preserve any site-specific options while removing gray and ensuring white.
+  // Preserve any site-specific options while removing gray and ensuring white
+  // and blue. Config Merge cannot merge indexed lists like allowed_values, so
+  // the active list must include the new blue option for config distro
+  // updates to leave it intact.
   $allowed_values = [];
-  $has_white = FALSE;
+  $existing = [];
   foreach ($storage->get('settings.allowed_values') ?? [] as $option) {
     if ($option['value'] !== 'gray') {
       $allowed_values[] = $option;
-      $has_white = $has_white || $option['value'] === 'white';
+      $existing[$option['value']] = TRUE;
     }
   }
-  if (!$has_white) {
-    $allowed_values[] = ['value' => 'white', 'label' => 'White'];
+  foreach (['white' => 'White', 'blue' => 'Blue'] as $value => $label) {
+    if (!isset($existing[$value])) {
+      $allowed_values[] = ['value' => $value, 'label' => $label];
+    }
   }
   $storage->set('settings.allowed_values', $allowed_values)->save(TRUE);
 

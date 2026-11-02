@@ -11,7 +11,7 @@ id: paragraph.image_gallery.field_image_gallery_background
 field_name: field_image_gallery_background
 entity_type: paragraph
 bundle: image_gallery
-label: 'Background color'
+label: 'Theme'
 description: ''
 required: true
 translatable: false

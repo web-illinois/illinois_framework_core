@@ -14,19 +14,19 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: illiniblue
-      label: 'Illini Blue'
+      value: blue
+      label: Blue
     -
-      value: illiniorange
-      label: 'Illini Orange'
+      value: orange
+      label: Orange
     -
       value: gray
       label: Gray
     -
-      value: bluegradient
+      value: blue-gradient
       label: 'Blue Gradient'
     -
-      value: orangegradient
+      value: orange-gradient
       label: 'Orange Gradient'
     -
       value: white

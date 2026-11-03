@@ -17,8 +17,20 @@ settings:
       value: white
       label: White
     -
+      value: gray
+      label: Gray
+    -
       value: illiniblue
-      label: 'Illini Blue'
+      label: Blue
+    -
+      value: orange
+      label: Orange
+    -
+      value: blue-gradient
+      label: 'Blue Gradient'
+    -
+      value: orange-gradient
+      label: 'Orange Gradient'
   allowed_values_function: ''
 module: options
 locked: false

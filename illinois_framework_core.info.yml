@@ -10,7 +10,6 @@ dependencies:
   - 'drupal:text'
   - 'drupal:user'
   - advanced_text_formatter
-  - colorbox
   - config_sync
   - custom_status_report
   - file

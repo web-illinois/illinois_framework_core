@@ -15,8 +15,8 @@ settings:
       value: white
       label: White
     -
-      value: gray
-      label: Gray
+      value: blue
+      label: Blue
   allowed_values_function: ''
 module: options
 locked: false

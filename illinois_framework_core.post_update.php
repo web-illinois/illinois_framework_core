@@ -7,6 +7,7 @@
 
 use Drupal\Core\Entity\ContentEntityTypeInterface;
 use Drupal\Core\Entity\RevisionableStorageInterface;
+use Drupal\Core\Utility\UpdateException;
 
 /**
  * Implements hook_removed_post_updates().
@@ -304,4 +305,46 @@ function illinois_framework_core_post_update_remove_bootstrap_theme_settings() {
   }
 
   return 'No obsolete Bootstrap theme settings were found.';
+}
+
+/**
+ * Replace the Colorbox image gallery formatter and uninstall Colorbox.
+ */
+function illinois_framework_core_post_update_image_gallery_remove_colorbox() {
+  $display = \Drupal::entityTypeManager()
+    ->getStorage('entity_view_display')
+    ->load('paragraph.image_gallery.default');
+  $component = $display?->getComponent('field_image_gallery_img');
+  if (($component['type'] ?? NULL) === 'colorbox') {
+    $component['type'] = 'image_url';
+    $component['settings'] = ['image_style' => 'image_gallery_full'];
+    $display->setComponent('field_image_gallery_img', $component)->save();
+  }
+
+  if (!\Drupal::moduleHandler()->moduleExists('colorbox')) {
+    return t('Updated the image gallery formatter. Colorbox is already uninstalled.');
+  }
+
+  // Preserve site-specific configuration that still uses Colorbox rather than
+  // letting the uninstall remove or alter it. Config Sync snapshots are
+  // managed by the module uninstall.
+  $dependents = \Drupal::service('config.manager')
+    ->getConfigEntitiesToChangeOnDependencyRemoval('module', ['colorbox']);
+  $names = [];
+  foreach (array_merge($dependents['update'], $dependents['delete']) as $entity) {
+    $name = $entity->getConfigDependencyName();
+    if (!str_starts_with($name, 'config_snapshot.snapshot.')) {
+      $names[] = $name;
+    }
+  }
+  if ($names) {
+    throw new UpdateException('Replace the remaining Colorbox usage before retrying this update: ' . implode(', ', $names));
+  }
+
+  // Uninstalling fails if an installed extension still requires Colorbox.
+  if (!\Drupal::service('module_installer')->uninstall(['colorbox'], FALSE)) {
+    throw new UpdateException('Colorbox could not be uninstalled because an installed extension requires it.');
+  }
+
+  return t('Updated the image gallery formatter and uninstalled Colorbox.');
 }

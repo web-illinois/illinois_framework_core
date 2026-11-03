@@ -193,3 +193,33 @@ function illinois_framework_core_update_10603() {
     $updated
   );
 }
+
+/**
+ * Replace gray image gallery backgrounds with white.
+ *
+ * Config Distro updates replace the gray option with blue in the field's
+ * allowed values.
+ */
+function illinois_framework_core_update_10604() {
+  $definition = \Drupal::entityDefinitionUpdateManager()->getFieldStorageDefinition('field_image_gallery_background', 'paragraph');
+  if (!$definition) {
+    return t('The image gallery background field does not exist.');
+  }
+
+  // Update all translations and revisions without creating new revisions or
+  // invoking entity save hooks during a database update. Use the table mapping
+  // because Drupal hashes dedicated table names that exceed its length limit.
+  $table_mapping = \Drupal::entityTypeManager()->getStorage('paragraph')->getTableMapping();
+  $column = $table_mapping->getFieldColumnName($definition, 'value');
+  foreach ([
+    $table_mapping->getDedicatedDataTableName($definition),
+    $table_mapping->getDedicatedRevisionTableName($definition),
+  ] as $table) {
+    \Drupal::database()->update($table)
+      ->fields([$column => 'white'])
+      ->condition($column, 'gray')
+      ->execute();
+  }
+
+  return t('Replaced gray image gallery backgrounds with white.');
+}

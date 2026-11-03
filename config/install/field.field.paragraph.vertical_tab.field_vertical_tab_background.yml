@@ -11,7 +11,7 @@ id: paragraph.vertical_tab.field_vertical_tab_background
 field_name: field_vertical_tab_background
 entity_type: paragraph
 bundle: vertical_tab
-label: 'Background color'
+label: 'Theme'
 description: ''
 required: true
 translatable: false

@@ -13,13 +13,13 @@ id: paragraph.intro_home.field_intro_home_background
 field_name: field_intro_home_background
 entity_type: paragraph
 bundle: intro_home
-label: Background
+label: Theme
 description: ''
 required: true
 translatable: false
 default_value:
   -
-    value: bluegradient
+    value: blue-gradient
 default_value_callback: ''
 settings: {  }
 field_type: list_string

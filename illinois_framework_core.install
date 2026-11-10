@@ -223,3 +223,57 @@ function illinois_framework_core_update_10604() {
 
   return t('Replaced gray image gallery backgrounds with white.');
 }
+
+/**
+ * Rename Intro Home background values to Toolkit theme names.
+ */
+function illinois_framework_core_update_10605() {
+  $field_storage = \Drupal\field\Entity\FieldStorageConfig::loadByName('paragraph', 'field_intro_home_background');
+  if (!$field_storage) {
+    return t('The Intro Home background field does not exist.');
+  }
+
+  $value_map = [
+    'illiniblue' => 'blue',
+    'illiniorange' => 'orange',
+    'bluegradient' => 'blue-gradient',
+    'orangegradient' => 'orange-gradient',
+  ];
+  $storage = \Drupal::entityTypeManager()->getStorage('paragraph');
+  $mapping = $storage->getTableMapping([$field_storage]);
+  $column = $mapping->getFieldColumnName($field_storage, 'value');
+
+  // Migrate all translations and revisions before removing allowed values.
+  foreach ([
+    $mapping->getDedicatedDataTableName($field_storage),
+    $mapping->getDedicatedRevisionTableName($field_storage),
+  ] as $table) {
+    foreach ($value_map as $old => $new) {
+      \Drupal::database()->update($table)
+        ->fields([$column => $new])
+        ->condition($column, $old)
+        ->execute();
+    }
+  }
+
+  $allowed_values = [];
+  foreach ($field_storage->getSetting('allowed_values') as $value => $label) {
+    $allowed_values[$value_map[$value] ?? $value] = $label;
+  }
+  $field_storage->setSetting('allowed_values', $allowed_values)->save();
+
+  // Preserve the chosen default while renaming its stored value.
+  foreach ($field_storage->getBundles() as $bundle) {
+    $field = \Drupal\field\Entity\FieldConfig::loadByName('paragraph', $bundle, 'field_intro_home_background');
+    $defaults = $field->getDefaultValueLiteral();
+    foreach ($defaults as &$item) {
+      $item['value'] = $value_map[$item['value']] ?? $item['value'];
+    }
+    unset($item);
+    $field->setDefaultValue($defaults)->save();
+  }
+
+  $storage->resetCache();
+  \Drupal::entityTypeManager()->getViewBuilder('paragraph')->resetCache();
+  return t('Updated Intro Home background values, revisions, and field defaults.');
+}

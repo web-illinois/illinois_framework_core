@@ -11,7 +11,7 @@ id: paragraph.rt.field_rt_background_color
 field_name: field_rt_background_color
 entity_type: paragraph
 bundle: rt
-label: 'Background Color'
+label: 'Theme'
 description: ''
 required: false
 translatable: false
